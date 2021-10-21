@@ -1,0 +1,108 @@
+<!-- head -->
+{% include head.html %}
+<!-- header -->
+{% include header.html %}
+<!-- body starts -->
+
+<body class="portfolio-single">
+  <!-- posts Layout -->
+  {% assign post_settings = site.data.blog.post_settings %}
+  {% assign post_layout = site.data.blog.post_settings.post_layout %}
+  {% if post_layout == "left-sidebar" %}
+  {% assign left_column_order_class = "order-lg-2 order-1" %}
+  {% assign right_column_order_class = "order-lg-1 order-2" %}
+  {% elsif post_layout == "right-sidebar" %}
+  {% assign left_column_order_class = "order-1" %}
+  {% assign right_column_order_class = "order-2" %}
+  {% elsif post_layout == "full-width" %}
+  {% assign right_column_order_class = "" %}
+  {% else %}
+  {% assign right_column_order_class = "" %}
+  {% endif %}
+
+  {% assign l = "post-content-section" %}
+
+<section>
+  <div class="container">
+    <div class="{{l}}">
+      <div class="{{l}}__post-image" style="background-image: url('{{ page.image }}');"></div>
+      <div class="row">
+        {% if post_layout == "full-width" %}
+        <!-- full width post starts -->
+        <div class="col-12 {{ left_column_order_class }} {{l}}__post-full-width">
+          {% else %}
+          <!-- post with sidewidget starts -->
+          <div class="col-lg-8 col-md-12 {{ left_column_order_class }}">
+            {% endif %}
+            <h1 class="{{l}}__post-title">{{ page.title }}</h1>
+            <!-- post details ends -->
+            <div class="{{l}}__content">
+              {{ content }}
+            </div>
+
+          </div>
+          <!-- full width post ends -->
+          <!-- sidewidget starts -->
+          {% if post_layout == "full-width" %}
+          <div class="col-md-12 {% if post_settings.post_layout and post_settings.post_social_share %}row{% endif %}">
+            {% else %}
+            <div class="col-lg-4 col-md-12 {{ right_column_order_class }}">
+              {% endif %}
+              {% if post_settings.post_author_details %}
+              {% if page.author %}
+              {% for team in site.team %}
+              {% if team.title == page.author %}
+              <div class="{{l}}__post-author-details {% if post_layout == "full-width" %}{% if post_settings.post_layout and post_settings.post_social_share %}col-md-6{% endif %}{% endif %}">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="{{l}}__post-author-image">
+                      <div class="{{l}}__post-author-image_post-author-image-frame">
+                        <div class="{{l}}__post-author-image_post-profile-image" style="background-image: url('{{ team.image }}"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-8">
+                    <div class="{{l}}__author-detail">
+                      <h6>Written by:</h6>
+                      <h4>{{ team.title }}</h4>
+                      <p>{{ team.content }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+              {% endif %}
+              {% endif %}
+
+              {% if post_settings.post_social_share %}
+              {% if post_layout == "full-width" %}
+              <div class="{% if post_settings.post_layout and post_settings.post_social_share %}col-md-6{% endif %}">
+                {% include social-share-buttons.html %}
+                {% else %}
+                <div class="row">
+                  {% if page.author and post_settings.post_layout %}
+                  <div class="col-md-4"></div>
+                  <div class="col-md-8">
+                    {% else %}
+                    <div class="col-md-12">
+                      {% endif %}
+
+                      {% include social-share-buttons.html %}
+                    </div>
+                    {% endif %}
+
+                  </div>
+                  {% endif %}
+                </div>
+                <!-- sidewidget ends -->
+              </div>
+            </div>
+          </div>
+</section>
+
+  <!-- footer -->
+  {% include footer.html %}
+  <!-- footer-script -->
+  {% include footer-script.html %}

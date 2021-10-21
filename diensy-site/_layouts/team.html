@@ -1,0 +1,39 @@
+<!-- head -->
+{% include head.html %}
+<!-- header -->
+{% include header.html %}
+<!-- body section starts -->
+<body>
+{% assign l = "team-member" %}
+<section class="{{l}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="{{l}}__team-member-profile" style="background-image: url('{{ page.image }}"></div>
+        <div class="{{l}}__social-share">
+          {% for social-media in page.social-media %}
+          {% if social-media.facebook %}
+          <a href="{{ social-media.facebook }}"><img src="/assets/images/social-share-icon/facebook-icon.png" class="share-icons" alt="facebook-icon" /></a>
+          {% endif %}
+          {% if social-media.linkedin %}
+          <a href="{{ social-media.linkedin }}"><img src="/assets/images/social-share-icon/linkedin-icon.png" class="share-icons" alt="linkedin-icon" /></a>
+          {% endif %}
+          {% if social-media.twitter %}
+          <a href="{{ social-media.twitter }}"><img src="/assets/images/social-share-icon/twitter-icon.png" class="share-icons" alt="twitter-icon" /></a>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-9 {{l}}__content">
+        <h1>{{ page.title }}</h1>
+        <h3>{{ page.designation }}</h3>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+{% include footer.html %}
+<!-- footer-script -->
+{% include footer-script.html %}

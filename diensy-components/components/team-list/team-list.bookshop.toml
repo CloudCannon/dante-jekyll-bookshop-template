@@ -1,0 +1,15 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Team List"
+description = "List of team-list collection items"
+icon = "groups"
+tags = ["Data"]
+
+[props]
+team_list_alignment.select = ["left", "center", "right"]  #: Select the alignment for team list
+team_list_caption_title = ""
+team_list_title = ""
+team_list_description_html = ""
+team_list_number_of_column.select = ["2", "3", "4"]  #: Select the number of column
+team_list_total_number_of_post.select = ["3", "6", "9"] #: Select the total number of posts
+team_list_button = true

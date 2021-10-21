@@ -1,0 +1,38 @@
+{% assign c = "do-call-to-action-block" %}
+
+<div class="do-call-to-action-block cta-{{ forloop.index }}">
+  <div class="container">
+    <div class="{{c}}__do-call-to-action {{c}}__background-ani-circle">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="{{c}}__do-call-to-action-content">
+            {% if include.call_to_action_title and include.call_to_action_title != "" %}
+            <!-- call-to-action title -->
+            <h3>
+              {{ include.call_to_action_title }}
+            </h3>
+            {% endif %}
+            {% if include.call_to_action_description_html and include.call_to_action_description_html != "" %}
+            <!-- call-to-action description -->
+            <p>
+              {{ include.call_to_action_description_html }}
+            </p>
+            {% endif %}
+          </div>
+          {% if include.call_to_action_button_name and include.call_to_action_button_name != "" %}
+          <!-- call-to-action button -->
+          <div class="{{c}}__bg-button bg-button">
+            <a href="{{ include.call_to_action_button_url }}" class="btn" role="button">{{ include.call_to_action_button_name }}</a>
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+      {% for i in (1..19) %}
+      <span></span>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Call to action"
+description = "Title, button with a call to action"
+icon = "call_to_action"
+tags = ["Text"]
+
+[props]
+call_to_action_title = "This is a title"
+call_to_action_description_html = "This is a description"
+call_to_action_button_name = "Button name"
+call_to_action_button_url = "Button url"

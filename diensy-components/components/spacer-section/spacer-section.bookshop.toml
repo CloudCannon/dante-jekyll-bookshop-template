@@ -1,0 +1,9 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Spacer section"
+description = "This section is used to add the specified space"
+icon = "expand"
+tags = ["Text"]
+
+[props]
+space.default = "30px"  #:  Default value for the spacer section ex-30px

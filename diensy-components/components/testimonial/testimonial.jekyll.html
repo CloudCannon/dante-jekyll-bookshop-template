@@ -1,0 +1,75 @@
+{% if include.testimonial-layout == "image_right" %}
+{% assign testimonial_image_order = "order-2" %}
+{% assign testimonial_content_order = "order-1" %}
+{% endif %}
+
+{% if include.testimonial-layout == "image_left" %}
+{% assign testimonial_image_order = "order-1" %}
+{% assign testimonial_content_order = "order-2" %}
+{% endif %}
+
+{% assign c = "do-testimonials" %}
+
+<div class="container {{c}} {{c}}-{{ forloop.index }}">
+  <div class="{{c}}__heading">
+
+    {% if include.testimonial_caption_title and include.testimonial_caption_title != "" %}
+    <div class="{{c}}__heading_caption-title">
+      <h4>
+        <span class="pr-3">{{ include.testimonial_caption_title }}</span>
+      </h4>
+    </div>
+    {% endif %}
+
+    {% if include.testimonial_main_title and include.testimonial_main_title != "" %}
+    <div class="{{c}}__heading_title">
+      <div class="row justify-content-between">
+        <div class="col-md-6">
+          <h2>
+            {{ include.testimonial_main_title }}
+          </h2>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+
+  <div class="row justify-content-between">
+    {% if include.testimonial_image and include.testimonial_image != "" %}
+    <div class="col-md-7 {{ testimonial_image_order }} mb-4">
+      <div class="{{c}}__customers" style="background-image:url('{{ include.testimonial_image }}')">
+        <img src="/assets/images/homepage/quote-img.png" class="img-fluid {{c}}__customers_quote-image" alt="{{ include.testimonial_image_alt }}" />
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="col-md-4 {{ testimonial_content_order }}">
+      <div class="{{c}}__feedback-section">
+        {% if include.testimonial_title and include.testimonial_title != "" %}
+        <div class="{{c}}__feedback-section_review-caption">
+          <h2>{{ include.testimonial_title }} </h2>
+        </div>
+        {% endif %}
+
+        {% if include.testimonial_description_html and include.testimonial_description_html != "" %}
+        <div class="{{c}}__feedback-section_customer-review">
+          <p>{{ include.testimonial_description_html }}</p>
+        </div>
+        {% endif %}
+
+        {% if include.testimonial_author_name and include.testimonial_author_name != "" %}
+        <div class="{{c}}__feedback-section_customer-name">
+          <h4>{{ include.testimonial_author_name }}</h4>
+
+          {% if include.testimonial_author_designation and include.testimonial_author_designation != "" %}
+          <p class="{{c}}__feedback-section_customer-occupation">{{ include.testimonial_author_designation }}</p>
+          {% endif %}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>

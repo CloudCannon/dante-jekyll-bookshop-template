@@ -1,0 +1,76 @@
+---
+title: Portfolio
+description: Diensy Portfolio page
+permalink: /portfolio/
+content_blocks:
+  - _bookshop_name: hero-content-section
+    hero_layout: image_right
+    hero_content_section_type: widewidth
+    hero_mobile_image_order: top
+    hero_vertical_alignment: bottom
+    hero_image_type: contained
+    hero_image: /assets/images/portfolio/hero-illustration.jpg
+    hero_image_alt: Hero image
+    hero_caption_title:
+    hero_title: Portfolio
+    hero_description_html: >-
+      <p>Every product we build has a different story. We join our
+      clients&rsquo; teams as a tech partner to overcome challenges and help
+      them grow.</p>
+    hero_button_name:
+    hero_button_url:
+    hero_icon_button_name:
+    hero_icon_button_url:
+  - _bookshop_name: spacer-section
+    space: 30px
+---
+
+{% assign p = "portfolio-section" %}
+
+<section class="{{p}}">
+  <div class="container">
+    <div class="{{p}}__tabs-1 ">
+      <ul class="nav nav-tabs {{p}}__nav-tabs">
+        <li><a class="btn active" data-toggle="tab" href="#all"><span>All</span></a></li>
+        <li><a class="btn" data-toggle="tab" href=""><span>Web Development</span></a></li>
+        <li><a class="btn" data-toggle="tab" href=""><span>Mobile Development</span></a></li>
+        <li><a class="btn" data-toggle="tab" href=""><span>Digital product design</span></a></li>
+        <li><a class="btn" data-toggle="tab" href=""><span>Cloud &amp; DevOps</span></a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="all" class="tab-pane active">
+          <div class="row {{p}}__portfolio-archive" data-pagebreak="6">
+            {% for post in site.portfolio %}
+            <div class="col-md-4 mb-5 portfolio-item">
+              <div class="{{p}}__portfolio-images">
+                {% if post.image %}
+                <a href="{{ post.url }}">
+                  <div class="{{p}}__portfolio-image">
+                    <div class="{{p}}__portfolio-image_portfolio-img" style="background-image: url('{{ post.image }}');"></div>
+                  </div>
+                </a>
+                {% endif %}
+                <h3 class="{{p}}__portfolio-images_portfolio-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <p class="{{p}}__portfolio-images_portfolio-description">{{ post.content | truncatewords: 10 }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="text-center">
+          <a href="" data-pagebreak-control="prev">Previous</a>
+          <a href="" data-pagebreak-control="next">Next</a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- tab content section starts -->
+    </div>
+  </div>
+</section>
+
+{% assign a = "" %}
+{% assign b = "" %}
+{% assign c = "" %}

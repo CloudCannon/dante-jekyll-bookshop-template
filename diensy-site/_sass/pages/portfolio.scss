@@ -1,0 +1,98 @@
+.portfolio-section {
+
+  &__portfolio-archive{
+    margin-bottom: 35px;
+  }
+
+  &__tabs-1 {
+    margin-bottom: 35px;
+  }
+
+  &__nav-tabs {
+    border: 0;
+    justify-content: center;
+    margin-bottom: 70px;
+
+    li {
+      margin-right: 15px;
+      margin-bottom: 15px;
+
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      a {
+        position: relative;
+        border-radius: 14px;
+        border: 1px solid var(--theme-secondary-color);
+        color: var(--theme-secondary-color);
+        padding: 18px 25px;
+        line-height: 120%;
+        font-weight: 600;
+        text-transform: capitalize;
+        transition: .5s;
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+
+        &:hover {
+          background-color: var(--theme-secondary-bgcolor) !important;
+          color: var(--white) !important;
+        }
+      }
+
+      a.active {
+        background-color: var(--theme-secondary-bgcolor) !important;
+        color: var(--white) !important;
+      }
+    }
+  }
+
+  &__portfolio-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 768px) {
+      border-radius: 15px;
+    }
+
+    &_portfolio-img {
+      box-shadow: var(--theme-box-shadow-primary-color);
+      transition: .5s;
+      height: 450px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background: #ebebeb;
+
+      @media only screen and (max-width: 768px) {
+        height: 400px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 1.5s;
+        transition-property: transform;
+      }
+    }
+  }
+
+  &__portfolio-images {
+    &_portfolio-title {
+      margin-bottom: 15px;
+      font-family: 'Inter', 'Open Sans', cursive;
+      font-weight: 600;
+    }
+
+    &_portfolio-description {
+      margin-bottom: 15px;
+      font-family: 'Inter', 'Open Sans', cursive;
+    }
+  }
+
+
+}

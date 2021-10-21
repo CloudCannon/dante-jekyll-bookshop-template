@@ -1,0 +1,112 @@
+<!-- head -->
+{% include head.html %}
+<!-- header -->
+{% include header.html %}
+<!-- body starts -->
+
+<body class="post-single">
+  <!-- Portfolio Layout -->
+  {% assign portfolio_settings = site.data.blog.portfolio_settings %}
+  {% assign portfolio_layout = site.data.blog.portfolio_settings.portfolio_layout %}
+  {% if portfolio_layout == "left-sidebar" %}
+  {% assign left_column_order_class = "order-lg-2 order-1" %}
+  {% assign right_column_order_class = "order-lg-1 order-2" %}
+  {% elsif portfolio_layout == "right-sidebar" %}
+  {% assign left_column_order_class = "order-1" %}
+  {% assign right_column_order_class = "order-2" %}
+  {% elsif portfolio_layout == "full-width" %}
+  {% assign right_column_order_class = "" %}
+  {% else %}
+  {% assign right_column_order_class = "" %}
+  {% endif %}
+
+  {% assign l = "portfolio-content-section" %}
+
+<section>
+  <div class="container">
+    <div class="{{l}}">
+      {% if page.feature-image %}
+      <div class="{{l}}__portfolio-image" style="background-image: url('{{ page.feature-image }}');"></div>
+      {% else %}
+      <div class="{{l}}__portfolio-image" style="background-image: url('{{ page.image }}');"></div>
+      {% endif %}
+      <div class="row">
+        {% if portfolio_layout == "full-width" %}
+        <!-- full width portfolio starts -->
+        <div class="col-12 {{ left_column_order_class }} {{l}}__portfolio-full-width">
+          {% else %}
+          <!-- portfolio with sidewidget starts -->
+          <div class="col-lg-8 col-md-12 {{ left_column_order_class }}">
+            {% endif %}
+            <h1 class="{{l}}__portfolio-title">{{ page.title }}</h1>
+            <!-- portfolio details ends -->
+            <div class="{{l}}__content">
+              {{ content }}
+            </div>
+
+          </div>
+          <!-- full width portfolio ends -->
+          <!-- sidewidget starts -->
+          {% if portfolio_layout == "full-width" %}
+          <div class="col-md-12 {% if portfolio_settings.portfolio_author_details and portfolio_settings.portfolio_social_share %}row{% endif %}">
+            {% else %}
+            <div class="col-lg-4 col-md-12 {{ right_column_order_class }}">
+              {% endif %}
+              {% if portfolio_settings.portfolio_author_details %}
+              {% if page.author %}
+              {% for team in site.team %}
+              {% if team.title == page.author %}
+              <div class="{{l}}__portfolio-author-details {% if portfolio_layout == "full-width" %}{% if portfolio_settings.portfolio_author_details and portfolio_settings.portfolio_social_share %}col-md-6{% endif %}{% endif %}">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="{{l}}__portfolio-author-image">
+                      <div class="{{l}}__portfolio-author-image_portfolio-author-image-frame">
+                        <div class="{{l}}__portfolio-author-image_portfolio-profile-image" style="background-image: url('{{ team.image }}"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-8">
+                    <div class="{{l}}__author-detail">
+                      <h6>Written by:</h6>
+                      <h4>{{ team.title }}</h4>
+                      <p>{{ team.content }}</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+              {% endif %}
+              {% endif %}
+
+              {% if portfolio_settings.portfolio_social_share %}
+              {% if portfolio_layout == "full-width" %}
+              <div class="{% if portfolio_settings.portfolio_author_details and portfolio_settings.portfolio_social_share %}col-md-6{% endif %}">
+                {% include social-share-buttons.html %}
+                {% else %}
+                <div class="row">
+                  {% if page.author and portfolio_settings.portfolio_author_details %}
+                  <div class="col-md-4"></div>
+                  <div class="col-md-8">
+                    {% else %}
+                    <div class="col-md-12">
+                      {% endif %}
+
+                      {% include social-share-buttons.html %}
+                    </div>
+                    {% endif %}
+
+                  </div>
+                  {% endif %}
+                </div>
+                <!-- sidewidget ends -->
+              </div>
+            </div>
+          </div>
+</section>
+  <!-- footer -->
+  {% include footer.html %}
+  <!-- footer-script -->
+  {% include footer-script.html %}

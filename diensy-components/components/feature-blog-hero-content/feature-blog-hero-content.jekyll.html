@@ -1,0 +1,106 @@
+<!-- feature blog version 1.0.0 -->
+{% if include.feature_blog_layout == "image_right" %}
+{% assign content_order = "order-lg-1" %}
+{% assign image_order = "order-lg-2" %}
+{% endif %}
+
+{% if include.feature_blog_layout == "image_left" %}
+{% assign content_order = "order-lg-2" %}
+{% assign image_order = "order-lg-1" %}
+{% endif %}
+
+{% if include.feature_blog_mobile_image_order == "bottom" %}
+{% assign mobile_content_order = "order-1" %}
+{% assign mobile_image_order = "order-2" %}
+{% endif %}
+
+{% if include.feature_blog_mobile_image_order == "top" %}
+{% assign mobile_content_order = "order-2" %}
+{% assign mobile_image_order = "order-1" %}
+{% endif %}
+
+{% if include.feature_blog_mobile_image_order == null and include.feature_blog_layout == "image-left" %}
+{% assign content_order = "order-2" %}
+{% assign image_order = "order-1" %}
+{% endif %}
+
+{% if include.feature_blog_vertical_alignment == "top" %}
+{% assign vertical_alignment = "align-self-start" %}
+{% endif %}
+
+{% if include.feature_blog_vertical_alignment == "center" %}
+{% assign vertical_alignment = "align-self-center" %}
+{% endif %}
+
+{% if include.feature_blog_vertical_alignment == "bottom" %}
+{% assign vertical_alignment = "align-self-end" %}
+{% endif %}
+
+{% assign c = "feature-blog-content" %}
+
+<section class="{{c}} {{c}}-{{ forloop.index }}">
+  <div class="
+  {% if include.feature_blog_type == "widewidth" %}
+  container
+  {% else %}
+  container-fluid
+  {% endif %}">
+    <div class="row">
+
+      {% assign featured_posts = site.posts | where_exp:"post", "post.feature-blog == true" %}
+      {% assign sorted_posts = featured_posts | sort: date | reverse %}
+      {% for post in sorted_posts limit: 1 %}
+      <div class="col-lg-6 col-md-12 {{ content_order }} {{ mobile_content_order }} {{ vertical_alignment }} {{c}}__feature-blog-content-column {{c}}__feature-blog-bg-content">
+        {% if include.feature_blog_title %}
+        <!-- feature blog title -->
+        <div class="{{c}}__feature-blog-bg-content_feature-blog-title">
+        {% if include.feature_blog_title_url %}
+          <a href="{{ post.permalink }}">
+            <h2>{{ post.title }}</h2>
+          </a>
+          {% else %}
+            <h2>{{ post.title }}</h2>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if include.feature_blog_description %}
+        <!-- feature blog description -->
+        <div class="{{c}}__feature-blog-bg-content_feature-blog-description">
+          <p>{{ post.excerpt }}</p>
+        </div>
+        {% endif %}
+
+        <div class="{{c}}__feature-blog-button">
+          {% if include.feature_blog_icon_button %}
+        <!-- feature blogicon button -->
+          <div class="{{c}}__feature-blog-button_feature-blog-icon-button">
+            <a href="{{ post.permalink }}" class="btn" role="button">
+              {% if include.feature_blog_icon_button_name and include.feature_blog_icon_button_name != "" %}
+              {{ include.feature_blog_icon_button_name }} <i class="fas fa-long-arrow-alt-right"></i>
+              {% else %}
+                Read article <i class="fas fa-long-arrow-alt-right"></i>
+              {% endif %}
+            </a>
+          </div>
+          {% endif %}
+        </div>
+
+    </div>
+
+    {% if include.feature_blog_image %}
+    <div class="col-lg-6 col-md-12 {{ image_order }} {{ mobile_image_order }} {{ vertical_alignment }} {{c}}__feature-blog-image {{c}}__feature-blog-content-column">
+      {% if include.feature_blog_image_url %}
+      <a href="{{ post.permalink }}">
+      <img class="img-fluid" src="{{ post.image }}" alt="{{ post.title }}" />
+      </a>
+      {% else %}
+      <img class="img-fluid" src="{{ post.image }}" alt="{{ post.title }}" />
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% endfor %}
+    </div>
+  </div>
+</section>

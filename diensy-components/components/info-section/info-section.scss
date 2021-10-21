@@ -1,0 +1,97 @@
+/* info-section version 1.0.0 */
+/* info-section starts */
+.do-info-block {
+  text-align: center;
+
+  &__row {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  &__caption-title {
+    h4 {
+      position: relative;
+      font-weight: 400;
+      color: var(--theme-secondary-color);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      
+      &::after {
+          content: "";
+          background-color: #6e92ff;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          width: 30px;
+      }
+
+      &::before {
+          content: "";
+          background-color: #6e92ff;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          width: 30px;
+      }
+
+      span {
+        padding-left: 50px;
+      }
+    }
+
+  }
+
+  &__title {
+    h2 {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__analyze-column {
+    border-radius: 25px;
+    padding: 44px 55px;
+    transition: box-shadow 0.4s linear;
+    margin-bottom: 35px;
+
+    @media only screen and (max-width: 768px) {
+      padding: 20px;
+
+    }
+
+    &:hover {
+        box-shadow: rgba(174, 169, 188, 0.2) 0px 10px 38px, rgba(174, 169, 188, 0.2) 0px 57px 36px;
+    }
+
+    &_column-image {
+      margin-bottom: 35px;
+    }
+
+    &_column-title {
+      h3 {
+        font-size: 22px;
+        line-height: 130%;
+        letter-spacing: 0.005em;
+        font-weight: 600;
+      }
+    }
+
+    &_info-block-button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--theme-secondary-color);
+      background-color: #fff;
+      color: var(--theme-secondary-color);
+      letter-spacing: 0.01em;
+      font-weight: 600;
+      font-size: 18px;
+      transition: 0.4s linear;
+
+      :hover {
+        background-color: var(--theme-secondary-color);
+        color: #fff;
+      }
+    }
+  }
+
+}

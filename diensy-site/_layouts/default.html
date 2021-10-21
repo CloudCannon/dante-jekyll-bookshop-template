@@ -1,0 +1,20 @@
+<!-- head -->
+{% include head.html %}
+<!-- header -->
+{% include header.html %}
+
+<!-- body section starts -->
+<body class="{{page.title}}">
+  <!-- content -->
+
+  <!-- bookshop data starts -->
+  <div data-bookshop-live="page" data-bookshop-props="page">
+    {% bookshop page content_blocks=page.content_blocks %}
+  </div>
+
+  {{ content }}
+
+  <!-- footer -->
+  {% include footer.html %}
+  <!-- footer-script -->
+  {% include footer-script.html %}

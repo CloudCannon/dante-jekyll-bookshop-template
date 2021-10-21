@@ -1,0 +1,53 @@
+<!-- footer script version 1.0.0 -->
+<!-- bootstrap script -->
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-latest.min.js"></script>
+
+<script>
+    /* navbar toggler script for header starts */
+    function navbartoggle(x) {
+      x.classList.toggle("change");
+    }
+    /* navbar toggler script for header ends */
+    $('.number-counter .number-counter__number-counter-column_counter-count .count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
+
+
+    $('#contact-submit').click(function() {
+      var first_name=$('#contact_first_name').val();
+      var last_name=$('#contact_last_name').val();
+      var email=$('#contact_email').val();
+      if ( first_name != "" && last_name != "" && email!= "" ){
+     $('.contact-section__contact-form .contact-section__contact-form_success').css('display','block');
+      setTimeout(function(){
+      $('.contact-section__contact-form .contact-section__contact-form_success').css('display','none');
+      }, 3000);
+     $('#contact_first_name').val("");
+     $('#contact_last_name').val("");
+     $('#contact_email').val("");
+     $('#contact_textarea').val("");
+   }else{
+     setTimeout(function(){
+      $('.contact-section__contact-form .contact-section__contact-form_success').css('display','none');
+      }, 3000);
+   }
+  });
+
+
+</script>
+
+{% bookshop_live _cloudcannon/bookshop-live.js %}
+</body>
+<!-- body section ends -->
+</html>

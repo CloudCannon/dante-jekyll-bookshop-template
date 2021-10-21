@@ -1,0 +1,133 @@
+<!-- footer version 1.0.0 -->
+
+{% assign footer_settings = site.data.footer %}
+{% assign columns_for_laptop = footer_settings.footer_columns.columns_for_laptop %}
+{% if columns_for_laptop > "1" and columns_for_laptop <= "6"  %}
+{% else %}
+{% assign columns_for_laptop = 3 %}
+{% endif %}
+{% assign calculate_columns_for_laptop = 12 | divided_by: columns_for_laptop %}
+{% assign laptop_column_class = "col-lg-" | append: calculate_columns_for_laptop %}
+
+{% assign columns_for_tablet = footer_settings.footer_columns.columns_for_tablet %}
+{% if columns_for_tablet > "1" and columns_for_tablet <= "4"  %}
+{% else %}
+{% assign columns_for_tablet = 2 %}
+{% endif %}
+{% assign calculate_columns_for_tablet = 12 | divided_by: columns_for_tablet %}
+{% assign tablet_column_class = "col-md-" | append: calculate_columns_for_tablet %}
+
+{% assign columns_for_mobile = footer_settings.footer_columns.columns_for_mobile %}
+{% if columns_for_mobile > "0" and columns_for_mobile <= "2"  %}
+{% else %}
+{% assign columns_for_mobile = 1 %}
+{% endif %}
+{% assign calculate_columns_for_mobile = 12 | divided_by: columns_for_mobile %}
+{% assign mobile_column_class = "col-" | append: calculate_columns_for_mobile %}
+
+{% assign i = "footer-widget" %}
+
+<!-- footer widget starts -->
+<footer class="{{i}}">
+  <div class="container">
+    {% if footer_settings.footer_info.footer_title %}
+    <h1 class="{{i}}__footer-title">{{ footer_settings.footer_info.footer_title }}</h1>
+    {% endif %}
+      <div class="row">
+        <div class="col-lg-4">
+            <div class="{{i}}__footer-widget-column">
+              {% if footer_settings.footer_info.footer_logo_image %}
+              <div class="{{i}}__footer-widget-column_footer-logo">
+                <a href="/" style="background-image: url('{{ footer_settings.footer_info.footer_logo_image }}')"></a>
+              </div>
+              {% endif %}
+              <div class="{{i}}__footer-widget-column_footer-content">
+                {% if footer_settings.footer_info.footer_content_html %}
+                <p>{{ footer_settings.footer_info.footer_content_html }}</p>
+                {% endif %}
+              </div>
+              <!-- footer social icon starts -->
+              {% if footer_settings.social_media_information.copyright_social_icon %}
+              <div class="{{i}}__footer-widget-column_copyright-social-icon">
+                <ul class="list-inline text-left">
+                  {% if footer_settings.social_media_information.youtube_url %}
+                  <!-- youtube link -->
+                  <li class="list-inline-item">
+                    <a href="{{ footer_settings.social_media_information.youtube_url }}"><i class="fab fa-youtube"></i></a>
+                  </li>
+                  {% endif %}
+                  {% if footer_settings.social_media_information.twitter_username %}
+                  <!-- twitter link -->
+                  <li class="list-inline-item">
+                    <a href="{{ footer_settings.social_media_information.twitter_username }}"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  {% endif %}
+                  {% if footer_settings.social_media_information.instagram_username %}
+                  <!-- instagram link -->
+                  <li class="list-inline-item">
+                    <a href="{{ footer_settings.social_media_information.instagram_username }}"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  {% endif %}
+                </ul>
+              </div>
+              {% endif %}
+
+              <!-- footer social icons ends -->
+            </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            {% for level1 in footer_settings.footer_menu %}
+            <!-- footer widget column starts -->
+            <div class="{{ laptop_column_class }} {{ tablet_column_class }} {{ mobile_column_class }} {{i}}__footer-widget-column">
+              {% if level1.footer-title %}
+              <!-- footer column title -->
+              <h4 class="{{i}}__footer-widget-column_footer-heading">{{ level1.footer-title }}</h4>
+              {% endif %}
+              <ul class="list-unstyled">
+                {% for level2 in level1.option %}
+                <li>
+                  {% if level2.icon_image == null %}
+                  {% if level2.url == null %}
+                  <!-- description without icon -->
+                  <p>{{ level2.title }}</p>
+                  {% else %}
+                  <!-- links without icon -->
+                  <a href="{{ level2.url }}">{{ level2.title }}</a>
+                  {% endif %}
+                  {% else %}
+                  {% if level2.url == null %}
+                  <!-- description with icon -->
+                  <p><span>{{ level2.icon_image }}</span><span>{{ level2.title }}</span></p>
+                  {% else %}
+                  <!-- links with icon -->
+                  <a href="{{ level2.url }}"><span class="mr-2">{{ level2.icon_image }}</span> {{ level2.title }}</a>
+                  {% endif %}
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <!-- footer widget column ends -->
+            {% if forloop.index == columns_for_laptop %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!-- footer copyright starts -->
+      <div class="{{i}}__footer-copyright">
+        <div class="{{i}}__footer-copyright_copy-right-text">
+          {% if footer_settings.copyright_settings.copyright_content %}
+          <!-- copyright text -->
+          {% if footer_settings.copyright_settings.copyright_text and footer_settings.copyright_settings.copyright_text != "" %}
+          <p>{{ footer_settings.copyright_settings.copyright_text }}</p>
+          {% endif %}
+          {% endif %}
+        </div>
+      </div>
+      <!-- footer copyrights ends -->
+    </div>
+</footer>
+<!-- footer widgets ends -->

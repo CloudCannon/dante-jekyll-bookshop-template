@@ -1,0 +1,121 @@
+.team-list {
+  background-color: var(--theme-primary-color);
+  padding: 180px 0 50px;
+  margin-bottom: 50px;
+
+  &__heading {
+    margin-bottom: 100px;
+
+    &_caption-title {
+      position: relative;
+      color: #fff;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      &::after {
+        content: "";
+        background-color: #fff;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+      }
+
+      &::before {
+        content: "";
+        background-color: #fff;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+      }
+
+      span {
+        padding-left: 50px;
+      }
+    }
+
+    &_title {
+      color: #fff;
+    }
+
+    &_description {
+      font-size: 18px;
+      line-height: 180%;
+
+      p {
+        color: #fff;
+      }
+    }
+  }
+
+  &__members-column {
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    &_member-image {
+      overflow: hidden;
+    }
+
+    &_member-bg-image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition-duration: 1.5s;
+      height: 365px;
+
+      &:hover{
+        transform: scale(1.1);
+        transition-property: transform;
+      }
+    }
+  }
+
+  &__member-info {
+    padding: 30px 0;
+
+    &_member-name {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 31px;
+      letter-spacing: 0.005em;
+      margin-bottom: 5px;
+    }
+
+    &_designation {
+      font-size: 14px;
+      line-height: 25px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__social-share {
+    a {
+      margin: 0 10px;
+    }
+  }
+
+  &__see-more-btn {
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #fff;
+    background-color: var(--theme-secondary-bgcolor);
+    border-radius: 10px;
+    padding: 24px 40px;
+    transition: 0.3s linear;
+
+    &:hover {
+      background-color: #fff;
+      color: var(--theme-secondary-color);
+    }
+  }
+
+
+
+}

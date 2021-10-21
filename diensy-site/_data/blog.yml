@@ -1,0 +1,8 @@
+post_settings:
+  post_layout: left-sidebar
+  post_author_details: true
+  post_social_share: true
+portfolio_settings:
+  portfolio_layout: full-width
+  portfolio_author_details: true
+  portfolio_social_share: true

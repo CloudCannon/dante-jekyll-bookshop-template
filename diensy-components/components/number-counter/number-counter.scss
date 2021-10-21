@@ -1,0 +1,73 @@
+.number-counter {
+  background-color: rgba(110, 146, 255, 0.1);
+  color: #2d3663;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__caption-title {
+    h4 {
+      position: relative;
+      font-weight: 400;
+      color: var(--theme-secondary-color);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      &:after {
+        content: "";
+        background-color: #6e92ff;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+      }
+
+      &:before {
+        content: "";
+        background-color: #6e92ff;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+      }
+
+      span {
+        padding-left: 50px;
+      }
+    }
+  }
+
+  &__title {
+    h2 {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+}
+
+  &__number-counter-block {
+      justify-content: center;
+  }
+
+  &__number-counter-column {
+      margin-bottom: 35px;
+
+      &_counter-count {
+        font-weight: bold;
+        letter-spacing: 0.005em;
+      }
+
+      &_title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 180%;
+      }
+
+      &_description {
+        font-size: 18px;
+        line-height: 180%;
+        opacity: 0.8;
+      }
+
+  }
+
+
+}

@@ -1,0 +1,147 @@
+.footer-widget {
+  background-color: var(--theme-primary-bgcolor);
+  padding: 100px 0 30px;
+
+  @media only screen and (min-width: 767px) {
+    border-radius: 25px;
+    margin: 0 20px 20px 20px;
+  }
+
+  &__footer-title {
+    color: var(--theme-primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__footer-widget-column {
+    ul {
+      margin-bottom: 25px;
+
+      li {
+          margin-bottom: 15px;
+
+          p {
+            color: var(--grey);
+            margin-bottom: 0;
+
+            span {
+              margin-right: 10px !important;
+            }
+          }
+
+          a {
+            line-height: 16px;
+            opacity: .8;
+            color:#fff;
+
+            &:hover {
+              color: var(--theme-secondary-color);
+            }
+          }
+
+          &_footer-heading {
+            padding-top: 20px;
+            text-transform: capitalize;
+            color: #fff;
+            margin-bottom: 20px;
+            word-break: break-word;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+          }
+
+      }
+
+
+    }
+
+    &_footer-logo {
+      margin-bottom: 45px;
+
+      a {
+        width: 171px;
+        height: 47px;
+        background-size: cover;
+        display: inline-block;
+        font-size: 0;
+
+        @media only screen and (max-width: 767px) {
+          width: 152px;
+          height: 42px;
+        }
+      }
+    }
+
+    &_footer-content {
+      p {
+        color:#fff;
+      }
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+
+    &_copyright-social-icon {
+      padding-top: 15px;
+      text-align: right;
+
+      ul {
+        li {
+          margin-right: 10px !important;
+
+          a {
+            width: 35px;
+            font-size: 16px;
+            display: inline-block;
+
+            i {
+              background-color: #fff;
+              padding: 10px;
+              border-radius: 50%;
+              color: var(--theme-primary-color);
+              transition: .5s;
+
+              &:hover {
+                background-color: var(--theme-secondary-color);
+                color: var(--white);
+              }
+
+            }
+          }
+        }
+      }
+
+
+    }
+
+
+
+  }
+
+  &__footer-copyright {
+    a {
+      color: var(--white);
+    }
+
+    &_copy-right-text {
+      padding-top: 15px;
+      text-align: center;
+
+      p {
+        font-size: 14px;
+        color: var(--white);
+        margin-bottom: 0;
+        letter-spacing: 0.07px;
+        font-family: 'Poppins', sans-serif;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+}

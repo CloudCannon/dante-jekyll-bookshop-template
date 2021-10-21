@@ -1,0 +1,18 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Contact"
+description = "Contact form, address, email, number and map iframe"
+icon = "location_on"
+tags = ["Form"]
+
+[props]
+address = ""  #: Enter the contact address
+email = ""  #: Enter the contact Email address
+phone = ""  #: Enter the contact phone number
+map-iframe = ""  #: Enter the google iframe src
+
+contact_layout.select = ["map_left", "map_right"]  #: Select the contact layout for the map.
+contact_layout.default = "map_right"  #: Default contact layout for the map.
+
+contact_mobile_map_position.select = ["bottom", "top"]  #: Select the mobile order for map
+contact_mobile_map_position.default = "bottom"  #: Default mobile order for map

@@ -1,0 +1,77 @@
+{% if include.icon_layout == "right" %}
+  {% assign icon_layout_section = "right-lg-section" %}
+  {% assign icon_layout_class = "right" %}
+  {% assign icon_title_order = "order-1" %}
+  {% assign icon_section_order = "order-2" %}
+{% else %}
+  {% assign icon_layout_section = "left-lg-section" %}
+  {% assign icon_layout_class = "left" %}
+  {% assign icon_title_order = "order-2" %}
+  {% assign icon_section_order = "order-1" %}
+{% endif %}
+
+{% assign c = "icon-module" %}
+
+<div class="{{c}}">
+  <div class="{{c}}__{{ icon_layout_class }} {{c}}-{{ forloop.index }}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 {{c}}__left-section {{ icon_title_order }}">
+          <div class="{{c}}__heading">
+            {% if include.icon_caption_title and include.icon_caption_title != "" %}
+            <div class="{{c}}__left-section_caption-title">
+              <h4>
+                <span>{{ include.icon_caption_title }}</span>
+              </h4>
+            </div>
+            {% endif %}
+            {% if include.icon_main_title and include.icon_main_title != "" %}
+            <div class="{{c}}__heading_title">
+              <h1>
+                {{ include.icon_main_title }}
+              </h1>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-7 {{c}}__{{ icon_layout_section }} {{ icon_section_order }} mb-5 mb-md-0">
+          <div class="{{c}}__bg-color">
+
+            {% for icons in include.icon-section %}
+            <div class="{{c}}__based-plans">
+              <div class="row">
+                <div class="col-sm-3">
+                  {% if icons.icon_image and icons.icon_image != "" %}
+                  <div class="{{c}}__based-plans_column-image">
+                    <img src="{{ icons.icon_image }}" class="img-fluid" alt="{{ icons.icon_image_alt }}" />
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="col-sm-9">
+                  {% if icons.icon_title and icons.icon_title != "" %}
+                  <h4>
+                    {{ icons.icon_title }}
+                  </h4>
+                  {% endif %}
+                  {% if icons.icon_description_html and icons.icon_description_html != "" %}
+                  <p>
+                    {{ icons.icon_description_html }}
+                  </p>
+                  {% endif %}
+                  {% if icons.icon_button_name and icons.icon_button_name != "" %}
+                  <!-- icon button -->
+                  <div class="{{c}}__based-plans_icon-button">
+                    <a href="{{ icons.icon_button_url }}" class="btn" role="button">{{ icons.icon_button_name }} <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

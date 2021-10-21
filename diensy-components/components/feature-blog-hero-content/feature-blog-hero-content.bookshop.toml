@@ -1,0 +1,27 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Feature Blog Hero Content"
+description = "These module's content comes from the blog, Image on one side and content on the other with a call to action button"
+icon = "menu_book"
+tags = ["Data"]
+
+[props]
+feature_blog_layout.select = ["image_left", "image_right"]  #: Select the layout for the image
+feature_blog_layout.default = "image_right"  #: Default value forr the image
+
+feature_blog_type.select = ["fullwidth", "widewidth"]  #: Select the type for the feature blog
+feature_blog_type.default = "widewidth"  #: Default type for the feature blog
+
+feature_blog_mobile_image_order.select = ["bottom", "top"]  #: Select the image order mobile
+feature_blog_mobile_image_order.default = "bottom"  #: Default image order for mobile
+
+feature_blog_vertical_alignment.select = ["top", "center", "bottom"]  #: Select the vertical alignment for feature blog
+feature_blog_vertical_alignment.default = "top"  #: Default vertical alignment for feature blog
+
+feature_blog_image = true
+feature_blog_image_url = false
+feature_blog_title = true
+feature_blog_title_url = true
+feature_blog_description = true
+feature_blog_icon_button = true
+feature_blog_icon_button_name = "Icon Button name"  #: Enter to show icon button name

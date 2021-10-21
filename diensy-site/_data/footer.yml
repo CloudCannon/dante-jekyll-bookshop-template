@@ -1,0 +1,61 @@
+footer_menu:
+  - footer-title: About
+    option:
+      - title: About us
+        url: /about/
+        icon_image:
+      - title: Features
+        url: '#'
+        icon_image:
+      - title: News
+        url: '#'
+        icon_image:
+      - title: Careerss
+        url: '#'
+        icon_image:
+  - footer-title: Company
+    option:
+      - title: Our team
+        url: /team/
+        icon_image:
+      - title: Partner with us
+        url: '#'
+        icon_image:
+      - title: FAQ
+        url: '#'
+        icon_image:
+      - title: Blog
+        url: /blog/
+        icon_image:
+  - footer-title: Support
+    option:
+      - title: Account
+        url: '#'
+        icon_image:
+      - title: Support center
+        url: '#'
+        icon_image:
+      - title: Feedback
+        url: '#'
+        icon_image:
+      - title: Contact us
+        url: /contact/
+        icon_image:
+footer_columns:
+  columns_for_laptop: '3'
+  columns_for_tablet: '2'
+  columns_for_mobile: '2'
+footer_info:
+  footer_title:
+  footer_logo_image: /assets/images/logo/diensy-wht-image.svg
+  footer_content_html: >-
+    Maecenas viverra malesuada erat sit ut commodo lacus amet, convallis.
+    Lobortis egestas parturient nunc
+social_media_information:
+  copyright_social_icon: true
+  youtube_url: '#'
+  twitter_username: '#'
+  instagram_username: '#'
+copyright_settings:
+  copyright_content: true
+  copyright_text: Copyright © Diensy 2021. All rights reserved.

@@ -1,0 +1,14 @@
+:root {
+    --s-design-min: 375;
+    --s-design-max: 1000;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-weight: 600;
+    --body-size: var(--s-16-18);
+    --heading-size: var(--s-25-36);
+    --column: 500px;
+    --column-max: 90%;
+    --background: #1C1C1C;
+    --foreground: #E4E4E4;
+    --border: solid 2px var(--foreground);
+    --radius: 4px;
+}

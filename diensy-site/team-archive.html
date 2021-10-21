@@ -1,0 +1,46 @@
+---
+Layout: default
+permalink: /team/
+title: Team
+description: List of team members
+---
+
+{% assign p = "team-archive" %}
+
+
+<section class="{{p}}">
+  <div class="container">
+    <div class="row">
+      {% for team in site.team %}
+      <div class="col-md-4">
+        <div class="{{p}}__members-column">
+          <div class="{{p}}__member-image">
+            <a href="{{ team.url }}">
+              <div class="{{p}}__member-image_member-bg-image" style="background-image: url('{{ team.image }}');"></div>
+            </a>
+          </div>
+          <div class="{{p}}__member-info">
+            <a href="{{ team.url }}">
+              <h5 class="{{p}}__member-info_member-name">{{ team.title }}</h5>
+            </a>
+            <p class="{{p}}__member-info_designation">{{ team.designation }}</p>
+            <div class="{{p}}__social-share">
+              {% for social-media in team.social-media %}
+              {% if social-media.facebook %}
+              <a href="{{ social-media.facebook }}"><img src="/assets/images/social-share-icon/facebook-icon.png" class="share-icons" alt="facebook-icon" /></a>
+              {% endif %}
+              {% if social-media.linkedin %}
+              <a href="{{ social-media.linkedin }}"><img src="/assets/images/social-share-icon/linkedin-icon.png" class="share-icons" alt="linkedin-icon" /></a>
+              {% endif %}
+              {% if social-media.twitter %}
+              <a href="{{ social-media.twitter }}"><img src="/assets/images/social-share-icon/twitter-icon.png" class="share-icons" alt="twitter-icon" /></a>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

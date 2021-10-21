@@ -1,0 +1,20 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Icon section"
+description = "Title on one side and content on the other with icons attached to it"
+icon = "ballot"
+tags = ["Text"]
+
+[props]
+icon_caption_title = "This is a caption title"
+icon_main_title = "This is a main title"
+icon_layout.select = ["left", "right"]  #: Select the layout for icon section
+icon_layout.default = "right"  #: Default layout for icon section
+
+[[props.icon-section]]
+icon_image.default = "" #: Select icon image
+icon_image_alt.default = "Icon image"  #: Provide the alternative text for the image
+icon_title = "This is a title"
+icon_description_html = "This is a description"
+icon_button_name = "Button name"
+icon_button_url = "Button url"

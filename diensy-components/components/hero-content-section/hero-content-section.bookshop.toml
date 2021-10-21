@@ -1,0 +1,33 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Hero content"
+description = "Image on one side and content on the other with a call to action button"
+icon = "chrome_reader_mode"
+tags = ["Text"]
+
+[props]
+hero_layout.select = ["image_left", "image_right"]  #: Select the layout for the image. Note this will only work for hero image type contained option
+hero_layout.default = "image_right" #: Default layout for the image. Note this will only work for hero image type contained option
+
+hero_content_section_type.select = ["fullwidth", "widewidth"]  #: Select the type for the hero content section
+hero_content_section_type.default = "widewidth"  #: Default type for the hero content section
+
+hero_mobile_image_order.select = ["bottom", "top"]  #: Select the image order for mobile
+hero_mobile_image_order.default = "bottom"  #: Default image order for mobile
+
+hero_vertical_alignment.select = ["top", "center", "bottom"]  #: Select the vertical alignment for hero content
+hero_vertical_alignment.default = "top"  #: Default vertical alignment for hero
+
+hero_image_type.select = ["contained", "stretched"]  #: Select the image type for hero
+hero_image_type.default = "contained"  #: Default image type for hero
+
+hero_image.default = ""  #: Select hero image
+hero_image_alt.default = "Hero image"  #: Provide the alternative text for the image
+
+hero_caption_title = "This is a caption title"
+hero_title = "This is a title"
+hero_description_html = "This is a description"
+hero_button_name = "Button name"
+hero_button_url = "Button url"
+hero_icon_button_name = "Icon Button name"
+hero_icon_button_url = "Icon Button url"

@@ -1,0 +1,61 @@
+/* ----------------------------- team page starts ------------------------- */
+.team-archive {
+  background-color: var(--theme-primary-color);
+  padding: 180px 0;
+
+  &__members-column {
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  &__member-image {
+    overflow: hidden;
+
+    &_member-bg-image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition-duration: 1.5s;
+      height: 365px;
+
+      &:hover {
+        transform: scale(1.1);
+        transition-property: transform;
+      }
+    }
+
+  }
+
+    &__member-info {
+      padding: 30px 0;
+
+      &_member-name {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 31px;
+        letter-spacing: 0.005em;
+        margin-bottom: 5px;
+      }
+
+      &_designation {
+        font-size: 14px;
+        line-height: 25px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__social-share {
+     a {
+       margin: 0 10px;
+     }
+    }
+
+
+}
+
+
+/* ----------------------------- team page ends ------------------------- */

@@ -1,0 +1,36 @@
+.team-member {
+  padding: 50px 0;
+
+  &__team-member-profile {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    margin-bottom: 15px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__social-share {
+    text-align: center;
+    margin-bottom: 35px;
+
+    img {
+      margin: 0 10px;
+    }
+  }
+
+  &__content {
+    @media only screen and (max-width: 768px) {
+      h1 {
+       text-align: center;
+     }
+      h3 {
+       text-align: center;
+     }
+    }
+  }
+
+
+}

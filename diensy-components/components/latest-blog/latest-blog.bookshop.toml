@@ -1,0 +1,15 @@
+[component]
+array_structures = [ "content_blocks" ]
+label = "Latest Blog"
+description = "List of Latest Blog items"
+icon = "fiber_new"
+tags = ["Data"]
+
+[props]
+latest_title = ""  #: Enter the latest title
+latest_post_image = true
+latest_post_image_url = true
+latest_post_tags = true
+latest_post_title = true
+latest_post_title_url = true
+latest_post_date = true

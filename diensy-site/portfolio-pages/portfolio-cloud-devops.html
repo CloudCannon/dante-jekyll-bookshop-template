@@ -1,0 +1,94 @@
+---
+title: Cloud & DevOpss
+description: Portfolio Cloud & DevOps
+permalink: /portfolio/tags/cloud-and-devops
+portfolio-tag: cloud-and-devops
+content_blocks:
+  - _bookshop_name: hero-content-section
+    hero-layout: image_right
+    hero-content-section-type: widewidth
+    hero-mobile-image-order: bottom
+    hero-vertical-alignment: center
+    hero-image-type: contained
+    hero_image: /assets/images/portfolio/hero-illustration.jpg
+    hero_image_alt: Hero image
+    hero-caption-title:
+    hero-title: Portfolio
+    hero-description_html: >-
+      <p>Every product we build has a different story. We join our
+      clients&rsquo; teams as a tech partner to overcome challenges and help
+      them grow.</p><p>&nbsp;</p>
+    hero-button-name:
+    hero-button_url:
+    hero-icon-button-name:
+    hero-icon-button_url:
+  - _bookshop_name: spacer-section
+    space: 30px
+paginate:
+  collection: portfolio
+  per_page: 6
+  limit: false
+  permalink: /:num/
+  tag: cloud-and-devops
+  reversed: false
+---
+
+{% assign b = 0 %}
+{% assign c = 0 %}
+{% for portfolio in site.portfolio-tags %}
+{% assign b = b | plus: 1 %}
+{% if portfolio.portfolio-tag == page.portfolio-tag %}
+    {% break %}
+{% endif %}
+{% endfor %}
+
+
+<section class="portfolio-section">
+  <div class="container">
+    <div class="tabs-1 ">
+      <ul class="nav nav-tabs">
+        <li><a class="btn" href="/portfolio/"><span>All</span></a></li>
+        {% for portfolio in site.portfolio-tags %}
+        {% assign c = c | plus: 1 %}
+        <li><a class="btn {% if b == c %}active{% endif %}" href="/portfolio/tags/{{ portfolio.portfolio-tag }}"><span>{{ portfolio.portfolio_name }}</span></a></li>
+        {% endfor %}
+      </ul>
+
+      <div class="tab-content">
+        <div id="all" class="tab-pane active">
+          <div class="row portfolio-archive">
+            {% for post in paginator.portfolio %}
+            <div class="col-md-4 mb-5 portfolio-item">
+              <div class="portfolio-images">
+                {% if post.image %}
+                <a href="{{ post.url }}">
+                  <div class="portfolio-image">
+                    <div class="portfolio-img" style="background-image: url('{{ post.image }}');"></div>
+                  </div>
+                </a>
+                {% endif %}
+                <h3 class="portfolio-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <p class="portfolio-description">{{ post.content | truncatewords: 10 }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+
+          {% include portfolio-pagination.html %}
+
+
+        </div>
+        {% for portfolio in site.portfolio-tags %}
+        <div id="{{ portfolio.portfolio-tag }}" class="tab-pane"></div>
+        {% endfor %}
+
+      </div>
+      <!-- tab content section starts -->
+    </div>
+  </div>
+</section>
+
+{% assign a = "" %}
+{% assign b = "" %}
+{% assign c = "" %}
