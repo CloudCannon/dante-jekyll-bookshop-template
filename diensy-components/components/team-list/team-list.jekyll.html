@@ -1,113 +1,117 @@
-{% if include.team_list_number_of_column == '2' %}
-{% assign team_list_column_number = 6 %}
-{% assign team_list_column = "col-md-" | append: team_list_column_number %}
-{% elsif include.team_list_number_of_column == '3' %}
-{% assign team_list_column_number = 4 %}
-{% assign team_list_column = "col-md-" | append: team_list_column_number %}
+{% if include.number_of_columns == '2' %}
+	{% assign team_list_column_number = 6 %}
+	{% assign team_list_column = "col-md-" | append: team_list_column_number %}
+{% elsif include.number_of_columns == '3' %}
+	{% assign team_list_column_number = 4 %}
+	{% assign team_list_column = "col-md-" | append: team_list_column_number %}
 {% else %}
-{% assign team_list_column_number = 3 %}
-{% assign team_list_column = "col-md-" | append: team_list_column_number %}
+	{% assign team_list_column_number = 3 %}
+	{% assign team_list_column = "col-md-" | append: team_list_column_number %}
 {% endif %}
 
 {% if include.team_list_alignment == 'left' %}
-{% assign team_list_text_alignment = 'text-left' %}
+	{% assign team_list_text_alignment = 'text-left' %}
 {% elsif include.team_list_alignment == 'center' %}
-{% assign team_list_text_alignment = 'text-center' %}
+	{% assign team_list_text_alignment = 'text-center' %}
 {% elsif include.team_list_alignment == 'right' %}
-{% assign team_list_text_alignment = 'text-right' %}
+	{% assign team_list_text_alignment = 'text-right' %}
 {% else %}
-{% assign team_list_text_alignment = 'text-left' %}
+	{% assign team_list_text_alignment = 'text-left' %}
 {% endif %}
 
-{% if include.team_list_total_number_of_post == '3' %}
-{% assign team_list_total_post = 3 %}
-{% elsif include.team_list_total_number_of_post == '6' %}
-{% assign team_list_total_post = 6 %}
-{% else %}
-{% assign team_list_total_post = 9 %}
-{% endif %}
+{% assign c = "c-team-list" %}
 
-{% assign c = "team-list" %}
+<section class="{{c}}">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 
+						col-md-8">
+				{% if include.team_list_caption_title or include.team_list_title or include.team_list_description_html %}
+					<div class="{{ c }}__content {{ team_list_text_alignment }}">
+						{% if include.team_list_caption_title and include.team_list_caption_title != "" %}
+							<h4 class="{{ c }}__caption-title">
+								<span class="pr-3">{{ include.team_list_caption_title }}</span>
+							</h4>
+						{% endif %}
 
-<section class="{{ c }} {{ c }}-{{ forloop.index }}">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-8">
-        {% if include.team_list_caption_title or include.team_list_title or include.team_list_description_html %}
-        <div class="{{ c }}__heading {{ team_list_text_alignment }}">
-          {% if include.team_list_caption_title and include.team_list_caption_title != "" %}
-          <h4 class="{{ c }}__heading_caption-title">
-            <span class="pr-3">{{ include.team_list_caption_title }}</span>
-          </h4>
-          {% endif %}
+						{% if include.team_list_title and include.team_list_title != "" %}
+							<h1 class="{{ c }}__title">
+								{{ include.team_list_title }}
+							</h1>
+						{% endif %}
 
-          {% if include.team_list_title and include.team_list_title != "" %}
-          <h1 class="{{ c }}__heading_title">
-            {{ include.team_list_title }}
-          </h1>
-          {% endif %}
+						{% if include.team_list_description_html and include.team_list_description_html != "" %}
+							<div class="{{ c }}__description">
+								<p>{{ include.team_list_description_html }}</p>
+							</div>
+						{% endif %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="col-lg-6 
+						col-md-4"></div>
+		</div>
 
-          {% if include.team_list_description_html and include.team_list_description_html != "" %}
-          <div class="{{ c }}__heading_description">
-            <p>
-              {{ include.team_list_description_html }}
-            </p>
-          </div>
-          {% endif %}
+		<div class="{{ c }}__team-members">
+			<div class="row 
+						mb-5">
+				{% for team in site.team limit: include.people_to_display_number %}
+					<div class="{{ team_list_column }}">
+						<div class="{{ c }}__team-member">
+							<div class="{{ c }}__image-wrapper">
+								<a href="{{ team.url }}">
+									<div class="{{ c }}__image" 
+										 style="background-image: url('{{ team.image }}');"></div>
+								</a>
+							</div>
+							<div class="{{ c }}__info-block">
+								<a href="{{ team.url }}">
+									<h5 class="{{ c }}__name">{{ team.title }}</h5>
+								</a>
+								<p class="{{ c }}__designation">{{ team.designation }}</p>
+								<div class="{{ c }}__social-links">
+									{% for social-media in team.social-media %}
+										{% if social-media.facebook %}
+											<a href="{{ social-media.facebook }}">
+												<img class="share-icons" 
+													 src="/assets/images/social-share-icon/facebook-icon.png" 
+													 alt="facebook-icon" />
+											</a>
+										{% endif %}
+										{% if social-media.linkedin %}
+											<a href="{{ social-media.linkedin }}">
+												<img class="share-icons" 
+													 src="/assets/images/social-share-icon/linkedin-icon.png" 
+													 alt="linkedin-icon" />
+											</a>
+										{% endif %}
+										{% if social-media.twitter %}
+											<a href="{{ social-media.twitter }}">
+												<img class="share-icons" 
+													 src="/assets/images/social-share-icon/twitter-icon.png" 
+													 alt="twitter-icon" />
+											</a>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
 
-        </div>
-        {% endif %}
-      </div>
-      <div class="col-lg-6 col-md-4"></div>
-    </div>
-
-    <div class="{{ c }}__member-column-section">
-      <div class="row mb-5">
-        {% for team in site.team %}
-        <div class="{{ team_list_column }}">
-          <div class="{{ c }}__members-column">
-            <div class="{{ c }}__members-column_member-image">
-              <a href="{{ team.url }}">
-                <div class="{{ c }}__members-column_member-bg-image" style="background-image: url('{{ team.image }}');"></div>
-              </a>
-            </div>
-            <div class="{{ c }}__member-info">
-              <a href="{{ team.url }}">
-                <h5 class="{{ c }}__member-info_member-name">{{ team.title }}</h5>
-              </a>
-              <p class="{{ c }}__member-info_designation">{{ team.designation }}</p>
-              <div class="{{ c }}__social-share">
-                {% for social-media in team.social-media %}
-                {% if social-media.facebook %}
-                <a href="{{ social-media.facebook }}"><img src="/assets/images/social-share-icon/facebook-icon.png" class="share-icons" alt="facebook-icon" /></a>
-                {% endif %}
-                {% if social-media.linkedin %}
-                <a href="{{ social-media.linkedin }}"><img src="/assets/images/social-share-icon/linkedin-icon.png" class="share-icons" alt="linkedin-icon" /></a>
-                {% endif %}
-                {% if social-media.twitter %}
-                <a href="{{ social-media.twitter }}"><img src="/assets/images/social-share-icon/twitter-icon.png" class="share-icons" alt="twitter-icon" /></a>
-                {% endif %}
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-        {% if forloop.index == team_list_total_post %}
-        {% break %}
-        {% endif %}
-        {% endfor %}
-      </div>
-
-      {% if include.team_list_button %}
-      <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-          <div class="text-center">
-            <a class="btn {{ c }}__see-more-btn" href="/team/" role="button">See more</a>
-          </div>
-        </div>
-        <div class="col-md-4"></div>
-      </div>
-      {% endif %}
-    </div>
+			{% if include.team_list_button %}
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<div class="text-center">
+							<a class="btn {{ c }}__more-button" 
+							   href="/team/" 
+							   role="button">See more</a>
+						</div>
+					</div>
+					<div class="col-md-4"></div>
+				</div>
+			{% endif %}
+		</div>
 </section>

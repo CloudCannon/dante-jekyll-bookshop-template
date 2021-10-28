@@ -5,7 +5,7 @@ site_info:
     various modules and easily configurable setting to build your website on.
     Download Jekyll Theme as Static Site Generator.
   permalink: /:title/
-  url: https://eggplant-dawn.cloudvent.net/
+  url: http://127.0.0.1:6060/
 schema:
   name: Diensy
   type: website

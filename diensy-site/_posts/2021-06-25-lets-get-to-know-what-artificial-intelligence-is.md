@@ -7,7 +7,7 @@ feature-blog: true
 image: /assets/images/blogs/image-37.jpg
 author: Danney Johnson
 permalink: /blog/let's-get-to-know-what-artificial-intelligence-is/
-date: 2021-11-21
+date: 2021-6-21
 ---
 
 Artificial Intelligence is a system or program created with special technology to help complete various activities obtained from following human thought patterns.

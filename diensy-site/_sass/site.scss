@@ -1,78 +1,78 @@
 * {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    box-sizing: border-box;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	box-sizing: border-box;
 }
 
 html,
 body {
-    -webkit-overflow-scrolling: touch;
-    margin: 0;
+	-webkit-overflow-scrolling: touch;
+	margin: 0;
 }
 
-/* ------------------------------ Use sass variable for the theme here -------------------------- */
+/* ------------------------------ Variables -------------------------- */
 
 :root {
---theme-font-family: 'Inter', 'Open Sans', cursive; // Use theme font family here
---theme-font-size: 16px;  // Use theme font size here
---theme-font-weight: normal;  // Use theme font weight here
---theme-font-color: var(--body-color); // Use theme font color here
+--theme-font-family: 'Inter', 'Open Sans', Arial;
+--theme-font-size: 16px; 
+--theme-font-weight: normal;
+--theme-font-color: var(--body-color);
 --theme-letter-spacing: .25px;
 --theme-line-height: 72px;
 --theme-opacity: 0.8;
 
---theme-h1-font-size: 60px; // use h1 font size here
---theme-h1-font-weight:700; // use h1 font weight here
---theme-h1-font-color:var(--theme-primary-color); // use h1 font color here
---theme-h1-font-family: 'Inter', 'Open Sans', cursive; // use h1 font family here
+--theme-h1-font-size: 60px;
+--theme-h1-font-weight:700;
+--theme-h1-font-color:var(--theme-primary-color);
+--theme-h1-font-family: 'Inter', 'Open Sans', Arial;
 --theme-h1-line-height: 72px;
 
---theme-h2-font-size: 45px; // use h2 font size here
---theme-h2-font-weight:500; // use h2 font weight here
---theme-h2-font-color:var(--theme-primary-color); // use h2 font color here
---theme-h2-font-family: 'Inter', 'Open Sans', cursive; // use h2 font family here
+--theme-h2-font-size: 45px;
+--theme-h2-font-weight:500;
+--theme-h2-font-color:var(--theme-primary-color);
+--theme-h2-font-family: 'Inter', 'Open Sans', Arial;
 --theme-h2-line-height: 54px;
 
---theme-h3-font-size: 30px; // use h3 font size here
---theme-h3-font-weight:500; // use h3 font weight here
---theme-h3-font-color:var(--theme-primary-color); // use h3 font color here
---theme-h3-font-family: 'Inter', 'Open Sans', cursive; // use h3 font family here
+--theme-h3-font-size: 30px;
+--theme-h3-font-weight:500;
+--theme-h3-font-color:var(--theme-primary-color);
+--theme-h3-font-family: 'Inter', 'Open Sans', Arial;
 --theme-h3-line-height: 36px;
 
---theme-h4-font-size: 24px; // use h4 font size here
---theme-h4-font-weight:500; // use h4 font weight here
---theme-h4-font-color:var(--theme-primary-color); // use h4 font color here
---theme-h4-font-family: 'Inter', 'Open Sans', cursive;  // use h4 font family here
---theme-h4-line-height: 32px;  // use h4 font family here
+--theme-h4-font-size: 24px;
+--theme-h4-font-weight:500;
+--theme-h4-font-color:var(--theme-primary-color);
+--theme-h4-font-family: 'Inter', 'Open Sans', Arial;
+--theme-h4-line-height: 32px;
 
---theme-h5-font-size: 20px; // use h5 font size here
---theme-h5-font-weight:500; // use h5 font weight here
---theme-h5-font-color:var(--theme-primary-color); // use h5 font color here
---theme-h5-font-family: 'Inter', 'Open Sans', cursive; // use h5 font family here
---theme-h5-line-height: 28px;  // use h4 font family here
+--theme-h5-font-size: 20px;
+--theme-h5-font-weight:500;
+--theme-h5-font-color:var(--theme-primary-color);
+--theme-h5-font-family: 'Inter', 'Open Sans', Arial;
+--theme-h5-line-height: 28px;
 
---theme-h6-font-size: 18px; // use h6 font size here
---theme-h6-font-weight:500; // use h6 font weight here
---theme-h6-font-color: var(--theme-primary-color); // use h6 font color here
---theme-h6-font-family: 'Inter', 'Open Sans', cursive; // use h6 font family here
+--theme-h6-font-size: 18px;
+--theme-h6-font-weight:500;
+--theme-h6-font-color: var(--theme-primary-color);
+--theme-h6-font-family: 'Inter', 'Open Sans', Arial;
 --theme-h6-line-height: 22px;
 
---theme-anchor-color: var( --theme-primary-color ); // Use anchor tag color here
---theme-anchor-hover-color: var( --theme-secondary-color ); // Use anchor tag hover color here
+--theme-anchor-color: var( --theme-primary-color );
+--theme-anchor-hover-color: var( --theme-secondary-color );
 
---theme-primary-color: #2d3663; // Use theme primary color here
---theme-primary-bgcolor: #2d3663; // Use theme primary background color here
---theme-secondary-color: #6e92ff; // Use theme secondary color here
---theme-secondary-bgcolor: #6e92ff; // Use theme secondary background color here
---theme-tertiary-color: #00398f; // Use theme tertiary color here
---theme-tertiary-bgcolor: #00398f; // Use theme tertiary background color here
+--theme-primary-color: #2d3663;
+--theme-primary-bgcolor: #2d3663;
+--theme-secondary-color: #6e92ff;
+--theme-secondary-bgcolor: #6e92ff;
+--theme-tertiary-color: #00398f;
+--theme-tertiary-bgcolor: #00398f;
 
---theme-box-shadow-primary-color: rgba(107, 124, 141, 0.08); // Use theme primary box shadow color here
---theme-box-shadow-secondary-color: rgba(107, 124, 141, 0.25); // Use theme secondary box shadow color here
---theme-header-box-shadow-color: rgba(0,0,0,0.1);  // Use theme header box shadow color here
+--theme-box-shadow-primary-color: rgba(107, 124, 141, 0.08);
+--theme-box-shadow-secondary-color: rgba(107, 124, 141, 0.25);
+--theme-header-box-shadow-color: rgba(0,0,0,0.1);
 
-// Use other color variables for the theme
+// Other color variables
 --black: #040f0f;
 --white: #ffffff;
 --blue-lighter: #e6eefa;
@@ -88,54 +88,52 @@ body {
 --body-color: #162c40;
 }
 
-/* ------------------------------ Use custom css here -------------------------- */
-
-/* ------------------------------ general css starts -------------------------- */
+/* ------------------------------ General styles -------------------------- */
 
 /* Font */
 html, body {
-  font-family: var( --theme-font-family );
+	font-family: var( --theme-font-family );
 }
 
 .primary-bg {background-color: var(--theme-primary-bgcolor);}
 
 .blue {color: var(--blue);}
-  .blue-bg {background-color: var(--blue);}
+.blue-bg {background-color: var(--blue);}
 
 .blue-light {color: var(--blue-light);}
-  .blue-light-bg {background-color: var(--blue-light);}
+.blue-light-bg {background-color: var(--blue-light);}
 
 .blue-lighter {color: var(--blue-lighter);}
-  .blue-lighter-bg {background-color: var(--blue-lighter);}
+.blue-lighter-bg {background-color: var(--blue-lighter);}
 
 .blue-dark {color: var(--blue-dark);}
-  .blue-dark-bg {background-color: var(--blue-dark);}
+.blue-dark-bg {background-color: var(--blue-dark);}
 
 .blue-darker {color: var(--blue-darker);}
-  .blue-darker-bg {background-color: var(--blue-darker);}
+.blue-darker-bg {background-color: var(--blue-darker);}
 
 .black {color: var(--black);}
-  .black-bg {background-color: var(--black);}
+.black-bg {background-color: var(--black);}
 
 .white {color: var(--white);}
-  .white-bg {background-color: var(--white);}
+.white-bg {background-color: var(--white);}
 
 .grey {color: var(--grey);}
-  .grey-bg {background-color: var(--grey);}
+.grey-bg {background-color: var(--grey);}
 
 .light-grey, .grey-light {color: var(--grey-light);}
-  .light-grey-bg, .grey-light-bg {background-color: var(--grey-light);}
+.light-grey-bg, .grey-light-bg {background-color: var(--grey-light);}
 
 .lighter-grey, .grey-lighter {color: var(--grey-lighter);}
-  .lighter-grey-bg, .grey-lighter-bg  {background-color: var(--grey-lighter);}
+.lighter-grey-bg, .grey-lighter-bg  {background-color: var(--grey-lighter);}
 
 .dark-grey {color: var(--grey-dark);}
-  .dark-grey-bg, .grey-dark-bg {background-color: var(--grey-dark);}
+.dark-grey-bg, .grey-dark-bg {background-color: var(--grey-dark);}
 
 .darker-grey, .grey-darker {color: var(--grey-darker);}
-  .darker-grey-bg, .grey-darker-bg {background-color: var(--grey-darker);}
+.darker-grey-bg, .grey-darker-bg {background-color: var(--grey-darker);}
 
-.yellow{color:var(--yellow)}
+.yellow {color:var(--yellow)}
 
 .fontwhite,
 .fontwhite h1,
@@ -145,175 +143,158 @@ html, body {
 .fontwhite h5,
 .fontwhite h6,
 .fontwhite p {
-  color: var(--white);
+	color: var(--white);
 }
 
-/* General elements */
-
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  font-size: var(--theme-font-size);
-  font-weight: var(--theme-font-weight);
-  color: var(--theme-font-color);
-  font-family: var( --theme-font-family-2 );
+	font-size: var(--theme-font-size);
+	font-weight: var(--theme-font-weight);
+	color: var(--theme-font-color);
 }
 
 h1 {
-  font-size: var( --theme-h1-font-size );
-  font-weight: var( --theme-h1-font-weight );
-  color: var( --theme-h1-font-color );
-  font-family: var( --theme-h1-font-family );
-  letter-spacing: var( --theme-letter-spacing );
-  line-height: var(--theme-h1-line-height);
+	font-size: var( --theme-h1-font-size );
+	font-weight: var( --theme-h1-font-weight );
+	color: var( --theme-h1-font-color );
+	font-family: var( --theme-h1-font-family );
+	letter-spacing: var( --theme-letter-spacing );
+	line-height: var(--theme-h1-line-height);
 
 }
 
 h2 {
-  font-size: var( --theme-h2-font-size );
-  font-weight: var( --theme-h2-font-weight );
-  color: var( --theme-h2-font-color );
-  font-family: var( --theme-h2-font-family );
-  letter-spacing: var( --theme-letter-spacing );
-  line-height: var(--theme-h2-line-height);
+	font-size: var( --theme-h2-font-size );
+	font-weight: var( --theme-h2-font-weight );
+	color: var( --theme-h2-font-color );
+	font-family: var( --theme-h2-font-family );
+	letter-spacing: var( --theme-letter-spacing );
+	line-height: var(--theme-h2-line-height);
 
 }
 
 h3 {
-  font-size: var( --theme-h3-font-size );
-  font-weight: var( --theme-h3-font-weight );
-  color: var( --theme-h3-font-color );
-  font-family: var( --theme-h3-font-family );
-  letter-spacing: var( --theme-letter-spacing );
-  line-height: var(--theme-h3-line-height);
+	font-size: var( --theme-h3-font-size );
+	font-weight: var( --theme-h3-font-weight );
+	color: var( --theme-h3-font-color );
+	font-family: var( --theme-h3-font-family );
+	letter-spacing: var( --theme-letter-spacing );
+	line-height: var(--theme-h3-line-height);
 
 }
 
 h4 {
-  font-size: var( --theme-h4-font-size );
-  font-weight: var( --theme-h4-font-weight );
-  color: var( --theme-h4-font-color );
-  font-family: var( --theme-h4-font-family );
-  letter-spacing: var( --theme-letter-spacing );
-  line-height: var(--theme-h4-line-height);
+	font-size: var( --theme-h4-font-size );
+	font-weight: var( --theme-h4-font-weight );
+	color: var( --theme-h4-font-color );
+	font-family: var( --theme-h4-font-family );
+	letter-spacing: var( --theme-letter-spacing );
+	line-height: var(--theme-h4-line-height);
 
 }
 
 h5 {
-  font-size: var( --theme-h5-font-size );
-  font-weight: var( --theme-h5-font-weight );
-  color: var( --theme-h5-font-color );
-  font-family: var( --theme-h5-font-family );
-  letter-spacing: var( --theme-letter-spacing );
-  line-height: var(--theme-line-height);
+	font-size: var( --theme-h5-font-size );
+	font-weight: var( --theme-h5-font-weight );
+	color: var( --theme-h5-font-color );
+	font-family: var( --theme-h5-font-family );
+	letter-spacing: var( --theme-letter-spacing );
+	line-height: var(--theme-line-height);
 
 }
 
 h6 {
-  font-size: var( --theme-h6-font-size );
-  font-weight: var( --theme-h6-font-weight );
-  color: var( --theme-h6-font-color );
-  font-family: var( --theme-h6-font-family );
-  letter-spacing: var( --theme-letter-spacing );
-  line-height: var(--theme-h6-line-height);
+	font-size: var( --theme-h6-font-size );
+	font-weight: var( --theme-h6-font-weight );
+	color: var( --theme-h6-font-color );
+	font-family: var( --theme-h6-font-family );
+	letter-spacing: var( --theme-letter-spacing );
+	line-height: var(--theme-h6-line-height);
 
 }
 
 p {
-  font-size: var( --theme-font-size );
-  color: var(--blue-darker);
-  line-height: 29px;
-  opacity: 0.8
+	font-size: var( --theme-font-size );
+	color: var(--blue-darker);
+	line-height: 29px;
+	opacity: 0.8
 }
 
 a {
-  color: var( --theme-anchor-hover-color );
-  text-decoration: none;
+	color: var( --theme-anchor-hover-color );
+	text-decoration: none;
 }
 
 a:hover {
-  color: var(--theme-anchor-color);
-  text-decoration: none;
-  opacity: 1;
+	color: var(--theme-anchor-color);
+	text-decoration: none;
+	opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
-  h1,
-  h2 {
-    font-size: 40px;
-    line-height: 48px;
-  }
+	h1,
+	h2 {
+		font-size: 40px;
+		line-height: 48px;
+	}
 }
 
-/* Form */
+/* Forms */
 
 .form .form-group .form-control:focus {
-  border-color: var(--theme-primary-bgcolor);
+	border-color: var(--theme-primary-bgcolor);
 }
 
 button:focus,
 .form-control:focus,
 .btn:focus {
-  outline:0;
-  box-shadow: none;
+	outline:0;
+	box-shadow: none;
 }
 
 /* selection */
 ::selection {
-  color: var(--white);
-  background: var(--theme-primary-bgcolor);
+	color: var(--white);
+	background: var(--theme-primary-bgcolor);
 }
 
 
 .component {
-    margin-bottom: 150px;
+		margin-bottom: 150px;
 }
 
 @media only screen and (max-width: 1140px) {
-.component {
-    margin-bottom: 75px;
+	.component {
+			margin-bottom: 75px;
+	}
 }
 
-}
 
-/* ------------------------------ general css ends -------------------------- */
-
-/* ----------------------------- scroll to top starts ----------------------- */
+/* ----------------------------- Scroll to top ----------------------- */
 
 .scroll-top {
-  position: fixed;
-  padding: 15px;
-  bottom: 15px;
-  right: 15px;
-  background: rgba(0,0,0,.5);
-  border-radius: 0;
+	position: fixed;
+	padding: 15px;
+	bottom: 15px;
+	right: 15px;
+	background: rgba(0,0,0,.5);
+	border-radius: 0;
 }
 
 .scroll-top:focus {
-  box-shadow: none;
+	box-shadow: none;
 }
 
 .scroll-top i {
-  display: inline-block;
-  color: #fff;
+	display: inline-block;
+	color: #fff;
 }
 
 @media only screen and (max-width: 1140px) {
-
-.scroll-top {
-  bottom:65px;
+	.scroll-top {
+		bottom:65px;
+	}
 }
-
-}
-
-/* ----------------------------- scroll to top ends ------------------------- */
-
-/* ----------------------------- home page starts ------------------------- */
-
-body {
-  font-family: 'Inter', 'Open Sans', cursive;
-}
-
-/* ----------------------------- home page ends ------------------------- */
