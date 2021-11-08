@@ -26,68 +26,9 @@ content_blocks:
     space: 30px
 paginate:
   collection: portfolio
-  per_page: 6  # maximum number of items per page
-  limit: false  # Maximum number of pages to paginate (false for unlimited)
-  permalink: /:num/  # pagination path (relative to template page)
+  per_page: 6
+  limit: false 
+  permalink: /:num/
   tag: mobile-development
-  reversed: false  # Reverse the order of the documents
+  reversed: false
 ---
-
-{% assign b = 0 %}
-{% assign c = 0 %}
-{% for portfolio in site.portfolio-tags %}
-{% assign b = b | plus: 1 %}
-{% if portfolio.portfolio-tag == page.portfolio-tag %}
-    {% break %}
-{% endif %}
-{% endfor %}
-
-<section class="portfolio-section">
-  <div class="container">
-    <div class="tabs-1 ">
-      <ul class="nav nav-tabs">
-        <li><a class="btn" href="/portfolio/"><span>All</span></a></li>
-        {% for portfolio in site.portfolio-tags %}
-        {% assign c = c | plus: 1 %}
-        <li><a class="btn {% if b == c %}active{% endif %}" href="/portfolio/tags/{{ portfolio.portfolio-tag }}"><span>{{ portfolio.portfolio_name }}</span></a></li>
-        {% endfor %}
-      </ul>
-
-      <div class="tab-content">
-        <div id="all" class="tab-pane active">
-          <div class="row portfolio-archive">
-            {% for post in paginator.portfolio %}
-            {% if post.tag contains page.portfolio-tag %}
-            <div class="col-md-4 mb-5 portfolio-item">
-              <div class="portfolio-images">
-                {% if post.image %}
-                <a href="{{ post.url }}">
-                  <div class="portfolio-image">
-                    <div class="portfolio-img" style="background-image: url('{{ post.image }}');"></div>
-                  </div>
-                </a>
-                {% endif %}
-                <h3 class="portfolio-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <p class="portfolio-description">{{ post.content | truncatewords: 10 }}</p>
-              </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-          </div>
-
-          {% include portfolio-pagination.html %}
-
-        </div>
-        {% for portfolio in site.portfolio-tags %}
-        <div id="{{ portfolio.portfolio-tag }}" class="tab-pane"></div>
-        {% endfor %}
-
-      </div>
-      <!-- tab content section starts -->
-    </div>
-  </div>
-</section>
-
-{% assign a = "" %}
-{% assign b = "" %}
-{% assign c = "" %}

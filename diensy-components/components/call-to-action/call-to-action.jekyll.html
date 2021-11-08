@@ -1,38 +1,32 @@
-{% assign c = "do-call-to-action-block" %}
+{% assign c = "c-call-to-action" %}
 
-<div class="do-call-to-action-block cta-{{ forloop.index }}">
-  <div class="container">
-    <div class="{{c}}__do-call-to-action {{c}}__background-ani-circle">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="{{c}}__do-call-to-action-content">
-            {% if include.call_to_action_title and include.call_to_action_title != "" %}
-            <!-- call-to-action title -->
-            <h3>
-              {{ include.call_to_action_title }}
-            </h3>
-            {% endif %}
-            {% if include.call_to_action_description_html and include.call_to_action_description_html != "" %}
-            <!-- call-to-action description -->
-            <p>
-              {{ include.call_to_action_description_html }}
-            </p>
-            {% endif %}
-          </div>
-          {% if include.call_to_action_button_name and include.call_to_action_button_name != "" %}
-          <!-- call-to-action button -->
-          <div class="{{c}}__bg-button bg-button">
-            <a href="{{ include.call_to_action_button_url }}" class="btn" role="button">{{ include.call_to_action_button_name }}</a>
-          </div>
-          {% endif %}
-        </div>
-        <div class="col-md-2"></div>
-      </div>
+<div class="{{c}}">
+	<div class="container">
+		<div class="{{c}}__inner">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div class="{{c}}__content">
+						{% if include.heading and include.heading != "" %}
+							<h3>{{ include.heading }}</h3>
+						{% endif %}
 
-      {% for i in (1..19) %}
-      <span></span>
-      {% endfor %}
-    </div>
-  </div>
+						{% if include.lower_text_html and include.lower_text_html != "" %}
+							<p>{{ include.lower_text_html }}</p>
+						{% endif %}
+					</div>
+					{% if include.button_label and include.button_label != "" %}
+						<div class="{{c}}__button">
+							<a href="{{ include.button_url }}" class="btn" role="button">{{ include.button_label }}</a>
+						</div>
+					{% endif %}
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+
+			{% for i in (1..19) %}
+				<span></span>
+			{% endfor %}
+		</div>
+	</div>
 </div>

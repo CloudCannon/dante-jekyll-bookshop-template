@@ -1,17 +1,17 @@
 <ul class="pager" style="text-align: center;">
-{% for i in (1..paginator.total_pages) %}
-{% if i == 1 %}
-  {% if i == paginator.page %}
-    <li class="{% if paginator.page %}selected{% endif %}"><a class="onlink" href="/portfolio/tags/">{{ i }}</a></li>
-  {% else %}
-    <li><a href="/portfolio/tags/">{{ i }}</a></li>
-  {% endif %}
-{% else %}
-  {% if i == paginator.page %}
-    <li class="{% if paginator.page %}selected{% endif %}"><a class="onlink" href="/portfolio/tags/{{ i }}">{{ i }}</a></li>
-  {% else %}
-    <li><a href="/portfolio/tags/{{ i }}">{{ i }}</a></li>
-  {% endif %}
-{% endif %}
-{% endfor %}
+	{% for i in (1..paginator.total_pages) %}
+		{% if i == 1 %}
+			{% if i == paginator.page %}
+				<li class="{% if paginator.page %}selected{% endif %}"><a class="onlink" href="/portfolio/tags/">{{ i }}</a></li>
+			{% else %}
+				<li><a href="/portfolio/tags/">{{ i }}</a></li>
+			{% endif %}
+		{% else %}
+			{% if i == paginator.page %}
+				<li class="{% if paginator.page %}selected{% endif %}"><a class="onlink" href="/portfolio/tags/{{ i }}">{{ i }}</a></li>
+			{% else %}
+				<li><a href="/portfolio/tags/{{ i }}">{{ i }}</a></li>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
 </ul>

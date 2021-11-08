@@ -24,53 +24,49 @@ content_blocks:
   - _bookshop_name: spacer-section
     space: 30px
 ---
+{% assign l = "l-portfolio" %}
 
-{% assign p = "portfolio-section" %}
+<section class="{{l}}">
+	<div class="container">
+		<div class="{{l}}__tabs-wrapper">
+			<ul class="nav nav-tabs {{l}}__tabs">
+				<li><a class="btn active" data-toggle="tab" href="#all"><span>All</span></a></li>
+				<li><a class="btn" data-toggle="tab" href=""><span>Web Development</span></a></li>
+				<li><a class="btn" data-toggle="tab" href=""><span>Mobile Development</span></a></li>
+				<li><a class="btn" data-toggle="tab" href=""><span>Digital product design</span></a></li>
+				<li><a class="btn" data-toggle="tab" href=""><span>Cloud &amp; DevOps</span></a></li>
+			</ul>
 
-<section class="{{p}}">
-  <div class="container">
-    <div class="{{p}}__tabs-1 ">
-      <ul class="nav nav-tabs {{p}}__nav-tabs">
-        <li><a class="btn active" data-toggle="tab" href="#all"><span>All</span></a></li>
-        <li><a class="btn" data-toggle="tab" href=""><span>Web Development</span></a></li>
-        <li><a class="btn" data-toggle="tab" href=""><span>Mobile Development</span></a></li>
-        <li><a class="btn" data-toggle="tab" href=""><span>Digital product design</span></a></li>
-        <li><a class="btn" data-toggle="tab" href=""><span>Cloud &amp; DevOps</span></a></li>
-      </ul>
-
-      <div class="tab-content">
-        <div id="all" class="tab-pane active">
-          <div class="row {{p}}__portfolio-archive" data-pagebreak="6">
-            {% for post in site.portfolio %}
-            <div class="col-md-4 mb-5 portfolio-item">
-              <div class="{{p}}__portfolio-images">
-                {% if post.image %}
-                <a href="{{ post.url }}">
-                  <div class="{{p}}__portfolio-image">
-                    <div class="{{p}}__portfolio-image_portfolio-img" style="background-image: url('{{ post.image }}');"></div>
-                  </div>
-                </a>
-                {% endif %}
-                <h3 class="{{p}}__portfolio-images_portfolio-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <p class="{{p}}__portfolio-images_portfolio-description">{{ post.content | truncatewords: 10 }}</p>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="text-center">
-          <a href="" data-pagebreak-control="prev">Previous</a>
-          <a href="" data-pagebreak-control="next">Next</a>
-          </div>
-        </div>
-
-
-      </div>
-
-      <!-- tab content section starts -->
-    </div>
-  </div>
+			<div class="tab-content">
+				<div id="all" 
+					 class="tab-pane active">
+					<div class="row {{l}}__archive" 
+						 data-pagebreak="6">
+						{% for post in site.portfolio %}
+							<div class="col-md-4 mb-5 
+										portfolio-item">
+								<div class="{{l}}__portfolio-item">
+									{% if post.image %}
+										<a href="{{ post.url }}">
+											<div class="{{l}}__item-image-wrapper">
+												<div class="{{l}}__item-image" 
+													 style="background-image: url('{{ post.image }}');">
+												</div>
+											</div>
+										</a>
+									{% endif %}
+									<h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+									<p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="text-center">
+						<a href="" data-pagebreak-control="prev">Previous</a>
+						<a href="" data-pagebreak-control="next">Next</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
-
-{% assign a = "" %}
-{% assign b = "" %}
-{% assign c = "" %}

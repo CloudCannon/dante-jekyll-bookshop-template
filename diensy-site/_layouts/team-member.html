@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+{% assign l = "l-team-member" %}
+<section class="{{l}}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="{{l}}__profile-image" 
+					 style="background-image: url('{{ page.image }}"></div>
+				<div class="{{l}}__social-share">
+					{% for social-media in page.social-media %}
+						{% if social-media.facebook %}
+							<a href="{{ social-media.facebook }}">
+								<img class="share-icons" 
+									 src="/assets/images/social-share-icon/facebook-icon.png" 
+									 alt="facebook-icon" />
+							</a>
+						{% endif %}
+						{% if social-media.linkedin %}
+							<a href="{{ social-media.linkedin }}">
+								<img class="share-icons"
+									 src="/assets/images/social-share-icon/linkedin-icon.png" 
+									 alt="linkedin-icon" />
+							</a>
+						{% endif %}
+						{% if social-media.twitter %}
+							<a href="{{ social-media.twitter }}">
+								<img class="share-icons"
+									 src="/assets/images/social-share-icon/twitter-icon.png" 
+									 alt="twitter-icon" />
+							</a>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-md-9 {{l}}__content">
+				<h1>{{ page.title }}</h1>
+				<h3>{{ page.designation }}</h3>
+				{{ content }}
+			</div>
+		</div>
+	</div>
+</section>

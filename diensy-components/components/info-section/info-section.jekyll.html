@@ -1,83 +1,77 @@
-<!-- info-section version 1.0.0 -->
-{% assign c = "do-info-block" %}
-<div class="container">
-
 {% if include.info_section_number_of_column == '2' %}
-{% assign info_section_number_of_column = 6 %}
-{% assign info_section_column = "col-lg-" | append: info_section_number_of_column %}
+	{% assign info_section_number_of_column = 6 %}
+	{% assign info_section_column = "col-lg-" | append: info_section_number_of_column %}
 {% elsif include.info_section_number_of_column == '3' %}
-{% assign info_section_number_of_column = 4 %}
-{% assign info_section_column = "col-lg-" | append: info_section_number_of_column %}
+	{% assign info_section_number_of_column = 4 %}
+	{% assign info_section_column = "col-lg-" | append: info_section_number_of_column %}
 {% else %}
-{% assign info_section_number_of_column = 3 %}
-{% assign info_section_column = "col-lg-" | append: info_section_number_of_column %}
+	{% assign info_section_number_of_column = 3 %}
+	{% assign info_section_column = "col-lg-" | append: info_section_number_of_column %}
 {% endif %}
 
-<div class="{{c}} {{c}}-{{ forloop.index }}">
+{% assign c = "c-info-section" %}
+<div class="container">
+	<div class="{{c}}">
+		{% if include.info_caption_title and include.info_caption_title != "" %}
+			<div class="{{c}}__caption-title">
+				<h4><span class="pr-3">{{ include.info_caption_title }}</span></h4>
+			</div>
+		{% endif %}
 
-  {% if include.info_caption_title and include.info_caption_title != "" %}
-  <div class="{{c}}__caption-title">
-    <h4>
-      <span class="pr-3">{{ include.info_caption_title }}</span>
-    </h4>
-  </div>
-  {% endif %}
+		{% if include.info_main_title and include.info_main_title != "" %}
+			<div class="{{c}}__title"><h2>{{ include.info_main_title }}</h2></div>
+		{% endif %}
 
-  {% if include.info_main_title and include.info_main_title != "" %}
-  <div class="{{c}}__title">
-    <h2>{{ include.info_main_title }}</h2>
-  </div>
-  {% endif %}
+		{% if include.info_main_description_html and include.info_main_description_html != ""  %}
+			<div class="row 
+						{{c}}__row">
+				<div class="col-md-6">
+					<p>{{ include.info_main_description_html }}</p>
+				</div>
+			</div>
+		{% endif %}
 
-  {% if include.info_main_description_html and include.info_main_description_html != ""  %}
-  <div class="row {{c}}__row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <p>{{ include.info_main_description_html }}</p>
-    </div>
-    <div class="col-md-3"></div>
-  </div>
-  {% endif %}
+		<div class="row 
+					{{c}}__row">
+			{% for infos in include.info-section %}
+				{% if infos.info_section_alignment == 'left' %}
+					{% assign info-text-alignment = 'text-left' %}
+				{% elsif infos.info_section_alignment == 'right' %}
+					{% assign info-text-alignment = 'text-right' %}
+				{% else %}
+					{% assign info-text-alignment = 'text-center' %}
+				{% endif %}
 
-  <!-- info-section starts -->
-  <div class="row {{c}}__row">
-    {% for infos in include.info-section %}
+				<div class="{{ info_section_column }} 
+							{{ info-text-alignment }}">
+					<div class="{{c}}__info-column">
+						{% if infos.info_image and infos.info_image != "" %}
+							<div class="{{c}}__analyze-column_column-image">
+								<img src="{{ infos.info_image }}" class="img-fluid" width="87px" alt="{{ infos.info_image_alt }}" />
+							</div>
+						{% endif %}
 
-    {% if infos.info_section_alignment == 'left' %}
-    {% assign info-text-alignment = 'text-left' %}
-    {% elsif infos.info_section_alignment == 'right' %}
-    {% assign info-text-alignment = 'text-right' %}
-    {% else %}
-    {% assign info-text-alignment = 'text-center' %}
-    {% endif %}
+						{% if infos.info_title and infos.info_title != "" %}
+							<div class="{{c}}__analyze-column_column-title">
+								<h3>{{ infos.info_title }}</h3>
+							</div>
+						{% endif %}
 
-    <div class="{{ info_section_column }} {{ info-text-alignment }} ">
-      <div class="{{c}}__analyze-column">
-        {% if infos.info_image and infos.info_image != "" %}
-        <div class="{{c}}__analyze-column_column-image">
-          <img src="{{ infos.info_image }}" class="img-fluid" width="87px" alt="{{ infos.info_image_alt }}" />
-        </div>
-        {% endif %}
+						{% if infos.info_description_html and infos.info_description_html != "" %}
+							<div class="{{c}}__analyze-column_column-content">
+								<p>{{ infos.info_description_html }}</p>
+							</div>
+						{% endif %}
 
-        {% if infos.info_title and infos.info_title != "" %}
-          <div class="{{c}}__analyze-column_column-title">
-            <h3>{{ infos.info_title }}</h3>
-          </div>
-          {% endif %}
-
-          {% if infos.info_description_html and infos.info_description_html != "" %}
-        <div class="{{c}}__analyze-column_column-content">
-            <p>{{ infos.info_description_html }}</p>
-        </div>
-        {% endif %}
-
-        {% if infos.info_button_name and infos.info_button_name != "" %}
-        <a href="{{ infos.info_button_url }}" class="btn outline-btn {{c}}__analyze-column_info-block-button">{{ infos.info_button_name }}</a>
-        {% endif %}
-      </div>
-    </div>
-    {% endfor %}
-
-  </div>
-</div>
+						{% if infos.info_button_name and infos.info_button_name != "" %}
+							<a class="btn 
+									  outline-btn 
+									  {{c}}__column-button" 
+							   href="{{ infos.info_button_url }}">{{ infos.info_button_name }}</a>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 </div>

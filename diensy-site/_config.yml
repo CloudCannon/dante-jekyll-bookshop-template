@@ -57,7 +57,7 @@ defaults:
       type: team
       path: _team
     values:
-      layout: team
+      layout: team-member
 
 collections:
   team:

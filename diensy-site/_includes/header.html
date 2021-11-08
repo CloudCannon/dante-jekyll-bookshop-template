@@ -1,109 +1,144 @@
-<!-- header version 1.0.0 -->
 {% assign menu_settings = site.data.menu %}
 
 {% if menu_settings.logo-favicon-settings.logo_width and menu_settings.logo-favicon-settings.logo_width != "" %}
-{% assign logo_width = menu_settings.logo-favicon-settings.logo_width %}
+	{% assign logo_width = menu_settings.logo-favicon-settings.logo_width %}
 {% else %}
-{% assign logo_width = "150" %}
+	{% assign logo_width = "150" %}
 {% endif %}
 
-{% assign i = "header" %}
+{% assign c = "c-header" %}
+ 
+<div class="{{c}} 
+			fixed-top">
+	<div class="navbar 
+				{{c}}__navbar 
+				navbar-expand-lg 
+				mainmenu">
+		<div class="container">
+			{% if menu_settings.logo-favicon-settings.logo_image and menu_settings.logo-favicon-settings.logo_image != "" %}
+				<a class="navbar-brand 
+						  {{c}}__navbar-brand" 
+				   href="/">
+				   <img src="{{ menu_settings.logo-favicon-settings.logo_image }}" 
+				   		alt="logo" 
+				   		width="{{ logo_width }}px" 
+				   		class="img-fluid">
+				</a>
+			{% endif %}
 
+			{% if menu_settings.header-settings.header-widget %}
+				<div class="{{c}}__header-widget 
+							order-lg-2 
+							d-none 
+							d-md-block">
+					{% if menu_settings.header-settings.login_url and menu_settings.header-settings.login_url != "" %}
+						<a class="btn 
+								  btn-link 
+								  {{c}}__login" 
+						   href="{{ menu_settings.header-settings.login_url }}">Login</a>
+					{% endif %}
+					{% if menu_settings.header-settings.signup_url and menu_settings.header-settings.signup_url != "" %}
+						<a class="btn 
+								  {{c}}__sign-up" 
+						   href="{{ menu_settings.header-settings.signup_url }}">Sign up</a>
+					{% endif %}
+				</div>
+			{% endif %}
 
-<!-- header section starts -->
-<!-- header one with logo left menu right optional dropdown and mega menu -->
-<div class="{{i}} fixed-top">
-  <div class="navbar {{i}}__navbar navbar-expand-lg mainmenu">
-    <div class="container">
-    <!-- logo for your website -->
-    {% if menu_settings.logo-favicon-settings.logo_image and menu_settings.logo-favicon-settings.logo_image != "" %}
-    <a class="navbar-brand {{i}}__navbar-brand" href="/"><img src="{{ menu_settings.logo-favicon-settings.logo_image }}" alt="logo" width="{{ logo_width }}px" class="img-fluid"></a>
-    {% endif %}
-    {% if menu_settings.header-settings.header-widget %}
-    <div class="{{i}}__header-widget order-lg-2 d-none d-md-block">
-      {% if menu_settings.header-settings.login_url and menu_settings.header-settings.login_url != "" %}
-      <!-- login link -->
-      <a class="btn btn-link {{i}}__header-widget_header-login" href="{{ menu_settings.header-settings.login_url }}">Login</a>
-      {% endif %}
-      {% if menu_settings.header-settings.signup_url and menu_settings.header-settings.signup_url != "" %}
-      <!-- signup link -->
-      <a class="btn {{i}}__header-widget_header-sign-up" href="{{ menu_settings.header-settings.signup_url }}">Sign up</a>
-      {% endif %}
-    </div>
-    {% endif %}
-    <!-- navbar toggler icon -->
-    <button onclick="navbartoggle(this)" class="{{i}}__navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span>
-        <div class="{{i}}__navbar-toggler_bar1"></div>
-        <div class="{{i}}__navbar-toggler_bar2"></div>
-        <div class="{{i}}__navbar-toggler_bar3"></div>
-      </span>
-    </button>
-    <!-- header main menu starts -->
-    <nav class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-      <ul class="navbar-nav {{i}}__navbar-nav">
-        {% for level1 in menu_settings.menu %}
-        {% if level1.option %}
-        <li class="dropdown">
-          <a class="nav-link {{i}}__navbar-nav_nav-link dropdown-toggle {% if page.path == "index.html" and level1.url == "/" %}active{% endif %} {% if level1.url == page.permalink %}active{% endif %}" data-toggle="dropdown" href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
-          <ul class="dropdown-menu">
-            {% for level2 in level1.option %}
-            {% if level2.option %}
-            <!-- dropdown menu  -->
-            <li class="dropdown">
-              <a href="{{ site.data.general.site_info.url }}{{ level2.url }}" class="dropdown-toggle" data-toggle="dropdown" >{{ level2.title }}</a>
-              <ul class="dropdown-menu">
-                {% for level3 in level2.option %}
-                <!-- subdropdown menu -->
-                <li><a href="{{ site.data.general.site_info.url }}{{ level3.url }}">{{ level3.title }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-            {% else %}
-            <li>
-              <a href="{{ site.data.general.site_info.url }}{{ level2.url }}">{{ level2.title }}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </li>
-        {% elsif level1.megamenu %}
-        <li class="d-none d-lg-block">
-          <a class="nav-link {{i}}__navbar-nav_nav-link" href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
-          <!-- header megamenu -->
-          {% include do-mega-menu.html %}
-        </li>
-        <li class="d-lg-none">
-          <a style="position:absolute; right:0;" class="nav-link {{i}}__navbar-nav_nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
-          <a class="nav-link {{i}}__navbar-nav_nav-link" href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
-          <!-- header megamenu -->
-          {% include do-mega-menu.html %}
-        </li>
-        {% else %}
-        <li>
-          <a class="nav-link {{i}}__navbar-nav_nav-link {% if page.path == "index.html" and level1.url == "/" %}active{% endif %} {% if level1.url == page.permalink %}active{% endif %}" href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-      {% if menu_settings.header-settings.header-widget %}
-      <div class="ml-3 d-md-none d-lg-none {{i}}__responsive-widget">
-        {% if menu_settings.header-settings.login_url and menu_settings.header-settings.login_url != "" %}
-        <!-- login link -->
-        <a class="btn {{i}}__responsive-widget_header-login" href="{{ menu_settings.header-settings.login_url }}">Login</a>
-        {% endif %}
-        <br>
-        {% if menu_settings.header-settings.signup_url and menu_settings.header-settings.signup_url != "" %}
-        <!-- signup link -->
-        <a class="btn header-sign-up {{i}}__responsive-widget_secondary-signup" href="{{ menu_settings.header-settings.signup_url }}">Sign up</a>
-        {% endif %}
-      </div>
-      {% endif %}
-    </nav>
-    <!-- main menu ends -->
-    </div>
-  </div>
+			<!-- navbar toggler icon -->
+			<button onclick="navbartoggle(this)" 
+					class="{{c}}__mobile-nav-button 
+						  navbar-toggler" 
+					type="button" 
+					data-toggle="collapse" 
+					data-target="#navbarNavDropdown" 
+					aria-controls="navbarNavDropdown" 
+					aria-expanded="false" 
+					aria-label="Toggle navigation">
+				<span>
+					<div class="{{c}}__toggle-bar1"></div>
+					<div class="{{c}}__toggle-bar2"></div>
+					<div class="{{c}}__toggle-bar3"></div>
+				</span>
+			</button>
+
+			<!-- Main navigation -->
+			<nav class="collapse 
+						navbar-collapse 
+						justify-content-center" 
+				 id="navbarNavDropdown">
+				<ul class="navbar-nav 
+						   {{c}}__navbar-nav">
+					{% for level1 in menu_settings.menu %}
+						{% if level1.option %}
+							<li class="dropdown">
+								<a class="nav-link 
+										  {{c}}__nav-link 
+										  dropdown-toggle 
+										  {% if page.path == "index.html" and level1.url == "/" %}active{% endif %} 
+										  {% if level1.url == page.permalink %}active{% endif %}" 
+								   data-toggle="dropdown" 
+								   href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
+								<ul class="dropdown-menu">
+									{% for level2 in level1.option %}
+										{% if level2.option %}
+											<!-- 1st level dropdown menu  -->
+											<li class="dropdown">
+												<a class="dropdown-toggle"
+												   href="{{ site.data.general.site_info.url }}{{ level2.url }}" 
+												   data-toggle="dropdown">{{ level2.title }}</a>
+												<ul class="dropdown-menu">
+													{% for level3 in level2.option %}
+														<!-- 2nd level drop-down menu -->
+														<li>
+															<a href="{{ site.data.general.site_info.url }}{{ level3.url }}">{{ level3.title }}</a>
+														</li>
+													{% endfor %}
+												</ul>
+											</li>
+										{% else %}
+											<li>
+												<a href="{{ site.data.general.site_info.url }}{{ level2.url }}">{{ level2.title }}</a>
+											</li>
+										{% endif %}
+									{% endfor %}
+								</ul>
+							</li>
+						{% else %}
+							<li>
+								<a class="nav-link 
+										  {{c}}__nav-link 
+										  {% if page.path == "index.html" and level1.url == "/" %}active{% endif %} 
+										  {% if level1.url == page.permalink %}active{% endif %}" 
+								   href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+				{% if menu_settings.header-settings.header-widget %}
+					<div class="ml-3 
+								d-md-none 
+								d-lg-none">
+						{% if menu_settings.header-settings.login_url and menu_settings.header-settings.login_url != "" %}
+							<!-- login link -->
+							<a class="btn 
+									  {{c}}__header-login" 
+							   href="{{ menu_settings.header-settings.login_url }}">Login</a>
+						{% endif %}
+						<br>
+						{% if menu_settings.header-settings.signup_url and menu_settings.header-settings.signup_url != "" %}
+							<!-- signup link -->
+							<a class="btn 
+									  header-sign-up 
+									  {{c}}__secondary-signup" 
+							   href="{{ menu_settings.header-settings.signup_url }}">Sign up</a>
+						{% endif %}
+					</div>
+				{% endif %}
+			</nav>
+		</div>
+	</div>
 </div>
 
-<div class="{{i}}__header-height"></div>
+<div class="{{c}}__header-height"></div>
 <!-- header section ends -->

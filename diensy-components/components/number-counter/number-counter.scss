@@ -1,73 +1,70 @@
-.number-counter {
-  background-color: rgba(110, 146, 255, 0.1);
-  color: #2d3663;
-  padding-top: 80px;
-  padding-bottom: 80px;
+.c-number-counter {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: rgba(110, 146, 255, 0.1);
+	color: #2d3663;
 
-  &__caption-title {
-    h4 {
-      position: relative;
-      font-weight: 400;
-      color: var(--theme-secondary-color);
-      letter-spacing: 5px;
-      text-transform: uppercase;
+	&__caption-title {
+		h4 {
+			position: relative;
+			font-weight: 400;
+			color: var(--theme-secondary-color);
+			letter-spacing: 5px;
+			text-transform: uppercase;
 
-      &:after {
-        content: "";
-        background-color: #6e92ff;
-        height: 1px;
-        position: absolute;
-        top: 50%;
-        width: 30px;
-      }
+			&:after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				width: 30px;
+				height: 1px;
+				background-color: #6e92ff;
+			}
 
-      &:before {
-        content: "";
-        background-color: #6e92ff;
-        height: 1px;
-        position: absolute;
-        top: 50%;
-        width: 30px;
-      }
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				width: 30px;
+				height: 1px;
+				background-color: #6e92ff;
+			}
 
-      span {
-        padding-left: 50px;
-      }
-    }
-  }
+			span {
+				padding-left: 50px;
+			}
+		}
+	}
 
-  &__title {
-    h2 {
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-}
+	&__title {
+		h2 {
+			margin-bottom: 30px;
+			font-weight: bold;
+		}
+	}
 
-  &__number-counter-block {
-      justify-content: center;
-  }
+	&__grid-items {
+			justify-content: center;
+	}
 
-  &__number-counter-column {
-      margin-bottom: 35px;
+	&__counter-item {
+		margin-bottom: 35px;
+	}
 
-      &_counter-count {
-        font-weight: bold;
-        letter-spacing: 0.005em;
-      }
+	&__item-count {
+		font-weight: bold;
+		letter-spacing: 0.005em;
+	}
 
-      &_title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 180%;
-      }
+	&__item-title {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 180%;
+	}
 
-      &_description {
-        font-size: 18px;
-        line-height: 180%;
-        opacity: 0.8;
-      }
-
-  }
-
-
+	&__item-description {
+		font-size: 18px;
+		line-height: 180%;
+		opacity: 0.8;
+	}
 }

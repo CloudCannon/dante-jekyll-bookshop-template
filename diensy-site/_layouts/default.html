@@ -1,20 +1,18 @@
-<!-- head -->
-{% include head.html %}
-<!-- header -->
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	{% include header.html %}
 
-<!-- body section starts -->
-<body class="{{page.title}}">
-  <!-- content -->
+	<body class="{{page.title}}">
 
-  <!-- bookshop data starts -->
-  <div data-bookshop-live="page" data-bookshop-props="page">
-    {% bookshop page content_blocks=page.content_blocks %}
-  </div>
+		<!-- bookshop data starts -->
+		<div data-bookshop-live="page" data-bookshop-props="page">
+			{% bookshop page content_blocks=page.content_blocks %}
+		</div>
 
-  {{ content }}
+		{{ content }}
 
-  <!-- footer -->
-  {% include footer.html %}
-  <!-- footer-script -->
-  {% include footer-script.html %}
+		{% include footer.html %}
+		{% include footer-script.html %}
+	</body>
+</html>
