@@ -11,8 +11,5 @@ email = ""  #: Enter the contact Email address
 phone = ""  #: Enter the contact phone number
 map-iframe = ""  #: Enter the google iframe src
 
-contact_layout.select = ["map_left", "map_right"]  #: Select the contact layout for the map.
-contact_layout.default = "map_right"  #: Default contact layout for the map.
-
-contact_mobile_map_position.select = ["bottom", "top"]  #: Select the mobile order for map
-contact_mobile_map_position.default = "bottom"  #: Default mobile order for map
+layout.select = ["map_left", "map_right"]  #: Select the contact layout for the map.
+layout.default = "map_right"  #: Default contact layout for the map.

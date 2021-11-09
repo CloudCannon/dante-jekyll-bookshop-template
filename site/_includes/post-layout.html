@@ -55,8 +55,8 @@
 
 					{% if include.post_settings.author_details %}
 						{% if page.author %}
-							{% for team in site.team %}
-								{% if team.title == page.author %}
+							{% for person in site.staff_members %}
+								{% if person.title == page.author %}
 									<div class="{{l}}__author-details 
 												{% if post_layout == "full-width" %}
 													{% if include.post_settings.author_details and include.post_settings.social_share %}
@@ -68,7 +68,7 @@
 												<div class="{{l}}__author-image-wrapper">
 													<div class="{{l}}__author-image-frame">
 														<div class="{{l}}__author-image" 
-															 style="background-image: url('{{ team.image }}"></div>
+															 style="background-image: url('{{ person.image }}"></div>
 													</div>
 												</div>
 											</div>
@@ -76,8 +76,8 @@
 											<div class="col-md-8">
 												<div class="{{l}}__author-detail">
 													<h6>Written by:</h6>
-													<h4>{{ team.title }}</h4>
-													<p>{{ team.content }}</p>
+													<h4>{{ person.title }}</h4>
+													<p>{{ person.content }}</p>
 												</div>
 											</div>
 										</div>

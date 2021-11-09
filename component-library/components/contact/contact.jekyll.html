@@ -1,22 +1,15 @@
-{% if include.contact_layout == "map_right" %}
+{% if include.layout == "map_right" %}
 	{% assign contact_form_order = "order-md-1" %}
 	{% assign contact_map_order = "order-md-2" %}
 {% endif %}
 
-{% if include.contact_layout == "map_left" %}
+{% if include.layout == "map_left" %}
 	{% assign contact_form_order = "order-md-2" %}
 	{% assign contact_map_order = "order-md-1" %}
 {% endif %}
 
-{% if include.contact_mobile_map_position == "bottom" %}
-	{% assign contact_mobile_form_order = "order-1" %}
-	{% assign contact_mobile_map_order = "order-2" %}
-{% endif %}
-
-{% if include.contact_mobile_map_position == "top" %}
-	{% assign contact_mobile_form_order = "order-2" %}
-	{% assign contact_mobile_map_order = "order-1" %}
-{% endif %}
+{% assign contact_mobile_form_order = "order-2" %}
+{% assign contact_mobile_map_order = "order-1" %}
 
 {% assign c = "c-contact" %}
 

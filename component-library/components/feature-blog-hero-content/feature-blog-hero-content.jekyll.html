@@ -1,45 +1,45 @@
 <!-- feature blog version 1.0.0 -->
-{% if include.feature_blog_layout == "image_right" %}
+{% if include.layout == "image_right" %}
 {% assign content_order = "order-lg-1" %}
 {% assign image_order = "order-lg-2" %}
 {% endif %}
 
-{% if include.feature_blog_layout == "image_left" %}
+{% if include.layout == "image_left" %}
 {% assign content_order = "order-lg-2" %}
 {% assign image_order = "order-lg-1" %}
 {% endif %}
 
-{% if include.feature_blog_mobile_image_order == "bottom" %}
+{% if include.mobile_image_order == "bottom" %}
 {% assign mobile_content_order = "order-1" %}
 {% assign mobile_image_order = "order-2" %}
 {% endif %}
 
-{% if include.feature_blog_mobile_image_order == "top" %}
+{% if include.mobile_image_order == "top" %}
 {% assign mobile_content_order = "order-2" %}
 {% assign mobile_image_order = "order-1" %}
 {% endif %}
 
-{% if include.feature_blog_mobile_image_order == null and include.feature_blog_layout == "image-left" %}
+{% if include.mobile_image_order == null and include.layout == "image-left" %}
 {% assign content_order = "order-2" %}
 {% assign image_order = "order-1" %}
 {% endif %}
 
-{% if include.feature_blog_vertical_alignment == "top" %}
+{% if include.vertical_alignment == "top" %}
 {% assign vertical_alignment = "align-self-start" %}
 {% endif %}
 
-{% if include.feature_blog_vertical_alignment == "center" %}
+{% if include.vertical_alignment == "center" %}
 {% assign vertical_alignment = "align-self-center" %}
 {% endif %}
 
-{% if include.feature_blog_vertical_alignment == "bottom" %}
+{% if include.vertical_alignment == "bottom" %}
 {% assign vertical_alignment = "align-self-end" %}
 {% endif %}
 
 {% assign c = "c-featured-blog-post" %}
 
 <section class="{{c}}">
-	<div class="{% if include.feature_blog_type == "widewidth" %}
+	<div class="{% if include.component_width == "normal" %}
 					container
 				{% else %}
 					container-fluid
@@ -55,40 +55,30 @@
 							{{ mobile_content_order }} 
 							{{ vertical_alignment }} 
 							{{c}}__content-column">
-					{% if include.feature_blog_title %}
+					{% if include.display_title %}
 						<div class="{{c}}__feature-blog-title">
-							{% if include.feature_blog_title_url %}
-								<a href="{{ post.permalink }}">
-									<h2>{{ post.title }}</h2>
-								</a>
-							{% else %}
+							<a href="{{ post.permalink }}">
 								<h2>{{ post.title }}</h2>
-							{% endif %}
+							</a>
 						</div>
 					{% endif %}
 
-					{% if include.feature_blog_description %}
+					{% if include.display_description %}
 						<div class="{{c}}__feature-blog-description">
 							<p>{{ post.excerpt }}</p>
 						</div>
 					{% endif %}
 
 					<div class="{{c}}__button">
-						{% if include.feature_blog_icon_button %}
-							<div class="{{c}}__button-icon">
-								<a href="{{ post.permalink }}" class="btn" role="button">
-									{% if include.feature_blog_icon_button_name and include.feature_blog_icon_button_name != "" %}
-										{{ include.feature_blog_icon_button_name }} <i class="fas fa-long-arrow-alt-right"></i>
-									{% else %}
-										Read article <i class="fas fa-long-arrow-alt-right"></i>
-									{% endif %}
-								</a>
-							</div>
-						{% endif %}
+						<div class="{{c}}__button-icon">
+							<a href="{{ post.permalink }}" class="btn" role="button">
+								Read article <i class="fas fa-long-arrow-alt-right"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 
-				{% if include.feature_blog_image %}
+				{% if include.display_image %}
 					<div class="col-lg-6 
 								col-md-12 
 								{{ image_order }} 
@@ -96,13 +86,9 @@
 								{{ vertical_alignment }} 
 								{{c}}__post-image 
 								{{c}}__content-column">
-						{% if include.feature_blog_image_url %}
-							<a href="{{ post.permalink }}">
-								<img class="img-fluid" src="{{ post.image }}" alt="{{ post.title }}" />
-							</a>
-						{% else %}
+						<a href="{{ post.permalink }}">
 							<img class="img-fluid" src="{{ post.image }}" alt="{{ post.title }}" />
-						{% endif %}
+						</a>
 					</div>
 				{% endif %}
 			{% endfor %}

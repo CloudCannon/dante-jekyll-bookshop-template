@@ -8,38 +8,38 @@
 {% assign hero_image_order = "order-lg-1" %}
 {% endif %}
 
-{% if include.hero_mobile_image_order == "bottom" %}
+{% if include.mobile_image_order == "bottom" %}
 {% assign hero_mobile_content_order = "order-1" %}
-{% assign hero_mobile_image_order = "order-2" %}
+{% assign mobile_image_order = "order-2" %}
 {% endif %}
 
-{% if include.hero_mobile_image_order == "top" %}
+{% if include.mobile_image_order == "top" %}
 {% assign hero_mobile_content_order = "order-2" %}
-{% assign hero_mobile_image_order = "order-1" %}
+{% assign mobile_image_order = "order-1" %}
 {% endif %}
 
-{% if include.hero_mobile_image_order == null and include.hero_layout == "image-left" %}
+{% if include.mobile_image_order == null and include.hero_layout == "image-left" %}
 {% assign hero_content_order = "order-2" %}
 {% assign hero_image_order = "order-1" %}
 {% endif %}
 
-{% if include.hero_vertical_alignment == "top" %}
-{% assign hero_vertical_alignment = "align-self-start" %}
+{% if include.vertical_alignment == "top" %}
+{% assign vertical_alignment = "align-self-start" %}
 {% endif %}
 
-{% if include.hero_vertical_alignment == "center" %}
-{% assign hero_vertical_alignment = "align-self-center" %}
+{% if include.vertical_alignment == "center" %}
+{% assign vertical_alignment = "align-self-center" %}
 {% endif %}
 
-{% if include.hero_vertical_alignment == "bottom" %}
-{% assign hero_vertical_alignment = "align-self-end" %}
+{% if include.vertical_alignment == "bottom" %}
+{% assign vertical_alignment = "align-self-end" %}
 {% endif %}
 
 {% assign c = "c-hero-content" %}
 
 <section class="{{c}} {{c}}-{{ forloop.index }}">
 
-	<div class="{% if include.hero_content_section_type == "widewidth" %}
+	<div class="{% if include.component_width == "normal" %}
 					container
 				{% else %}
 					container-fluid
@@ -50,44 +50,44 @@
 						col-md-12 
 						{{ hero_content_order }} 
 						{{ hero_mobile_content_order }} 
-						{{ hero_vertical_alignment }} 
+						{{ vertical_alignment }} 
 						{{c}}__column 
 						{{c}}__content">
-				{% if include.hero_caption_title and include.hero_caption_title != "" %}
+				{% if include.caption_title and include.caption_title != "" %}
 					<div class="{{c}}__caption">
 						<h4>
-							<span class="pr-3">{{ include.hero_caption_title }}</span>
+							<span class="pr-3">{{ include.caption_title }}</span>
 						</h4>
 					</div>
 				{% endif %}
 
-				{% if include.hero_title and include.hero_title != "" %}
+				{% if include.title and include.title != "" %}
 					<div class="{{c}}__title">
-						<h1>{{ include.hero_title }}</h1>
+						<h1>{{ include.title }}</h1>
 					</div>
 				{% endif %}
 
-				{% if include.hero_description_html and include.hero_description_html != "" %}
+				{% if include.description_html and include.description_html != "" %}
 					<div class="{{c}}__description">
-						<p>{{ include.hero_description_html }}</p>
+						<p>{{ include.description_html }}</p>
 					</div>
 				{% endif %}
 
-				{% if include.hero_button_name or include.hero_icon_button_name %}
+				{% if include.cta_button_label or include.secondary_button_label %}
 					<div class="{{c}}__button-wrapper">
-						{% if include.hero_button_name and include.hero_button_name != "" %}
+						{% if include.cta_button_label and include.cta_button_label != "" %}
 						<div class="{{c}}__button">
 							<a class="btn" 
-							   href="{{ include.hero_button_url }}" 
-							   role="button">{{ include.hero_button_name }}</a>
+							   href="{{ include.cta_button_url }}" 
+							   role="button">{{ include.cta_button_label }}</a>
 						</div>
 						{% endif %}
 
-						{% if include.hero_icon_button_name and include.hero_icon_button_name != "" %}
+						{% if include.secondary_button_label and include.secondary_button_label != "" %}
 							<div class="{{c}}__button-icon">
 								<a class="btn" 
-								   href="{{ include.hero_icon_button_url }}"
-								   role="button">{{ include.hero_icon_button_name }} <i class="fas fa-long-arrow-alt-right"></i>
+								   href="{{ include.secondary_button_url }}"
+								   role="button">{{ include.secondary_button_label }} <i class="fas fa-long-arrow-alt-right"></i>
 								</a>
 							</div>
 						{% endif %}
@@ -98,14 +98,14 @@
 			<div class="col-lg-6 
 						col-md-12 
 						{{ hero_image_order }} 
-						{{ hero_mobile_image_order }} 
-						{{ hero_vertical_alignment }} 
+						{{ mobile_image_order }} 
+						{{ vertical_alignment }} 
 						{{c}}__image 
 						{{c}}__column">
-				{% if include.hero_image != "" %}
+				{% if include.image != "" %}
 					<img class="img-fluid" 
-						 src="{{ include.hero_image }}" 
-						 alt="{{ include.hero_image_alt }}" />
+						 src="{{ include.image }}" 
+						 alt="{{ include.image_alt }}" />
 				{% endif %}
 			</div>
 		</div>

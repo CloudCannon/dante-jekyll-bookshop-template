@@ -55,22 +55,22 @@
 		<div class="{{ c }}__team-members">
 			<div class="row 
 						mb-5">
-				{% for team in site.team limit: include.people_to_display_number %}
+				{% for person in site.staff_members limit: include.people_to_display_number %}
 					<div class="{{ team_list_column }}">
 						<div class="{{ c }}__team-member">
 							<div class="{{ c }}__image-wrapper">
-								<a href="{{ team.url }}">
+								<a href="{{ person.url }}">
 									<div class="{{ c }}__image" 
-										 style="background-image: url('{{ team.image }}');"></div>
+										 style="background-image: url('{{ person.image }}');"></div>
 								</a>
 							</div>
 							<div class="{{ c }}__info-block">
-								<a href="{{ team.url }}">
-									<h5 class="{{ c }}__name">{{ team.title }}</h5>
+								<a href="{{ person.url }}">
+									<h5 class="{{ c }}__name">{{ person.title }}</h5>
 								</a>
-								<p class="{{ c }}__designation">{{ team.designation }}</p>
+								<p class="{{ c }}__designation">{{ person.designation }}</p>
 								<div class="{{ c }}__social-links">
-									{% for social-media in team.social-media %}
+									{% for social-media in person.social-media %}
 										{% if social-media.facebook %}
 											<a href="{{ social-media.facebook }}">
 												<img class="share-icons" 

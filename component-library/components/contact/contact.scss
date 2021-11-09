@@ -58,6 +58,7 @@
 	}
 
 	&__map-wrapper {
+
 		@media screen and (min-width: 1440px){
 			#{$c}__map-embed {
 				height: 60vh;
@@ -70,7 +71,7 @@
 				width: 100vw;
 				border-top-left-radius: 0;
 				border-bottom-left-radius: 0;
-				height: 100vh;
+				height: 60vh;
 			}
 		}
 
@@ -145,6 +146,7 @@
 		padding: 0px;
 		width: 45vw;
 		height: 60vh;
+		max-height: 625px;
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 30px;
 		background-color: #f7f7f7;

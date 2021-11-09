@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bglw/bookshop-example.git"
+    "url": "git+https://github.com/CloudCannon/dante-jekyll-bookshop-template.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bglw/bookshop-example/issues"
+    "url": "https://github.com/CloudCannon/dante-jekyll-bookshop-template/issues"
   },
-  "homepage": "https://github.com/bglw/bookshop-example#readme",
+  "homepage": "https://github.com/CloudCannon/dante-jekyll-bookshop-template#readme",
   "devDependencies": {
     "@bookshop/browser": "^2.0.0-beta.8",
     "@bookshop/jekyll-engine": "^2.0.0-beta.8",

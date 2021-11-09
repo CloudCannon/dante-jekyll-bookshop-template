@@ -54,18 +54,18 @@ defaults:
       layout: portfolio
   -
     scope:
-      type: team
+      type: staff_members
       path: _team
     values:
       layout: team-member
 
 collections:
-  team:
-    name: 'Teams'
+  staff_members:
+    name: 'Staff Members'
     _icon: 'groups'
     _singular_name: 'Team'
     output: true
-    permalink: /team/:slug/
+    permalink: /staff_members/:slug/
   posts:
     name: 'Posts'
     _icon: 'description'

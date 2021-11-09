@@ -4,7 +4,6 @@ _site
 .jekyll-metadata
 vendor
 node_modules
-bookshop
 bookshop-dev.js
 assets/js/site.js
 __BOOKSHOP_VENDOR__
