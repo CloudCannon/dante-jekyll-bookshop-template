@@ -1,0 +1,14 @@
+show_login_options: true
+login_url: "#"
+signup_url: "#"
+menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Portfolio
+    url: /portfolio/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/

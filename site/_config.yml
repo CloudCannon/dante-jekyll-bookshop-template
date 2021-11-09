@@ -1,0 +1,157 @@
+
+# Timezone
+timezone: Pacific/Auckland  # Set the time zone for site generation.
+
+# Pagination Settings
+pagination:
+  per_page: 6             # maximum number of items per page
+  limit: false          # Maximum number of pages to paginate (false for unlimited)
+  permalink: /page:num/     # pagination path (relative to template page)
+  title_suffix: " - page :num" # Append to template's page title
+
+plugins:
+  - jekyll-bookshop
+  - cloudcannon-jekyll-bookshop
+  - jekyll-postcss-v2
+  - jekyll-local-assign
+  - jekyll-pagebreak
+
+# Multiple bookshops can be used on one website,
+# or different production / staging locations.
+bookshop_locations:
+  - ../component-library
+
+exclude:
+  - postcss.config.js
+  - node_modules
+
+include:
+  - _cloudcannon
+
+# The rest of this array structure will be
+# populated by the bookshop-array-structures plugin.
+_array_structures:
+  content_blocks:
+    style: modal
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      layout: post
+  -
+    scope:
+      type: portfolio
+      path: _portfolio
+    values:
+      layout: portfolio
+  -
+    scope:
+      type: team
+      path: _team
+    values:
+      layout: team-member
+
+collections:
+  team:
+    name: 'Teams'
+    _icon: 'groups'
+    _singular_name: 'Team'
+    output: true
+    permalink: /team/:slug/
+  posts:
+    name: 'Posts'
+    _icon: 'description'
+    _singular_name: 'Post'
+    output: true
+    permalink: /blog/:slug/
+  portfolio:
+    name: 'Portfolio'
+    _icon: 'work_outline'
+    _singular_name: 'Portfolio'
+    output: true
+    permalink: /portfolio/:slug/
+
+# portfolio tags
+portfolio-tags:
+  - portfolio_name: 'Web Development'
+    portfolio-tag: 'web-development'
+  - portfolio_name: 'Mobile Development'
+    portfolio-tag: 'mobile-development'
+  - portfolio_name: 'Digital product design'
+    portfolio-tag: 'digital-product-design'
+  - portfolio_name: 'Cloud &amp; DevOps'
+    portfolio-tag: 'cloud-and-devops'
+
+# Build Settings
+markdown: kramdown
+
+kramdown:
+  coderay_default_lang: html
+
+# SASS Settings
+sass:
+  style: compressed
+
+gems:
+  - octopress-paginate
+
+_select_data:
+  columns_for_laptops:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 6
+  columns_for_tablets:
+    - 1
+    - 2
+    - 3
+    - 4
+  columns_for_mobiles:
+    - 1
+    - 2
+
+  portfolio_layouts:
+    - left-sidebar
+    - right-sidebar
+    - full-width
+
+  post_layouts:
+    - left-sidebar
+    - right-sidebar
+    - full-width
+
+
+
+
+_comments:
+  # Used in footer and menu yml files
+  url: Enter the page url
+  title: Enter the page title
+
+  # Used in menu yml files
+  logo_image: Use logo icon here
+  logo_width: Enter logo width (default 150px)
+  favicon_image: Use favicon here
+  login_url: Enter login link in menu
+  signup_url: Enter signup link in menu
+
+  # Used in footer yml files
+  columns_for_laptop: Default value is 3
+  columns_for_tablet: Default value is 2
+  columns_for_mobile: Default value is 1
+
+  # Used in general yml files
+  site_title: Enter the website title
+  description: Enter the site description
+  permalink: Page URL in slug format
+  website_url: Enter live website domain
+  font-style_url: Enter a google font url.

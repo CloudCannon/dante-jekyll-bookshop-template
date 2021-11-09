@@ -1,0 +1,32 @@
+{% assign post_social_share = site.data.general.post_settings.social_share %}
+{% assign portfolio_social_share = site.data.general.portfolio_settings.social_share %}
+{% assign c = "social-share-section" %}
+{% if portfolio_social_share or post_social_share %}
+	<div class="{{c}}">
+		<h6>Share article:</h6>
+		<div class="{{c}}__social-share">
+			<!-- linkedin share button -->
+			<span>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.data.general.site_info.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.data.general.site_info.website_title }}" target="_blank">
+					<i class="fab 
+							  fa-linkedin-in 
+							  social-icon"></i>
+					</a>
+			</span>
+			<!-- twitter share button -->
+			<span>
+				<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.data.general.site_info.url }}{{ site.baseurl }}{{ page.url }}" target="_blank">
+					<i class="fab 
+							  fa-twitter 
+							  social-icon"></i>
+				</a>
+			</span>
+			<!-- instagram share button -->
+			<span>
+				<a href="#">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</span>
+		</div>
+	</div>
+{% endif %}

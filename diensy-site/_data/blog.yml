@@ -1,8 +1,0 @@
-post_settings:
-  layout: left-sidebar
-  author_details: true
-  social_share: true
-portfolio_settings:
-  layout: full-width
-  author_details: true
-  social_share: true

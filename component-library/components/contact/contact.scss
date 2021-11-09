@@ -1,0 +1,152 @@
+.c-contact { $c: &;
+	padding: 50px 0;
+	overflow: hidden;
+	position: relative;
+
+	@media screen and (max-width: 767px){
+		position: relative;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	&__location-popout {
+		position: relative;
+		z-index: 10001;
+
+		@media screen and (max-width: 767px){
+			margin-bottom: 50px;
+			padding: 0;
+		}
+	}
+
+	&__location-popout-details {
+		background-color: #fff;
+		border-radius: 15px;
+		padding: 34px 30px;
+		position: absolute;
+		bottom: 15%;
+		left: 30px;
+		margin-right: 15px;
+
+		@media screen and (max-width: 767px){
+			bottom: 125px;
+			z-index: 1001;
+		}
+	}
+
+	&__popout-heading {
+		margin-bottom: 8px;
+
+		p {
+			color: var(--theme-secondary-color);
+			margin-bottom: 0;
+			font-size: 10px;
+			line-height: 180%;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+		}
+	}
+
+	&__popout-detail {
+		p {
+			color: var(--theme-primary-color);
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 120%;
+			letter-spacing: 0.01em;
+		}
+	}
+
+	&__map-wrapper {
+		@media screen and (min-width: 1440px){
+			#{$c}__map-embed {
+				height: 60vh;
+			}
+		}
+
+		@media screen and (max-width: 767px){
+			#{$c}__map-embed {
+				position: relative;
+				width: 100vw;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				height: 100vh;
+			}
+		}
+
+		@media screen and (min-width: 768px){
+			#{$c}__map-embed.order-md-1 {
+				left: 0 !important;
+				border-top-right-radius: 30px !important;
+				border-bottom-right-radius: 30px !important;
+			}
+		}
+	}
+
+	&__contact-form {
+		margin-bottom: 50px;
+
+		label {
+			color: var(--theme-primary-color);
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 120%;
+			letter-spacing: 0.01em;
+		}
+
+		input {
+			height: 70px;
+		}
+
+		input, textarea {
+			background: rgba(218, 224, 233, 0.2);
+			border-radius: 10px;
+			border: 0;
+		}
+
+		input:focus, textarea:focus {
+			background: rgba(218,224,233,.2);
+		}
+	}
+
+	&__contact-form-firstname{
+		@media screen and (max-width: 576px){
+			margin-bottom: 16px;
+		}
+	}
+
+	&__submit-button {
+		padding: 24px 40px;
+		background-color: var(--theme-secondary-color);
+		color: #fff;
+		border-radius: 10px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 120%;
+		letter-spacing: 0.01em;
+		transition: .5s;
+
+		&:hover {
+			background-color: var(--theme-primary-color);
+			color: #fff;
+		}
+	}
+
+	&__success {
+		display: none;
+	}
+
+	&__map-embed {
+		display: block;
+		position: absolute;
+		z-index: 9;
+		top: 0;
+		right: 0;
+		padding: 0px;
+		width: 45vw;
+		height: 60vh;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+		background-color: #f7f7f7;
+	}
+}

@@ -1,0 +1,20 @@
+website_url: 
+website_title: Dante Jekyll Theme for Static Site Generators
+description: >-
+  A starter theme build on Jekyll and Bootsrap. This Jekyll theme includes
+  various modules and easily configurable setting to build your website on.
+  Download Jekyll Theme as Static Site Generator.
+site_icon_image: /assets/images/logo/siteicon.png
+logo_image: /assets/images/logo/dante-logo.svg
+permalink: /:title/
+fonts:
+  - font_style_url: >-
+      https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&family=Poppins:wght@100;400;600&display=swap
+post_settings:
+  layout: left-sidebar
+  author_details: true
+  social_share: true
+portfolio_settings:
+  layout: full-width
+  author_details: true
+  social_share: true

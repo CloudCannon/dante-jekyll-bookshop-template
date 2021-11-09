@@ -1,0 +1,122 @@
+{% assign footer_settings = site.data.footer %}
+{% assign columns_for_laptop = footer_settings.column_settings.columns_for_laptop %}
+{% if columns_for_laptop > "1" and columns_for_laptop <= "6"  %}
+{% else %}
+{% assign columns_for_laptop = 3 %}
+{% endif %}
+{% assign calculate_columns_for_laptop = 12 | divided_by: columns_for_laptop %}
+{% assign laptop_column_class = "col-lg-" | append: calculate_columns_for_laptop %}
+
+{% assign columns_for_tablet = footer_settings.column_settings.columns_for_tablet %}
+{% if columns_for_tablet > "1" and columns_for_tablet <= "4"  %}
+{% else %}
+{% assign columns_for_tablet = 2 %}
+{% endif %}
+{% assign calculate_columns_for_tablet = 12 | divided_by: columns_for_tablet %}
+{% assign tablet_column_class = "col-md-" | append: calculate_columns_for_tablet %}
+
+{% assign columns_for_mobile = footer_settings.column_settings.columns_for_mobile %}
+{% if columns_for_mobile > "0" and columns_for_mobile <= "2"  %}
+{% else %}
+{% assign columns_for_mobile = 1 %}
+{% endif %}
+{% assign calculate_columns_for_mobile = 12 | divided_by: columns_for_mobile %}
+{% assign mobile_column_class = "col-" | append: calculate_columns_for_mobile %}
+
+{% assign c = "c-footer" %}
+
+<footer class="{{c}}">
+	<div class="container">
+		{% if footer_settings.footer_info.footer_title %}
+			<h1 class="{{c}}__footer-title">{{ footer_settings.footer_info.footer_title }}</h1>
+		{% endif %}
+			<div class="row">
+				<div class="col-lg-4">
+						<div class="{{c}}__footer-column">
+							{% if footer_settings.footer_info.footer_logo_image %}
+								<div class="{{c}}__footer-logo">
+									<a href="/" 
+									   style="background-image: url('{{ footer_settings.footer_info.footer_logo_image }}')"></a>
+								</div>
+							{% endif %}
+							<div class="{{c}}__footer-content">
+								{% if footer_settings.footer_info.footer_content_html %}
+									<p>{{ footer_settings.footer_info.footer_content_html }}</p>
+								{% endif %}
+							</div>
+
+							{% if footer_settings.social_media_information.copyright_social_icon %}
+								<div class="{{c}}__copyright-social-icon">
+									<ul class="list-inline text-left">
+										{% if footer_settings.social_media_information.youtube_url %}
+											<!-- Youtube link -->
+											<li class="list-inline-item">
+												<a href="{{ footer_settings.social_media_information.youtube_url }}"><i class="fab fa-youtube"></i></a>
+											</li>
+										{% endif %}
+										{% if footer_settings.social_media_information.twitter_username %}
+											<!-- Twitter link -->
+											<li class="list-inline-item">
+												<a href="{{ footer_settings.social_media_information.twitter_username }}"><i class="fab fa-twitter"></i></a>
+											</li>
+										{% endif %}
+										{% if footer_settings.social_media_information.instagram_username %}
+											<!-- Instagram link -->
+											<li class="list-inline-item">
+												<a href="{{ footer_settings.social_media_information.instagram_username }}"><i class="fab fa-instagram"></i></a>
+											</li>
+										{% endif %}
+									</ul>
+								</div>
+							{% endif %}
+						</div>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row">
+						{% for column in footer_settings.footer_columns %}
+							<div class="{{ laptop_column_class }} {{ tablet_column_class }} {{ mobile_column_class }} {{c}}__footer-column">
+								{% if column.footer_column_title %}
+									<h4 class="{{c}}__footer-heading">{{ column.footer_column_title }}</h4>
+								{% endif %}
+								<ul class="list-unstyled">
+									{% for link in column.items %}
+										<li>
+											{% if link.icon_image == null %}
+												{% comment %} Sub-item without icon {% endcomment %}
+												{% if link.url == null %}
+													<p>{{ link.title }}</p>
+												{% else %}
+													<a href="{{ link.url }}">{{ link.title }}</a>
+												{% endif %}
+											{% else %}
+												{% comment %} Sub-item with icon {% endcomment %}
+												{% if link.url == null %}
+													<p><span>{{ link.icon_image }}</span><span>{{ link.title }}</span></p>
+												{% else %}
+													<a href="{{ link.url }}"><span class="mr-2">{{ link.icon_image }}</span> {{ link.title }}</a>
+												{% endif %}
+											{% endif %}
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+							{% if forloop.index == columns_for_laptop %}
+								{% break %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+
+			<div class="{{c}}__footer-copyright">
+				<div class="{{c}}__copyright-text">
+					{% if footer_settings.copyright_settings.copyright_content %}
+							{% if footer_settings.copyright_settings.copyright_text and footer_settings.copyright_settings.copyright_text != "" %}
+							<p>{{ footer_settings.copyright_settings.copyright_text }}</p>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+</footer>
