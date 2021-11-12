@@ -1,7 +1,7 @@
 {% if include.columns_to_display == '2' %}
 	{% assign columns = 6 %}
 	{% assign columns =  columns | prepend: "col-md-" %}
-{% elsif include.columns == '3' %}
+{% elsif include.columns_to_display == '3' %}
 	{% assign columns = 4 %}
 	{% assign columns =  columns | prepend: "col-md-" %}
 {% else %}

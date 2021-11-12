@@ -135,7 +135,6 @@ _select_data:
 _comments:
   # Used in footer and menu yml files
   url: Enter the page url
-  title: Enter the page title
 
   # Used in menu yml files
   logo_image: Use logo icon here
