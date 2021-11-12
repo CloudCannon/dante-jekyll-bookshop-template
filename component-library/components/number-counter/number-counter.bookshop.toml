@@ -10,7 +10,7 @@ alignment.select = ["left", "center", "right"]
 caption_title = "This is a caption title"
 main_title = "This is a main title"
 description_html = "This is a description"
-columns.select = ["2", "3", "4"]
+columns_to_display.select = ["2", "3", "4"]
 
 
 [[props.items]]

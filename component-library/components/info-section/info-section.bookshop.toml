@@ -9,7 +9,7 @@ tags = ["Text"]
 caption_title = "This is a caption title"
 main_title = "This is a main title"
 description_html = "This is a description"
-columns.select = ["2", "3", "4"]  #: Select the number of column for info section
+columns_to_display.select = ["2", "3", "4"]  #: Select the number of column for info section
 
 
 [[props.items]]

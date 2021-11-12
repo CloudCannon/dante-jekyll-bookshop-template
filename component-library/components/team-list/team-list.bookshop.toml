@@ -10,6 +10,6 @@ alignment.select = ["left", "center", "right"]  #: Select the alignment for team
 caption_title = ""
 main_title = ""
 description_html = ""
-columns.select = ["2", "3", "4"]
+columns_to_display.select = ["2", "3", "4"]
 people_to_display_number = 6
 show_button = true
