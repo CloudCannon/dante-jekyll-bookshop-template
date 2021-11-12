@@ -6,8 +6,8 @@ icon = "chrome_reader_mode"
 tags = ["Text"]
 
 [props]
-hero_layout.select = ["image_left", "image_right"]  #: Select the layout for the image. Note this will only work for hero image type contained option
-hero_layout.default = "image_right" #: Default layout for the image. Note this will only work for hero image type contained option
+layout.select = ["image_left", "image_right"]  #: Select the layout for the image. Note this will only work for hero image type contained option
+layout.default = "image_right" #: Default layout for the image. Note this will only work for hero image type contained option
 
 component_width.select = ["fullwidth", "normal"]  #: Select the type for the hero content section
 component_width.default = "normal"  #: Default type for the hero content section

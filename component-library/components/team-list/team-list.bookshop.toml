@@ -6,10 +6,10 @@ icon = "groups"
 tags = ["Data"]
 
 [props]
-team_list_alignment.select = ["left", "center", "right"]  #: Select the alignment for team list
-team_list_caption_title = ""
-team_list_title = ""
-team_list_description_html = ""
-number_of_columns.select = ["2", "3", "4"]
+alignment.select = ["left", "center", "right"]  #: Select the alignment for team list
+caption_title = ""
+main_title = ""
+description_html = ""
+columns.select = ["2", "3", "4"]
 people_to_display_number = 6
-team_list_button = true
+show_button = true

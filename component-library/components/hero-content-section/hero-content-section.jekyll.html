@@ -1,9 +1,9 @@
-{% if include.hero_layout == "image_right" %}
+{% if include.layout == "image_right" %}
 {% assign hero_content_order = "order-lg-1" %}
 {% assign hero_image_order = "order-lg-2" %}
 {% endif %}
 
-{% if include.hero_layout == "image_left" %}
+{% if include.layout == "image_left" %}
 {% assign hero_content_order = "order-lg-2" %}
 {% assign hero_image_order = "order-lg-1" %}
 {% endif %}
@@ -18,7 +18,7 @@
 {% assign mobile_image_order = "order-1" %}
 {% endif %}
 
-{% if include.mobile_image_order == null and include.hero_layout == "image-left" %}
+{% if include.mobile_image_order == null and include.layout == "image-left" %}
 {% assign hero_content_order = "order-2" %}
 {% assign hero_image_order = "order-1" %}
 {% endif %}

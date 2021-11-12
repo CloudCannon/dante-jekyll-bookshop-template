@@ -3,8 +3,8 @@
 <section class="{{c}}">
 	<div class="container">
 		<h2 class="{{c}}__title">
-			{% if include.latest_title and include.latest_title != "" %}
-				{{ include.latest_title }}
+			{% if include.title and include.title != "" %}
+				{{ include.title }}
 			{% else %}
 				Latest
 			{% endif %}
@@ -16,41 +16,25 @@
 				<div class="col-md-4">
 					<div class="{{c}}__blog-post">
 						<div class="{{c}}__image-wrapper">
-							{% if include.latest_post_image_url %}
-								<a href="{{ post.permalink }}">
-									<div class="{{c}}__post-image" 
-										 {% if include.latest_post_image %}
-										 	style="background-image: url('{{ post.image }}');"
-										 {% endif %}>
-									</div>
-								</a>
-							{% else %}
+							<a href="{{ post.permalink }}">
 								<div class="{{c}}__post-image" 
-									 {% if include.latest_post_image %}
-									 	style="background-image: url('{{ post.image }}');"
-									 {% endif %}>
+									 style="background-image: url('{{ post.image }}');">
 								</div>
-							{% endif %}
+							</a>
 						</div>
 
 						<div class="{{c}}__post-content">
-							{% if include.latest_post_tags %}
+							{% if include.show_post_tags %}
 								<p class="{{c}}__post-tags">{{ post.tags }}</p>
 							{% endif %}
 
-							{% if include.latest_post_title %}
-								<h6 class="latest-posts-title">
-									{% if include.latest_post_title_url %}
-										<a href="{{ post.permalink }}">
-											{{ post.title }}
-										</a>
-									{% else %}
-										{{ post.title }}
-									{% endif %}
-								</h6>
-							{% endif %}
+							<h6 class="latest-posts-title">
+								<a href="{{ post.permalink }}">
+									{{ post.title }}
+								</a>
+							</h6>
 
-							{% if include.latest_post_date %}
+							{% if include.show_post_date %}
 								<p class="{{c}}__post-date">{{ post.date | date_to_string }}</p>
 							{% endif %}
 						</div>

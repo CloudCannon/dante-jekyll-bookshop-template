@@ -1,11 +1,11 @@
-{% if include.testimonial-layout == "image_right" %}
-	{% assign testimonial_image_order = "order-2" %}
-	{% assign testimonial_content_order = "order-1" %}
+{% if include.layout == "image_right" %}
+	{% assign image_order = "order-2" %}
+	{% assign content_order = "order-1" %}
 {% endif %}
 
-{% if include.testimonial-layout == "image_left" %}
-	{% assign testimonial_image_order = "order-1" %}
-	{% assign testimonial_content_order = "order-2" %}
+{% if include.layout == "image_left" %}
+	{% assign image_order = "order-1" %}
+	{% assign content_order = "order-2" %}
 {% endif %}
 
 {% assign c = "c-testimonials" %}
@@ -13,21 +13,21 @@
 <div class="container 
 			{{c}}">
 	<div class="{{c}}__heading-wrapper">
-		{% if include.testimonial_caption_title and include.testimonial_caption_title != "" %}
+		{% if include.caption_title and include.caption_title != "" %}
 			<div class="{{c}}__caption-title">
 				<h4>
-					<span class="pr-3">{{ include.testimonial_caption_title }}</span>
+					<span class="pr-3">{{ include.caption_title }}</span>
 				</h4>
 			</div>
 		{% endif %}
 
-		{% if include.testimonial_main_title and include.testimonial_main_title != "" %}
+		{% if include.main_title and include.main_title != "" %}
 			<div class="{{c}}__title">
 				<div class="row 
 							justify-content-between">
 					<div class="col-md-6">
 						<h2>
-							{{ include.testimonial_main_title }}
+							{{ include.main_title }}
 						</h2>
 					</div>
 					<div class="col-md-6"></div>
@@ -39,41 +39,41 @@
 
 	<div class="row 
 				justify-content-between">
-		{% if include.testimonial_image and include.testimonial_image != "" %}
+		{% if include.image and include.image != "" %}
 			<div class="col-md-7 
-						{{ testimonial_image_order }} 
+						{{ image_order }} 
 						mb-4">
 				<div class="{{c}}__main-image" 
-					 style="background-image:url('{{ include.testimonial_image }}')">
+					 style="background-image:url('{{ include.image }}')">
 					<img class="img-fluid 
 								{{c}}__quote-image" 
 						 src="/assets/images/homepage/quote-img.png" 
-						 alt="{{ include.testimonial_image_alt }}" />
+						 alt="{{ include.image_alt }}" />
 				</div>
 			</div>
 		{% endif %}
 
 		<div class="col-md-4 
-					{{ testimonial_content_order }}">
+					{{ content_order }}">
 			<div class="{{c}}__content">
-				{% if include.testimonial_title and include.testimonial_title != "" %}
+				{% if include.content_heading and include.content_heading != "" %}
 					<div class="{{c}}__testimonial-heading">
-						<h2>{{ include.testimonial_title }} </h2>
+						<h2>{{ include.content_heading }} </h2>
 					</div>
 				{% endif %}
 
-				{% if include.testimonial_description_html and include.testimonial_description_html != "" %}
+				{% if include.content_html and include.content_html != "" %}
 					<div class="{{c}}__testimonial-content">
-						<p>{{ include.testimonial_description_html }}</p>
+						<p>{{ include.content_html }}</p>
 					</div>
 				{% endif %}
 
-				{% if include.testimonial_author_name and include.testimonial_author_name != "" %}
+				{% if include.author_name and include.author_name != "" %}
 					<div class="{{c}}__testimonial-name">
-						<h4>{{ include.testimonial_author_name }}</h4>
+						<h4>{{ include.author_name }}</h4>
 
-						{% if include.testimonial_author_designation and include.testimonial_author_designation != "" %}
-							<p class="{{c}}__testimonial-designation">{{ include.testimonial_author_designation }}</p>
+						{% if include.author_designation and include.author_designation != "" %}
+							<p class="{{c}}__testimonial-designation">{{ include.author_designation }}</p>
 						{% endif %}
 					</div>
 				{% endif %}

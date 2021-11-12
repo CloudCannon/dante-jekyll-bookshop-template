@@ -6,16 +6,16 @@ icon = "plus_one"
 tags = ["Text"]
 
 [props]
-number_counter_alignment.select = ["left", "center", "right"]  #: Select the alignment for number counter
-number_counter_caption_title = "This is a caption title"
-number_counter_main_title = "This is a main title"
-number_counter_main_description_html = "This is a description"
-number_counter_column.select = ["2", "3", "4"]  #: Select the number of columns
+alignment.select = ["left", "center", "right"]
+caption_title = "This is a caption title"
+main_title = "This is a main title"
+description_html = "This is a description"
+columns.select = ["2", "3", "4"]
 
 
-[[props.number-counter]]
-counter_alignment.select = ["left", "center", "right"]  #: Select for column alignment
-counter_number = ""  # Enter number for Number counter
-counter_symbol = ""  # Enter for Number counter Symbol
-counter_title = "This is a title"
-counter_description_html = "This is a description"
+[[props.items]]
+alignment.select = ["left", "center", "right"]
+counter_number = ""
+counter_symbol = ""
+title = "This is a title"
+description_html = "This is a description"

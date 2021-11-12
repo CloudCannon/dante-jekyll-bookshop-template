@@ -1,34 +1,34 @@
-{% if include.icon_layout == "right" %}
-	{% assign icon_layout_section = "right-lg-section" %}
-	{% assign icon_layout_class = "right" %}
-	{% assign icon_title_order = "order-1" %}
-	{% assign icon_section_order = "order-2" %}
+{% if include.layout == "right" %}
+	{% assign layout_section = "right-lg-section" %}
+	{% assign layout_class = "right" %}
+	{% assign title_order = "order-1" %}
+	{% assign section_order = "order-2" %}
 {% else %}
-	{% assign icon_layout_section = "left-lg-section" %}
-	{% assign icon_layout_class = "left" %}
-	{% assign icon_title_order = "order-2" %}
-	{% assign icon_section_order = "order-1" %}
+	{% assign layout_section = "left-lg-section" %}
+	{% assign layout_class = "left" %}
+	{% assign title_order = "order-2" %}
+	{% assign section_order = "order-1" %}
 {% endif %}
 
 {% assign c = "c-icon-module" %}
 
 <div class="{{c}}
-			{{c}}__{{ icon_layout_class }}">
+			{{c}}__{{ layout_class }}">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5 
 						{{c}}__left-section 
-						{{ icon_title_order }}">
+						{{ title_order }}">
 				<div class="{{c}}__heading-wrapper">
-					{% if include.icon_caption_title and include.icon_caption_title != "" %}
+					{% if include.caption_title and include.caption_title != "" %}
 						<div class="{{c}}__caption-title">
-							<h4><span>{{ include.icon_caption_title }}</span></h4>
+							<h4><span>{{ include.caption_title }}</span></h4>
 						</div>
 					{% endif %}
 
-					{% if include.icon_main_title and include.icon_main_title != "" %}
+					{% if include.main_title and include.main_title != "" %}
 						<div class="{{c}}__heading">
-							<h1>{{ include.icon_main_title }}</h1>
+							<h1>{{ include.main_title }}</h1>
 						</div>
 					{% endif %}
 				</div>
@@ -36,35 +36,35 @@
 			<div class="col-md-7 
 						mb-5 
 						mb-md-0
-						{{c}}__{{ icon_layout_section }} 
-						{{ icon_section_order }}">
+						{{c}}__{{ layout_section }} 
+						{{ section_order }}">
 				<div class="{{c}}__background-color">
-					{% for icons in include.icon-section %}
+					{% for item in include.items %}
 						<div class="{{c}}__based-plans">
 							<div class="row">
 								<div class="col-sm-3">
-									{% if icons.icon_image and icons.icon_image != "" %}
+									{% if item.icon_image and item.icon_image != "" %}
 										<div class="{{c}}__icon-image">
 											<img class="img-fluid" 
-												 src="{{ icons.icon_image }}" 
-												 alt="{{ icons.icon_image_alt }}" />
+												 src="{{ item.icon_image }}" 
+												 alt="{{ item.icon_image_alt }}" />
 										</div>
 									{% endif %}
 								</div>
 								<div class="col-sm-9">
-									{% if icons.icon_title and icons.icon_title != "" %}
-										<h4>{{ icons.icon_title }}</h4>
+									{% if item.title and item.title != "" %}
+										<h4>{{ item.title }}</h4>
 									{% endif %}
 
-									{% if icons.icon_description_html and icons.icon_description_html != "" %}
-										<p>{{ icons.icon_description_html }}</p>
+									{% if item.description_html and item.description_html != "" %}
+										<p>{{ item.description_html }}</p>
 									{% endif %}
 
-									{% if icons.icon_button_name and icons.icon_button_name != "" %}
+									{% if item.button_label and item.button_label != "" %}
 										<div class="{{c}}__icon-button">
 											<a class="btn" 
-											   href="{{ icons.icon_button_url }}" 
-											   role="button">{{ icons.icon_button_name }} <i class="fas fa-long-arrow-alt-right"></i>
+											   href="{{ item.button_url }}" 
+											   role="button">{{ item.button_label }} <i class="fas fa-long-arrow-alt-right"></i>
 											</a>
 										</div>
 									{% endif %}

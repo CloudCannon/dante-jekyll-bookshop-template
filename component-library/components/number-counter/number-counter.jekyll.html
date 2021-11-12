@@ -1,19 +1,19 @@
-{% if include.number_counter_column == '2' %}
-	{% assign number_counter_column_number = 6 %}
-	{% assign number_counter_column = "col-md-" | append: number_counter_column_number %}
-{% elsif include.number_counter_column == '3' %}
-	{% assign number_counter_column_number = 4 %}
-	{% assign number_counter_column = "col-md-" | append: number_counter_column_number %}
+{% if include.columns == '2' %}
+	{% assign columns = 6 %}
+	{% assign columns =  columns | prepend: "col-md-" %}
+{% elsif include.columns == '3' %}
+	{% assign columns = 4 %}
+	{% assign columns =  columns | prepend: "col-md-" %}
 {% else %}
-	{% assign number_counter_column_number = 3 %}
-	{% assign number_counter_column = "col-md-" | append: number_counter_column_number %}
+	{% assign columns = 3 %}
+	{% assign columns =  columns | prepend: "col-md-" %}
 {% endif %}
 
-{% if include.number_counter_alignment == 'left' %}
+{% if include.alignment == 'left' %}
 	{% assign number_counter_intro_alignment = 'text-left' %}
-{% elsif include.number_counter_alignment == 'center' %}
+{% elsif include.alignment == 'center' %}
 	{% assign number_counter_intro_alignment = 'text-center' %}
-{% elsif include.number_counter_alignment == 'right' %}
+{% elsif include.alignment == 'right' %}
 	{% assign number_counter_intro_alignment = 'text-right' %}
 {% else %}
 	{% assign number_counter_intro_alignment = 'text-left' %}
@@ -21,33 +21,27 @@
 
 {% assign c = "c-number-counter" %}
 
-<div class="{{c}}
-			{% comment %}
-				TODO: WHAT IS THIS????
-			{% endcomment %}
-			{% if level1.alignment %}
-				text-{{ level1.alignment }}
-			{% endif %}">
+<div class="{{c}}">
 	<div class="container">
-		{% if include.number_counter_caption_title or include.number_counter_main_title or include.number_counter_main_description_html %}
+		{% if include.caption_title or include.main_title or include.description_html %}
 			<div class="{{ number_counter_intro_alignment }}">
-				{% if include.number_counter_caption_title and include.number_counter_caption_title != "" %}
+				{% if include.caption_title and include.caption_title != "" %}
 					<div class="{{c}}__caption-title">
-						<h4><span class="pr-3">{{ include.number_counter_caption_title }}</span></h4>
+						<h4><span class="pr-3">{{ include.caption_title }}</span></h4>
 					</div>
 				{% endif %}
 
-				{% if include.number_counter_main_title and include.number_counter_main_title != "" %}
+				{% if include.main_title and include.main_title != "" %}
 					<div class="{{c}}__title">
-						<h2>{{ include.number_counter_main_title }}</h2>
+						<h2>{{ include.main_title }}</h2>
 					</div>
 				{% endif %}
 
-				{% if include.number_counter_main_description_html and include.number_counter_main_description_html != "" %}
+				{% if include.description_html and include.description_html != "" %}
 					<div class="row">
 						<div class="col-md-3"></div>
 						<div class="col-md-6">
-							<p>{{ include.number_counter_main_description_html }}</p>
+							<p>{{ include.description_html }}</p>
 						</div>
 						<div class="col-md-3"></div>
 					</div>
@@ -59,18 +53,18 @@
 
 		<div class="row 
 					{{c}}__grid-items">
-			{% for counter in include.number-counter %}
-				{% if counter.counter_alignment == 'left' %}
+			{% for counter in include.items %}
+				{% if counter.alignment == 'left' %}
 					{% assign number_counter_section_alignment = 'text-left' %}
-				{% elsif counter.counter_alignment == 'center' %}
+				{% elsif counter.alignment == 'center' %}
 					{% assign number_counter_section_alignment = 'text-center' %}
-				{% elsif counter.counter_alignment == 'right' %}
+				{% elsif counter.alignment == 'right' %}
 					{% assign number_counter_section_alignment = 'text-right' %}
 				{% else %}
 					{% assign number_counter_section_alignment = 'text-left' %}
 				{% endif %}
 
-				<div class="{{ number_counter_column }} 
+				<div class="{{ columns }} 
 							{{ number_counter_section_alignment }} 
 							{{c}}__counter-item">
 					{% if counter.counter_number and counter.counter_number != "" %}
@@ -79,11 +73,11 @@
 							<span>{{ counter.counter_symbol }}</span>
 						</h1>
 					{% endif %}
-					{% if counter.counter_title and counter.counter_title != "" %}
-						<h4 class="{{c}}__number-counter-column_title">{{ counter.counter_title }}</h4>
+					{% if counter.title and counter.title != "" %}
+						<h4 class="{{c}}__number-counter-column_title">{{ counter.title }}</h4>
 					{% endif %}
-					{% if counter.counter_description_html and counter.counter_description_html != "" %}
-						<p class="{{c}}__number-counter-column_description">{{ counter.counter_description_html }}</p>
+					{% if counter.description_html and counter.description_html != "" %}
+						<p class="{{c}}__number-counter-column_description">{{ counter.description_html }}</p>
 					{% endif %}
 				</div>
 			{% endfor %}

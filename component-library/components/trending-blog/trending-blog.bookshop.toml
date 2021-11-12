@@ -6,11 +6,7 @@ icon = "trending_up"
 tags = ["Data"]
 
 [props]
-trending_title = ""  #: Enter trending blog title
-total_posts_in_number = "3"  #: Enter the number of posts
-trending_post_image = true
-trending_post_image_url = true
-trending_post_tag = true
-trending_post_title = true
-trending_post_title_url = true
-trending_post_date = true
+title = ""  #: Enter trending blog title
+posts_to_show_number = "3"  #: Enter the number of posts
+show_post_tags = true
+show_post_date = true

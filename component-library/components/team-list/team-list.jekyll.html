@@ -1,22 +1,22 @@
-{% if include.number_of_columns == '2' %}
-	{% assign team_list_column_number = 6 %}
-	{% assign team_list_column = "col-md-" | append: team_list_column_number %}
-{% elsif include.number_of_columns == '3' %}
-	{% assign team_list_column_number = 4 %}
-	{% assign team_list_column = "col-md-" | append: team_list_column_number %}
+{% if include.columns == '2' %}
+	{% assign columns = 6 %}
+	{% assign columns = columns | prepend: "col-md-" %}
+{% elsif include.columns == '3' %}
+	{% assign columns = 4 %}
+	{% assign columns = columns | prepend: "col-md-" %}
 {% else %}
-	{% assign team_list_column_number = 3 %}
-	{% assign team_list_column = "col-md-" | append: team_list_column_number %}
+	{% assign columns = 3 %}
+	{% assign columns = columns | prepend: "col-md-" %}
 {% endif %}
 
-{% if include.team_list_alignment == 'left' %}
-	{% assign team_list_text_alignment = 'text-left' %}
-{% elsif include.team_list_alignment == 'center' %}
-	{% assign team_list_text_alignment = 'text-center' %}
-{% elsif include.team_list_alignment == 'right' %}
-	{% assign team_list_text_alignment = 'text-right' %}
+{% if include.alignment == 'left' %}
+	{% assign alignment = 'text-left' %}
+{% elsif include.alignment == 'center' %}
+	{% assign alignment = 'text-center' %}
+{% elsif include.alignment == 'right' %}
+	{% assign alignment = 'text-right' %}
 {% else %}
-	{% assign team_list_text_alignment = 'text-left' %}
+	{% assign alignment = 'text-left' %}
 {% endif %}
 
 {% assign c = "c-team-list" %}
@@ -26,23 +26,23 @@
 		<div class="row">
 			<div class="col-lg-6 
 						col-md-8">
-				{% if include.team_list_caption_title or include.team_list_title or include.team_list_description_html %}
-					<div class="{{ c }}__content {{ team_list_text_alignment }}">
-						{% if include.team_list_caption_title and include.team_list_caption_title != "" %}
+				{% if include.caption_title or include.main_title or include.description_html %}
+					<div class="{{ c }}__content {{ alignment }}">
+						{% if include.caption_title and include.caption_title != "" %}
 							<h4 class="{{ c }}__caption-title">
-								<span class="pr-3">{{ include.team_list_caption_title }}</span>
+								<span class="pr-3">{{ include.caption_title }}</span>
 							</h4>
 						{% endif %}
 
-						{% if include.team_list_title and include.team_list_title != "" %}
+						{% if include.main_title and include.main_title != "" %}
 							<h1 class="{{ c }}__title">
-								{{ include.team_list_title }}
+								{{ include.main_title }}
 							</h1>
 						{% endif %}
 
-						{% if include.team_list_description_html and include.team_list_description_html != "" %}
+						{% if include.description_html and include.description_html != "" %}
 							<div class="{{ c }}__description">
-								<p>{{ include.team_list_description_html }}</p>
+								<p>{{ include.description_html }}</p>
 							</div>
 						{% endif %}
 					</div>
@@ -56,7 +56,7 @@
 			<div class="row 
 						mb-5">
 				{% for person in site.staff_members limit: include.people_to_display_number %}
-					<div class="{{ team_list_column }}">
+					<div class="{{ columns }}">
 						<div class="{{ c }}__team-member">
 							<div class="{{ c }}__image-wrapper">
 								<a href="{{ person.url }}">
@@ -100,7 +100,7 @@
 				{% endfor %}
 			</div>
 
-			{% if include.team_list_button %}
+			{% if include.show_button %}
 				<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-4">

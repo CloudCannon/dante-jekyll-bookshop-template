@@ -6,14 +6,14 @@ icon = "format_quote"
 tags = ["Text"]
 
 [props]
-testimonial_layout.select = ["image_left", "image_right"]  #: Select the layout for the image.
-testimonial_layout.default = "image_left"  #: Default layout for the image
+layout.select = ["image_left", "image_right"]  #: Select the layout for the image.
+layout.default = "image_left"  #: Default layout for the image
 
-testimonial_caption_title = "This is a caption title"
-testimonial_main_title = "This is a main title"
-testimonial_image.default = ""  #: Select testimonial image
-testimonial_image_alt.default = "Testimonial image"  #: Provide the alternative text for the image
-testimonial_title = "This is a title"
-testimonial_description_html = "This is a description"
-testimonial_author_name = "Author name"
-testimonial_author_designation = "Designation"
+caption_title = "This is a caption title"
+main_title = "This is a main title"
+image.default = ""  #: Select testimonial image
+image_alt.default = "Testimonial image"  #: Provide the alternative text for the image
+content_heading = "This is a title"
+content_html = "This is a description"
+author_name = "Author name"
+author_designation = "Designation"

@@ -3,63 +3,42 @@
 <section class="{{c}}">
 	<div class="container">
 		<h2 class="{{c}}__title">
-			{% if include.trending_title %}
-				{{ include.trending_title }}
+			{% if include.title %}
+				{{ include.title }}
 			{% else %}
 				Trending
 			{% endif %}
 		</h2>
 
 		<div class="row">
-			{% assign i = 0 %}
-			{% for post in site.posts %}
-				{% if post.trending %}
-					<div class="col-md-4">
-						<div class="{{c}}__posts">
-							<div class="{{c}}__image-wrapper">
-								{% if include.trending_post_image_url %}
-									<a href="{{ post.permalink }}">
-										<div class="{{c}}__image" 
-											 {% if include.trending_post_image %} 
-											 	style="background-image: url('{{ post.image }}');" 
-											 {% endif %}>
-										</div>
-									</a>
-								{% else %}
-									<div class="{{c}}__image" 
-										 {% if include.trending_post_image %} 
-										 	style="background-image: url('{{ post.image }}');" 
-										 {% endif %}>
-									</div>
-								{% endif %}
-							</div>
-							<div class="{{c}}__content">
-								{% if include.trending_post_tag %}
-									<p class="{{c}}__post-tags">{{ post.tag }}</p>
-								{% endif %}
-								{% if include.trending_post_title %}
-									<h6 class="{{c}}__post-title">
-										{% if include.trending_post_title_url %}
-											<a href="{{ post.permalink }}">
-												{{ post.title }}
-											</a>
-										{% else %}
-											{{ post.title }}
-										{% endif %}
-									</h6>
-								{% endif %}
+			{% assign posts = site.posts | where_exp:"post", "post.trending == true" %}
+			{% assign sorted_posts = posts | sort: date | reverse %}
+			{% for post in site.posts limit: include.posts_to_show_number %}
+				<div class="col-md-4">
+					<div class="{{c}}__posts">
+						<div class="{{c}}__image-wrapper">
+							<a href="{{ post.permalink }}">
+								<div class="{{c}}__image" 
+								 	 style="background-image: url('{{ post.image }}');">
+								</div>
+							</a>
+						</div>
+						<div class="{{c}}__content">
+							{% if include.show_post_tags %}
+								<p class="{{c}}__post-tags">{{ post.tag }}</p>
+							{% endif %}
+							<h6 class="{{c}}__post-title">
+								<a href="{{ post.permalink }}">
+									{{ post.title }}
+								</a>
+							</h6>
 
-								{% if include.trending_post_date %}
-									<p class="{{c}}__post-date">{{ post.date | date_to_string }}</p>
-								{% endif %}
-							</div>
+							{% if include.show_post_date %}
+								<p class="{{c}}__post-date">{{ post.date | date_to_string }}</p>
+							{% endif %}
 						</div>
 					</div>
-					{% assign i = i | plus: 1 %}
-					{% if i == include.total_posts_in_number %}
-						{% break %}
-					{% endif %}
-				{% endif %}
+				</div>
 			{% endfor %}
 		</div>
 	</div>
