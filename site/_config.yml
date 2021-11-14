@@ -79,6 +79,20 @@ collections:
     output: true
     permalink: /portfolio/:slug/
 
+_collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+      - portfolio
+      - staff_members
+  - heading: Blog
+    collections:
+      - posts
+      - drafts
+  - heading: Settings
+    collections:
+      - data
+
 # portfolio tags
 portfolio-tags:
   - portfolio_name: 'Web Development'
