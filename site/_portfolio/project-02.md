@@ -2,7 +2,7 @@
 title:  Project 2
 image: /assets/images/portfolio/project-2.jpg
 header_image: /assets/images/portfolio/data-on-laptop.jpg
-author: Danney Johnson
+author_staff_member: Danney Johnson
 permalink: /portfolio/project-2/
 ---
 

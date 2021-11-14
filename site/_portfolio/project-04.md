@@ -2,7 +2,7 @@
 title:  Project 4
 image: /assets/images/portfolio/project-4.jpg
 header_image:
-author: Hermionie Granger
+author_staff_member: Hermionie Granger
 permalink: /portfolio/project-4/
 ---
 

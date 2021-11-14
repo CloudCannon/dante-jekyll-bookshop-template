@@ -4,7 +4,7 @@ post_category: Marketing
 trending: false
 featured: false
 image: /assets/images/blogs/image-33.jpg
-author: Klara Kimberline
+author_staff_member: Klara Kimberline
 permalink: /blog/what-i-search-engine-optimisation-seo/
 date: 2021-6-24
 ---

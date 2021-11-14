@@ -2,7 +2,7 @@
 title:  Project 5
 image: /assets/images/portfolio/project-5.jpg
 header_image:
-author: Klara Kimberline
+author_staff_member: Klara Kimberline
 permalink: /portfolio/project-5/
 ---
 

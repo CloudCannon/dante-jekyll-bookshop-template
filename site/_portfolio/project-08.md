@@ -2,7 +2,7 @@
 title:  Project 8
 image: /assets/images/portfolio/project-8.jpg
 header_image:
-author: Danney Johnson
+author_staff_member: Danney Johnson
 permalink: /portfolio/project-8/
 ---
 

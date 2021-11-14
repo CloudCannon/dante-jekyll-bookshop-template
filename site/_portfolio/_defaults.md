@@ -3,6 +3,6 @@ title:
 category: Portfolio
 image:
 header_image:
-author:
+author_staff_member:
 permalink:
 ---

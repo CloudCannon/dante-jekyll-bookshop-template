@@ -2,7 +2,7 @@
 title:  Project 1
 image: /assets/images/portfolio/project-1.jpg
 header_image: /assets/images/portfolio/data-in-mobile.jpeg
-author: Dane Emerson
+author_staff_member: Dane Emerson
 permalink: /portfolio/project-1/
 ---
 

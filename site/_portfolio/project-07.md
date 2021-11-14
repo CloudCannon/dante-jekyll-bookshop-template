@@ -2,7 +2,7 @@
 title:  Project 7
 image: /assets/images/portfolio/project-7.jpg
 header_image:
-author: Dane Emerson
+author_staff_member: Dane Emerson
 permalink: /portfolio/project-7/
 ---
 

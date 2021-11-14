@@ -2,7 +2,7 @@
 title:  Project 9
 image: /assets/images/portfolio/project-9.jpg
 header_image:
-author: Hannah Khanwald
+author_staff_member: Hannah Khanwald
 permalink: /portfolio/project-9/
 ---
 

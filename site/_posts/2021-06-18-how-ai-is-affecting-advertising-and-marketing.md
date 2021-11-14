@@ -4,7 +4,7 @@ post_category: Marketing
 trending: false
 featured: false
 image: /assets/images/blogs/image-35.png
-author: Klara Kimberline
+author_staff_member: Klara Kimberline
 permalink: /blog/how-ai-is-affecting-advertising-and-marketing/
 date: 2021-6-18
 ---

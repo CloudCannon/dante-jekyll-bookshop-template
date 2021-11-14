@@ -4,7 +4,7 @@ post_category: Designs
 trending: true
 featured: false
 image: /assets/images/blogs/image-28.jpg
-author: Danney Johnson
+author_staff_member: Danney Johnson
 permalink: /blog/5-tips-how-to-make-user-flow-in-a-short-time
 date: 2021-6-15
 ---

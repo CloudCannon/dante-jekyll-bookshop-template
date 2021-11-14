@@ -2,7 +2,7 @@
 title:  Project 6
 image: /assets/images/portfolio/project-6.jpg
 header_image:
-author: Wilson Kumbara
+author_staff_member: Wilson Kumbara
 permalink: /portfolio/project-6/
 ---
 

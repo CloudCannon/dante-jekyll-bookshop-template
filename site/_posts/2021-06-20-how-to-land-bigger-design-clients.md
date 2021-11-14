@@ -4,7 +4,7 @@ post_category: Business
 trending: true
 featured: false
 image: /assets/images/blogs/image-30.jpg
-author: Dane Emerson
+author_staff_member: Dane Emerson
 permalink: /blog/how-to-land-bigger-design-clients/
 date: 2021-6-20
 ---

@@ -54,9 +54,9 @@
 							{% endif %}">
 
 					{% if include.post_settings.author_details %}
-						{% if page.author %}
+						{% if page.author_staff_member %}
 							{% for person in site.staff_members %}
-								{% if person.title == page.author %}
+								{% if person.title == page.author_staff_member %}
 									<div class="{{l}}__author-details 
 												{% if post_layout == "full-width" %}
 													{% if include.post_settings.author_details and include.post_settings.social_share %}
@@ -98,7 +98,7 @@
 							{% if post_layout == "full-width" %}
 								{% include social-share-buttons.html %}
 							{% else %}
-								{% if page.author and include.post_settings.author_details %}
+								{% if page.author_staff_member and include.post_settings.author_details %}
 									<div class="col-md-4"></div>
 									<div class="col-md-8">{% include social-share-buttons.html %}</div>
 								{% else %}

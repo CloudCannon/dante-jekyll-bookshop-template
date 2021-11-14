@@ -4,7 +4,7 @@ post_category: Relations
 trending: true
 featured: true
 image: /assets/images/blogs/image-29.jpg
-author: Hannah Khanwald
+author_staff_member: Hannah Khanwald
 permalink: /blog/10-main-mistakes-in-communication-with-the-client/
 date: 2021-6-16
 ---

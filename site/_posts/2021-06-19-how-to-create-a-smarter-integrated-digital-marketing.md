@@ -4,7 +4,7 @@ post_category: Marketing
 trending: false
 featured: false
 image: /assets/images/blogs/image-34.jpg
-author: Wilson Kumbara
+author_staff_member: Wilson Kumbara
 permalink: /blog/how-to-create-a-smarter-integrated-digital-marketing/
 date: 2021-6-19
 ---

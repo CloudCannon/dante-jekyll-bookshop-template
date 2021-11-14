@@ -4,7 +4,7 @@ post_category: Career Advice
 trending: true
 featured: false
 image: /assets/images/blogs/image-31.jpg
-author: Dane Emerson
+author_staff_member: Dane Emerson
 permalink: /blog/5-pioneering-skills-you’ll-need-by-2025/
 date: 2021-6-14
 ---

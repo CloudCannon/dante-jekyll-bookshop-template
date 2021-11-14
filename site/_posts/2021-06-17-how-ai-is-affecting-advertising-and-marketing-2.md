@@ -4,7 +4,7 @@ post_category: Designs
 trending: false
 featured: false
 image: /assets/images/blogs/image-38.png
-author: Hermionie Granger
+author_staff_member: Hermionie Granger
 permalink: /blog/25-how-ai-is-affecting-advertising-and-marketing-2/
 date: 2021-6-17
 ---

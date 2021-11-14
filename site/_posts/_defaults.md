@@ -4,6 +4,6 @@ post_category:
 trending: true
 featured: true
 image:
-author:
+author_staff_member:
 permalink:
 ---

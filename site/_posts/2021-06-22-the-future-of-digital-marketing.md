@@ -4,7 +4,7 @@ post_category: Business
 trending: false
 featured: false
 image: /assets/images/blogs/image-36.jpg
-author: Hannah Khanwald
+author_staff_member: Hannah Khanwald
 permalink: /blog/the-future-of-digital-marketing/
 date: 2021-6-22
 ---

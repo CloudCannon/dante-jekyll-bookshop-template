@@ -4,7 +4,7 @@ post_category: Business
 trending: false
 featured: false
 image: /assets/images/blogs/image-32.jpg
-author: Hermionie Granger
+author_staff_member: Hermionie Granger
 permalink: /blog/the-workplace-of-the-future-is-here-are-you-ready/
 date: 2021-6-23
 ---
