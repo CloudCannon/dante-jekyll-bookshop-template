@@ -1,9 +1,8 @@
 ---
 title:  
-category: portfolio
-tag:
+category: Portfolio
 image:
-feature-image:
+header_image:
 author:
 permalink:
 ---

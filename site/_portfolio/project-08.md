@@ -1,11 +1,7 @@
 ---
 title:  Project 8
-category: portfolio
-tag:
-    - mobile-development
-    - digital-product-design
 image: /assets/images/portfolio/project-8.jpg
-feature-image:
+header_image:
 author: Danney Johnson
 permalink: /portfolio/project-8/
 ---

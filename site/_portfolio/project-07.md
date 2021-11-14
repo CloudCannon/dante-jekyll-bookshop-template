@@ -1,11 +1,7 @@
 ---
 title:  Project 7
-category: portfolio
-tag:
-    - mobile-development
-    - cloud-and-devops
 image: /assets/images/portfolio/project-7.jpg
-feature-image:
+header_image:
 author: Dane Emerson
 permalink: /portfolio/project-7/
 ---

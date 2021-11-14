@@ -1,11 +1,7 @@
 ---
 title:  Project 3
-category: portfolio
-tag:
-    - digital-product-design
-    - cloud-and-devops
 image: /assets/images/portfolio/project-3.jpg
-feature-image:
+header_image:
 author: Hannah Khanwald
 permalink: /portfolio/project-3/
 ---

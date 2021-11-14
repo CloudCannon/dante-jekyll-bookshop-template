@@ -1,9 +1,8 @@
 ---
 title: How to Create a Smarter Integrated Digital Marketing
-categories: blog
-tag: Marketing
+post_category: Marketing
 trending: false
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-34.jpg
 author: Wilson Kumbara
 permalink: /blog/how-to-create-a-smarter-integrated-digital-marketing/

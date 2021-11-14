@@ -1,9 +1,8 @@
 ---
 title: How AI is Affecting Advertising and Marketing 2
-categories: blog
-tag: Designs
+post_category: Designs
 trending: false
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-38.png
 author: Hermionie Granger
 permalink: /blog/25-how-ai-is-affecting-advertising-and-marketing-2/

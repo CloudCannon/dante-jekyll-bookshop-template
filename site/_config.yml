@@ -129,6 +129,13 @@ _select_data:
     - right-sidebar
     - full-width
 
+  post_categories:
+    - 'Marketing'
+    - 'Business'
+    - 'Designs'
+    - 'Relations'
+    - 'Career Advice'
+
 
 
 

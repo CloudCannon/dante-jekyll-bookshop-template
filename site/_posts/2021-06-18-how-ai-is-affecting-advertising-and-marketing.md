@@ -1,9 +1,8 @@
 ---
 title: How AI is Affecting Advertising and Marketing
-categories: blog
-tag: Marketing
+post_category: Marketing
 trending: false
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-35.png
 author: Klara Kimberline
 permalink: /blog/how-ai-is-affecting-advertising-and-marketing/

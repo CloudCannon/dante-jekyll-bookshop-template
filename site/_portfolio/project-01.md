@@ -1,11 +1,7 @@
 ---
 title:  Project 1
-category: portfolio
-tag:
-    - mobile-development
-    - digital-product-design
 image: /assets/images/portfolio/project-1.jpg
-feature-image: /assets/images/portfolio/data-in-mobile.jpeg
+header_image: /assets/images/portfolio/data-in-mobile.jpeg
 author: Dane Emerson
 permalink: /portfolio/project-1/
 ---

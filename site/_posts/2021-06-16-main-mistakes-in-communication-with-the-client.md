@@ -1,9 +1,8 @@
 ---
 title: 10 main mistakes in communication with the client
-categories: blog
-tag: Relations
+post_category: Relations
 trending: true
-feature-blog: true
+featured: true
 image: /assets/images/blogs/image-29.jpg
 author: Hannah Khanwald
 permalink: /blog/10-main-mistakes-in-communication-with-the-client/

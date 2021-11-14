@@ -1,9 +1,8 @@
 ---
 title: What is Search Engine Optimisation (SEO)?
-categories: blog
-tag: Marketing
+post_category: Marketing
 trending: false
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-33.jpg
 author: Klara Kimberline
 permalink: /blog/what-i-search-engine-optimisation-seo/

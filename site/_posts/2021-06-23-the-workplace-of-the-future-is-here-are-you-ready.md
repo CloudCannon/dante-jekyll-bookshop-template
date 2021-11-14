@@ -1,9 +1,8 @@
 ---
 title: The Workplace of the Future is Here. Are You Ready?
-categories: blog
-tag: Business
+post_category: Business
 trending: false
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-32.jpg
 author: Hermionie Granger
 permalink: /blog/the-workplace-of-the-future-is-here-are-you-ready/

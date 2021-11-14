@@ -1,11 +1,7 @@
 ---
 title:  Project 4
-category: portfolio
-tag:
-    - mobile-development
-    - cloud-and-devops
 image: /assets/images/portfolio/project-4.jpg
-feature-image:
+header_image:
 author: Hermionie Granger
 permalink: /portfolio/project-4/
 ---

@@ -1,9 +1,8 @@
 ---
 title: The Future of Digital Marketing
-categories: blog
-tag: Business
+post_category: Business
 trending: false
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-36.jpg
 author: Hannah Khanwald
 permalink: /blog/the-future-of-digital-marketing/

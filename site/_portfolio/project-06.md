@@ -1,11 +1,7 @@
 ---
 title:  Project 6
-category: portfolio
-tag:
-    - web-development
-    - digital-product-design
 image: /assets/images/portfolio/project-6.jpg
-feature-image:
+header_image:
 author: Wilson Kumbara
 permalink: /portfolio/project-6/
 ---

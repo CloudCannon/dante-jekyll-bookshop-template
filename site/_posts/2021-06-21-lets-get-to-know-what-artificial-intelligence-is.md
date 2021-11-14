@@ -1,9 +1,8 @@
 ---
 title: Let's Get To Know What Artificial Intelligence Is
-categories: blog
-tag: Relations
+post_category: Relations
 trending: false
-feature-blog: true
+featured: true
 image: /assets/images/blogs/image-37.jpg
 author: Danney Johnson
 permalink: /blog/let's-get-to-know-what-artificial-intelligence-is/

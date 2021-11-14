@@ -46,7 +46,7 @@
 				{% endif %}">
 		<div class="row">
 
-			{% assign featured_posts = site.posts | where_exp:"post", "post.feature-blog == true" %}
+			{% assign featured_posts = site.posts | where_exp:"post", "post.featured == true" %}
 			{% assign sorted_posts = featured_posts | sort: date | reverse %}
 			{% for post in sorted_posts limit: 1 %}
 				<div class="col-lg-6 

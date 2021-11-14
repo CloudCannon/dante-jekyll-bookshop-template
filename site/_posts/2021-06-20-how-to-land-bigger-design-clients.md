@@ -1,9 +1,8 @@
 ---
 title: How to land bigger design clients?
-categories: blog
-tag: Business
+post_category: Business
 trending: true
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-30.jpg
 author: Dane Emerson
 permalink: /blog/how-to-land-bigger-design-clients/

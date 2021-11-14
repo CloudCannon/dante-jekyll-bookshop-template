@@ -1,9 +1,8 @@
 ---
 title: 5 Pioneering Skills You’ll Need By 2025
-categories: blog
-tag: Career Advice
+post_category: Career Advice
 trending: true
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-31.jpg
 author: Dane Emerson
 permalink: /blog/5-pioneering-skills-you’ll-need-by-2025/

@@ -1,9 +1,8 @@
 ---
 title: 5 tips how to make User Flow in a short time
-categories: blog
-tag: Design
+post_category: Designs
 trending: true
-feature-blog: false
+featured: false
 image: /assets/images/blogs/image-28.jpg
 author: Danney Johnson
 permalink: /blog/5-tips-how-to-make-user-flow-in-a-short-time

@@ -1,9 +1,8 @@
 ---
 title:
-categories: blog
-tag:
+post_category:
 trending: true
-feature-blog: true
+featured: true
 image:
 author:
 permalink:

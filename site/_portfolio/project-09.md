@@ -1,11 +1,7 @@
 ---
 title:  Project 9
-category: portfolio
-tag:
-    - web-development
-    - cloud-and-devops
 image: /assets/images/portfolio/project-9.jpg
-feature-image:
+header_image:
 author: Hannah Khanwald
 permalink: /portfolio/project-9/
 ---

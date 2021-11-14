@@ -1,11 +1,7 @@
 ---
 title:  Project 5
-category: portfolio
-tag:
-    - mobile-development
-    - digital-product-design
 image: /assets/images/portfolio/project-5.jpg
-feature-image:
+header_image:
 author: Klara Kimberline
 permalink: /portfolio/project-5/
 ---

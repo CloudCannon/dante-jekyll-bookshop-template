@@ -1,11 +1,7 @@
 ---
 title:  Project 2
-category: portfolio
-tag:
-    - web-development
-    - cloud-and-devops
 image: /assets/images/portfolio/project-2.jpg
-feature-image: /assets/images/portfolio/data-on-laptop.jpg
+header_image: /assets/images/portfolio/data-on-laptop.jpg
 author: Danney Johnson
 permalink: /portfolio/project-2/
 ---
