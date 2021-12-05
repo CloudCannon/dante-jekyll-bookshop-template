@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
 group :jekyll_plugins do
-  gem "jekyll-bookshop", ">= 2.0.0.pre.beta.8"
-  gem "cloudcannon-jekyll-bookshop", ">= 2.0.0.pre.beta.8"
+  gem "jekyll-bookshop", ">= 2.2.0"
+  gem "cloudcannon-jekyll-bookshop", ">= 2.2.0"
   gem 'jekyll-watch'
   gem 'jekyll-postcss-v2'
   gem 'jekyll-local-assign'
