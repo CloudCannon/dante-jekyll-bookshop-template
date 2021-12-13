@@ -67,12 +67,10 @@
 				<div class="{{ columns }} 
 							{{ number_counter_section_alignment }} 
 							{{c}}__counter-item">
-					{% if counter.counter_number and counter.counter_number != "" %}
-						<h1 class="{{c}}__item-count">
-							<span class="count">{{ counter.counter_number }}</span>
-							<span>{{ counter.counter_symbol }}</span>
-						</h1>
-					{% endif %}
+					<h1 class="{{c}}__item-count">
+						<span class="count">{{ counter.counter_number }}</span>
+						<span>{{ counter.counter_symbol }}</span>
+					</h1>
 					{% if counter.title and counter.title != "" %}
 						<h4 class="{{c}}__number-counter-column_title">{{ counter.title }}</h4>
 					{% endif %}

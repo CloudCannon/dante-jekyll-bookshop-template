@@ -15,7 +15,7 @@ columns_to_display.select = ["2", "3", "4"]
 
 [[props.items]]
 alignment.select = ["left", "center", "right"]
-counter_number = ""
+counter_number = 0
 counter_symbol = ""
 title = "This is a title"
 description_html = "This is a description"
