@@ -20,6 +20,8 @@ _select_data:
     - 1
     - 2
 
+  layouts:
+
   portfolio_layouts:
     - left-sidebar
     - right-sidebar
