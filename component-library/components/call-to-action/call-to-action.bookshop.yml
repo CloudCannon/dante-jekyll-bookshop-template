@@ -1,0 +1,26 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  array_structures:
+    - content_blocks
+  label: Call to action
+  description: Call to action block with a button
+  icon: call_to_action
+  tags:
+    - Text
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: ""
+  lower_text_html: ""
+  button_label: ""
+  button_url: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: This is a title
+  lower_text_html: This is a description
+  button_label: Button name
+  button_url: Button url
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs: {}

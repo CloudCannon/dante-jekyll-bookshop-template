@@ -1,0 +1,55 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  array_structures:
+    - content_blocks
+  label: Feature Blog Hero Content
+  description: These module's content comes from the blog, Image on one side and
+    content on the other with a call to action button
+  icon: menu_book
+  tags:
+    - Data
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  layout: image_right
+  component_width: normal
+  mobile_image_order: bottom
+  vertical_alignment: top
+  display_image: true
+  display_title: true
+  display_description: true
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview: {}
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  layout:
+    comment: Select the layout for the image
+    type: select
+    options:
+      values:
+        - image_left
+        - image_right
+  component_width:
+    comment: Select the type for the feature blog
+    type: select
+    options:
+      values:
+        - fullwidth
+        - normal
+  mobile_image_order:
+    comment: Select the image order mobile
+    type: select
+    options:
+      values:
+        - bottom
+        - top
+  vertical_alignment:
+    comment: Select the vertical alignment for feature blog
+    type: select
+    options:
+      values:
+        - top
+        - center
+        - bottom

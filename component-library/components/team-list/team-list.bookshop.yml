@@ -1,0 +1,43 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  array_structures:
+    - content_blocks
+  label: Team List
+  description: List of team-list collection items
+  icon: groups
+  tags:
+    - Data
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  alignment: left
+  caption_title: ""
+  main_title: ""
+  description_html: ""
+  columns_to_display: "2"
+  people_to_display_number: 6
+  show_button: true
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  caption_title: ""
+  main_title: ""
+  description_html: ""
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  alignment:
+    comment: Select the alignment for team list
+    type: select
+    options:
+      values:
+        - left
+        - center
+        - right
+  columns_to_display:
+    type: select
+    options:
+      values:
+        - "2"
+        - "3"
+        - "4"

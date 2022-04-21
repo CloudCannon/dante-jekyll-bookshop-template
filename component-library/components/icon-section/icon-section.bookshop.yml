@@ -1,0 +1,43 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  array_structures:
+    - content_blocks
+  label: Icon section
+  description: Title on one side and content on the other with icons attached to it
+  icon: ballot
+  tags:
+    - Text
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  caption_title: ""
+  main_title: ""
+  icon_layout: right
+  items:
+    - icon_image: ""
+      icon_image_alt: Icon image
+      title: ""
+      description_html: ""
+      button_label: ""
+      button_url: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  caption_title: This is a caption title
+  main_title: This is a main title
+  items:
+    - title: This is a title
+      description_html: This is a description
+      button_label: Button name
+      button_url: Button url
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  icon_layout:
+    type: select
+    options:
+      values:
+        - left
+        - right
+  icon_image_alt:
+    comment: Provide the alternative text for the image

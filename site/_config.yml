@@ -11,7 +11,6 @@ pagination:
 
 plugins:
   - jekyll-bookshop
-  - cloudcannon-jekyll-bookshop
   - jekyll-postcss-v2
   - jekyll-local-assign
   - jekyll-pagebreak
@@ -27,12 +26,6 @@ exclude:
 
 include:
   - _cloudcannon
-
-# The rest of this array structure will be
-# populated by the bookshop-array-structures plugin.
-_array_structures:
-  content_blocks:
-    style: modal
 
 defaults:
   -
@@ -79,20 +72,6 @@ collections:
     output: true
     permalink: /portfolio/:slug/
 
-_collection_groups:
-  - heading: Pages
-    collections:
-      - pages
-      - portfolio
-      - staff_members
-  - heading: Blog
-    collections:
-      - posts
-      - drafts
-  - heading: Settings
-    collections:
-      - data
-
 # portfolio tags
 portfolio-tags:
   - portfolio_name: 'Web Development'
@@ -117,61 +96,8 @@ sass:
 gems:
   - octopress-paginate
 
-_select_data:
-  columns_for_laptops:
-    - 1
-    - 2
-    - 3
-    - 4
-    - 6
-  columns_for_tablets:
-    - 1
-    - 2
-    - 3
-    - 4
-  columns_for_mobiles:
-    - 1
-    - 2
-
-  portfolio_layouts:
-    - left-sidebar
-    - right-sidebar
-    - full-width
-
-  post_layouts:
-    - left-sidebar
-    - right-sidebar
-    - full-width
-
-  post_categories:
-    - 'Marketing'
-    - 'Business'
-    - 'Designs'
-    - 'Relations'
-    - 'Career Advice'
 
 
 
 
-_comments:
-  # Used in footer and menu yml files
-  url: Enter the page url
 
-  # Used in menu yml files
-  logo_image: Use logo icon here
-  logo_width: Enter logo width (default 150px)
-  favicon_image: Use favicon here
-  login_url: Enter login link in menu
-  signup_url: Enter signup link in menu
-
-  # Used in footer yml files
-  columns_for_laptop: Default value is 3
-  columns_for_tablet: Default value is 2
-  columns_for_mobile: Default value is 1
-
-  # Used in general yml files
-  site_title: Enter the website title
-  description: Enter the site description
-  permalink: Page URL in slug format
-  website_url: Enter live website domain
-  font-style_url: Enter a google font url.

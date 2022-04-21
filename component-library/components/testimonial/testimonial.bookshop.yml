@@ -1,0 +1,44 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  array_structures:
+    - content_blocks
+  label: Testimonial
+  description: Image with some quotes or review
+  icon: format_quote
+  tags:
+    - Text
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  layout: image_left
+  caption_title: ""
+  main_title: ""
+  image: ""
+  image_alt: Testimonial image
+  content_heading: ""
+  content_html: ""
+  author_name: ""
+  author_designation: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  caption_title: This is a caption title
+  main_title: This is a main title
+  content_heading: This is a title
+  content_html: This is a description
+  author_name: Author name
+  author_designation: Designation
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  layout:
+    comment: Select the layout for the image.
+    type: select
+    options:
+      values:
+        - image_left
+        - image_right
+  image:
+    comment: Select testimonial image
+  image_alt:
+    comment: Provide the alternative text for the image

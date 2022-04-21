@@ -1,0 +1,59 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  array_structures:
+    - content_blocks
+  label: Info section
+  description: Title and caption title above with icon, description and a call to
+    action below
+  icon: view_stream
+  tags:
+    - Text
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  caption_title: ""
+  main_title: ""
+  description_html: ""
+  columns_to_display: "2"
+  items:
+    - alignment: left
+      image: ""
+      image_alt: Icon image
+      title: ""
+      description_html: ""
+      button_label: ""
+      button_url: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  caption_title: This is a caption title
+  main_title: This is a main title
+  description_html: This is a description
+  items:
+    - title: This is a title
+      description_html: This is a description
+      button_label: Button name
+      button_url: Button url
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  columns_to_display:
+    comment: Select the number of column for info section
+    type: select
+    options:
+      values:
+        - "2"
+        - "3"
+        - "4"
+  alignment:
+    comment: Select the alignment for info section
+    type: select
+    options:
+      values:
+        - left
+        - center
+        - right
+  image:
+    comment: Select the info image
+  image_alt:
+    comment: Provide the alternative text for the image
