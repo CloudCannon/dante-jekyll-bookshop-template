@@ -87,10 +87,6 @@ _collection_groups:
     collections:
       - data
 
-_structures:
-  content_blocks:
-    style: 'modal'
-
 _comments:
   # Used in footer and menu yml files
   url: Enter the page url

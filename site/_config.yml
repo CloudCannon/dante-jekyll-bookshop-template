@@ -52,9 +52,9 @@ defaults:
     values:
       layout: team-member
 
-_array_structures:
+_structures:
   content_blocks:
-    style: modal
+    style: 'modal'
     
 collections:
   staff_members:
