@@ -34,9 +34,10 @@
 		<div class="row 
 					{{c}}__row">
 			{% for item in include.items %}
-				{% if item.alignment == 'left' %}
+				{% assign content_alignment = include.content_alignment | slugify %}
+				{% if content_alignment == 'left' %}
 					{% assign info-text-alignment = 'text-left' %}
-				{% elsif item.alignment == 'right' %}
+				{% elsif content_alignment == 'right' %}
 					{% assign info-text-alignment = 'text-right' %}
 				{% else %}
 					{% assign info-text-alignment = 'text-center' %}

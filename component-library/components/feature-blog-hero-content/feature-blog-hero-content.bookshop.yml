@@ -11,7 +11,7 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  layout: image_right
+  hero_layout: Image Right
   component_width: Normal
   mobile_image_order: Bottom
   vertical_alignment: Top
@@ -26,11 +26,6 @@ preview: {}
 _inputs:
   layout:
     comment: Select the layout for the image
-    type: select
-    options:
-      values:
-        - image_left
-        - image_right
   component_width:
     comment: Select the type for the feature blog
     type: select
