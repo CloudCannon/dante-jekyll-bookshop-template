@@ -1,7 +1,7 @@
 
 # Timezone
 timezone: Pacific/Auckland  # Set the time zone for site generation.
-source: site
+
 # Pagination Settings
 pagination:
   per_page: 6             # maximum number of items per page
