@@ -22,6 +22,19 @@ _select_data:
 
   layouts:
 
+  component_widths:
+    - "Normal"
+    - "Wide"
+
+  vertical_alignments:
+    - "Top"
+    - "Center"
+    - "Bottom"
+
+  image_types:
+    - "contained"
+    - "stretched"
+
   portfolio_layouts:
     - left-sidebar
     - right-sidebar

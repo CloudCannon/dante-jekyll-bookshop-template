@@ -24,22 +24,24 @@
 {% assign image_order = "order-1" %}
 {% endif %}
 
-{% if include.vertical_alignment == "top" %}
+{% assign vertical_alignment = include.vertical_alignment | slugify %}
+{% if vertical_alignment == "top" %}
 {% assign vertical_alignment = "align-self-start" %}
 {% endif %}
 
-{% if include.vertical_alignment == "center" %}
+{% if vertical_alignment == "center" %}
 {% assign vertical_alignment = "align-self-center" %}
 {% endif %}
 
-{% if include.vertical_alignment == "bottom" %}
+{% if vertical_alignment == "bottom" %}
 {% assign vertical_alignment = "align-self-end" %}
 {% endif %}
 
 {% assign c = "c-featured-blog-post" %}
 
 <section class="{{c}}">
-	<div class="{% if include.component_width == "normal" %}
+	{% assign width = include.component_width | slugify %}
+	<div class="{% if width == "normal" %}
 					container
 				{% else %}
 					container-fluid

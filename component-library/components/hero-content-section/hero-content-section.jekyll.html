@@ -23,23 +23,32 @@
 {% assign hero_image_order = "order-1" %}
 {% endif %}
 
-{% if include.vertical_alignment == "top" %}
+{% assign vertical_alignment = include.vertical_alignment | slugify %}
+{% if vertical_alignment == "top" %}
 {% assign vertical_alignment = "align-self-start" %}
 {% endif %}
 
-{% if include.vertical_alignment == "center" %}
+{% if vertical_alignment == "center" %}
 {% assign vertical_alignment = "align-self-center" %}
 {% endif %}
 
-{% if include.vertical_alignment == "bottom" %}
+{% if vertical_alignment == "bottom" %}
 {% assign vertical_alignment = "align-self-end" %}
+{% endif %}
+
+{% assign fit = include.image_type | slugify %}
+{% if fit == "contained" %}
+	{% assign object_fit = "contain" %}
+{% else %}
+	{% assign object_fit = "cover" %}
 {% endif %}
 
 {% assign c = "c-hero-content" %}
 
 <section class="{{c}} {{c}}-{{ forloop.index }}">
 
-	<div class="{% if include.component_width == "normal" %}
+	{% assign width = include.component_width | slugify %}
+	<div class="{% if width == "normal" %}
 					container
 				{% else %}
 					container-fluid
@@ -105,7 +114,8 @@
 				{% if include.image != "" %}
 					<img class="img-fluid" 
 						 src="{{ include.image }}" 
-						 alt="{{ include.image_alt }}" />
+						 alt="{{ include.image_alt }}"
+						 style="object-fit: {{ object_fit }}" />
 				{% endif %}
 			</div>
 		</div>
