@@ -16,7 +16,7 @@ blueprint:
   description_html: ""
   columns_to_display: "2"
   items:
-    - alignment: left
+    - conent_alignment: Left
       image: ""
       image_alt: Icon image
       title: ""
@@ -47,12 +47,6 @@ _inputs:
         - "4"
   alignment:
     comment: Select the alignment for info section
-    type: select
-    options:
-      values:
-        - left
-        - center
-        - right
   image:
     comment: Select the info image
   image_alt:

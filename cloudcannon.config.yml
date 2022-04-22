@@ -29,6 +29,16 @@ _select_data:
     - "Center"
     - "Right"
 
+  counter_alignments:
+    - "Left"
+    - "Center"
+    - "Right"
+
+  content_alignments:
+    - "Left"
+    - "Center"
+    - "Right"
+
   component_widths:
     - "Normal"
     - "Wide"

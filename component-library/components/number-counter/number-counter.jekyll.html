@@ -9,7 +9,7 @@
 	{% assign columns =  columns | prepend: "col-md-" %}
 {% endif %}
 
-{% assign caption_alignment = include.alignment | slugify %}
+{% assign caption_alignment = include.caption_alignment | slugify %}
 {% if caption_alignment == 'left' %}
 	{% assign number_counter_intro_alignment = 'text-left' %}
 {% elsif caption_alignment == 'center' %}
