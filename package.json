@@ -3,10 +3,10 @@
   "private": true,
   "description": "Dante template for bookshop and CloudCannon",
   "scripts": {
-    "bookshop-dev": "bookshop-browser -b ./component-library -p 6061",
-    "bookshop-hosted": "bookshop-browser -b ./component-library -o site/assets/bookshop-hosted.js",
-    "bookshop-live": "bookshop-live -b ./component-library -o site/_cloudcannon/bookshop-live.js",
-    "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --source site --port 6060 --trace --unpublished",
+    "bookshop-dev": "bookshop-browser -b component-library -p 6061",
+    "bookshop-hosted": "bookshop-browser -b component-library -o site/assets/bookshop-hosted.js",
+    "bookshop-live": "bookshop-live -b component-library -o site/_cloudcannon/bookshop-live.js",
+    "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --port 6060 --trace --unpublished",
     "start": "run-p bookshop-dev jekyll",
     "install-jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle install",
     "postinstall": "mkdir -p site/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss site/node_modules/.bin/postcss"

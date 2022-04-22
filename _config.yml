@@ -2,6 +2,8 @@
 # Timezone
 timezone: Pacific/Auckland  # Set the time zone for site generation.
 
+source: site
+
 # Pagination Settings
 pagination:
   per_page: 6             # maximum number of items per page
@@ -11,6 +13,7 @@ pagination:
 
 plugins:
   - jekyll-bookshop
+  - cloudcannon-jekyll-bookshop
   - jekyll-postcss-v2
   - jekyll-local-assign
   - jekyll-pagebreak
@@ -19,7 +22,6 @@ plugins:
 # or different production / staging locations.
 bookshop_locations:
   - ../component-library
-
 exclude:
   - postcss.config.js
   - node_modules
