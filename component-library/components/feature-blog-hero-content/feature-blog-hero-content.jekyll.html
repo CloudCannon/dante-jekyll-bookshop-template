@@ -9,17 +9,18 @@
 {% assign image_order = "order-lg-1" %}
 {% endif %}
 
-{% if include.mobile_image_order == "bottom" %}
+{% assign mobile_image_order = include.mobile_image_order | slugify %}
+{% if mobile_image_order == "bottom" %}
 {% assign mobile_content_order = "order-1" %}
 {% assign mobile_image_order = "order-2" %}
 {% endif %}
 
-{% if include.mobile_image_order == "top" %}
+{% if mobile_image_order == "top" %}
 {% assign mobile_content_order = "order-2" %}
 {% assign mobile_image_order = "order-1" %}
 {% endif %}
 
-{% if include.mobile_image_order == null and include.layout == "image-left" %}
+{% if mobile_image_order == null and include.layout == "image-left" %}
 {% assign content_order = "order-2" %}
 {% assign image_order = "order-1" %}
 {% endif %}

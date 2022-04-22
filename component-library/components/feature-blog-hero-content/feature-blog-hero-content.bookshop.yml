@@ -12,9 +12,9 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   layout: image_right
-  component_width: normal
-  mobile_image_order: bottom
-  vertical_alignment: top
+  component_width: Normal
+  mobile_image_order: Bottom
+  vertical_alignment: Top
   display_image: true
   display_title: true
   display_description: true

@@ -11,9 +11,9 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   layout: image_right
-  component_width: normal
-  mobile_image_order: bottom
-  vertical_alignment: top
+  component_width: Normal
+  mobile_image_order: Bottom
+  vertical_alignment: Top
   image_type: contained
   image: ""
   image_alt: Hero image

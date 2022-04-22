@@ -20,7 +20,9 @@ _select_data:
     - 1
     - 2
 
-  layouts:
+  hero_layouts:
+    - "Image Left"
+    - "Image Right"
 
   component_widths:
     - "Normal"
@@ -29,6 +31,10 @@ _select_data:
   vertical_alignments:
     - "Top"
     - "Center"
+    - "Bottom"
+
+  mobile_image_orders:
+    - "Top"
     - "Bottom"
 
   image_types:

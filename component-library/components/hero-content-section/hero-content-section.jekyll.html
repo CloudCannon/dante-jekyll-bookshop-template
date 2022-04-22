@@ -1,24 +1,26 @@
-{% if include.layout == "image_right" %}
+{% assign hero_layout = include.hero_layout | slugify %}
+{% if hero_layout == "image-right" %}
 {% assign hero_content_order = "order-lg-1" %}
 {% assign hero_image_order = "order-lg-2" %}
 {% endif %}
 
-{% if include.layout == "image_left" %}
+{% if hero_layout == "image-left" %}
 {% assign hero_content_order = "order-lg-2" %}
 {% assign hero_image_order = "order-lg-1" %}
 {% endif %}
 
-{% if include.mobile_image_order == "bottom" %}
+{% assign mobile_image_order = include.mobile_image_order | slugify %}
+{% if mobile_image_order == "bottom" %}
 {% assign hero_mobile_content_order = "order-1" %}
 {% assign mobile_image_order = "order-2" %}
 {% endif %}
 
-{% if include.mobile_image_order == "top" %}
+{% if mobile_image_order == "top" %}
 {% assign hero_mobile_content_order = "order-2" %}
 {% assign mobile_image_order = "order-1" %}
 {% endif %}
 
-{% if include.mobile_image_order == null and include.layout == "image-left" %}
+{% if mobile_image_order == null and hero_layout == "image-left" %}
 {% assign hero_content_order = "order-2" %}
 {% assign hero_image_order = "order-1" %}
 {% endif %}
