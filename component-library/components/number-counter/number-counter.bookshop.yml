@@ -10,13 +10,13 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  alignment: left
+  caption_alignment: left
   caption_title: ""
   main_title: ""
   description_html: ""
   columns_to_display: "2"
   items:
-    - alignment: left
+    - counter_alignment: Left
       counter_number: 0
       counter_symbol: ""
       title: ""
@@ -38,9 +38,9 @@ _inputs:
     type: select
     options:
       values:
-        - left
-        - center
-        - right
+        - Left
+        - Center
+        - Right
   columns_to_display:
     type: select
     options:

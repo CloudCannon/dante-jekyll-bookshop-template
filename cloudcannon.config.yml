@@ -24,6 +24,11 @@ _select_data:
     - "Image Left"
     - "Image Right"
 
+  caption_alignments:
+    - "Left"
+    - "Center"
+    - "Right"
+
   component_widths:
     - "Normal"
     - "Wide"

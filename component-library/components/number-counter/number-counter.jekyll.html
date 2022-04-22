@@ -9,11 +9,12 @@
 	{% assign columns =  columns | prepend: "col-md-" %}
 {% endif %}
 
-{% if include.alignment == 'left' %}
+{% assign caption_alignment = include.alignment | slugify %}
+{% if caption_alignment == 'left' %}
 	{% assign number_counter_intro_alignment = 'text-left' %}
-{% elsif include.alignment == 'center' %}
+{% elsif caption_alignment == 'center' %}
 	{% assign number_counter_intro_alignment = 'text-center' %}
-{% elsif include.alignment == 'right' %}
+{% elsif caption_alignment == 'right' %}
 	{% assign number_counter_intro_alignment = 'text-right' %}
 {% else %}
 	{% assign number_counter_intro_alignment = 'text-left' %}
@@ -54,11 +55,12 @@
 		<div class="row 
 					{{c}}__grid-items">
 			{% for counter in include.items %}
-				{% if counter.alignment == 'left' %}
+				{% assign counter_alignment = counter.alignment | slugify %}
+				{% if counter_alignment == 'left' %}
 					{% assign number_counter_section_alignment = 'text-left' %}
-				{% elsif counter.alignment == 'center' %}
+				{% elsif counter_alignment == 'center' %}
 					{% assign number_counter_section_alignment = 'text-center' %}
-				{% elsif counter.alignment == 'right' %}
+				{% elsif counter_alignment == 'right' %}
 					{% assign number_counter_section_alignment = 'text-right' %}
 				{% else %}
 					{% assign number_counter_section_alignment = 'text-left' %}
