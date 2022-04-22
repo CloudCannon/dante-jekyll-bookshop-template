@@ -52,10 +52,6 @@ defaults:
     values:
       layout: team-member
 
-_structures:
-  content_blocks:
-    style: 'modal'
-    
 collections:
   staff_members:
     name: 'Staff Members'
