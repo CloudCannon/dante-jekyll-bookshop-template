@@ -132,7 +132,6 @@ collections_config:
     name: "Posts"
     icon: "description"
     singular_name: "Post"
-output: true
     permalink: /blog/:slug/
   portfolio:
     path: _portfolio
@@ -140,7 +139,6 @@ output: true
     icon: "work_outline"
     image_key: image
     singular_name: "Portfolio"
-output: true
     schemas:
       default:
         path: schemas/portfolio.md
