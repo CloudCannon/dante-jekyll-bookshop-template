@@ -114,7 +114,6 @@ collections_config:
     name: "Staff Members"
     icon: "groups"
     singular_name: "Team"
-    output: true
     permalink: /staff_members/:slug/
     image_key: image
     schemas:
@@ -133,7 +132,7 @@ collections_config:
     name: "Posts"
     icon: "description"
     singular_name: "Post"
-    output: true
+output: true
     permalink: /blog/:slug/
   portfolio:
     path: _portfolio
@@ -141,7 +140,7 @@ collections_config:
     icon: "work_outline"
     image_key: image
     singular_name: "Portfolio"
-    output: true
+output: true
     schemas:
       default:
         path: schemas/portfolio.md
