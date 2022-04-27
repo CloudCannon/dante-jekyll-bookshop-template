@@ -47,6 +47,14 @@ defaults:
     values:
       layout: team-member
 
+collections:
+  staff_members:
+    output: true
+  posts:
+    output: true
+  portfolio:
+    output: true
+
 # portfolio tags
 portfolio-tags:
   - portfolio_name: "Web Development"
