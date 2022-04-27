@@ -52,25 +52,6 @@ defaults:
     values:
       layout: team-member
 
-collections:
-  staff_members:
-    name: 'Staff Members'
-    _icon: 'groups'
-    _singular_name: 'Team'
-    output: true
-    permalink: /staff_members/:slug/
-  posts:
-    name: 'Posts'
-    _icon: 'description'
-    _singular_name: 'Post'
-    output: true
-    permalink: /blog/:slug/
-  portfolio:
-    name: 'Portfolio'
-    _icon: 'work_outline'
-    _singular_name: 'Portfolio'
-    output: true
-    permalink: /portfolio/:slug/
 
 # portfolio tags
 portfolio-tags:

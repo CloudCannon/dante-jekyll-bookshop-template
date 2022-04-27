@@ -108,7 +108,27 @@ _select_data:
     - "Relations"
     - "Career Advice"
 
-_collection_groups:
+collections_config:
+  staff_members:
+    name: 'Staff Members'
+    icon: 'groups'
+    singular_name: 'Team'
+    output: true
+    permalink: /staff_members/:slug/
+  posts:
+    name: 'Posts'
+    icon: 'description'
+    singular_name: 'Post'
+    output: true
+    permalink: /blog/:slug/
+  portfolio:
+    name: 'Portfolio'
+    icon: 'work_outline'
+    singular_name: 'Portfolio'
+    output: true
+    permalink: /portfolio/:slug/
+
+collection_groups:
   - heading: Pages
     collections:
       - pages
