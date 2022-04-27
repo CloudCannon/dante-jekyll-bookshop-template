@@ -3,6 +3,41 @@ _inputs:
     instance_value: NOW
   datetime:
     instance_value: NOW
+  # Used in footer and menu yml files
+  url:
+    comment: Enter the page url
+
+  # Used in menu yml files
+  logo_image:
+    comment: Use logo icon here
+  logo_width:
+    comment: Enter logo width (default 150px)
+  favicon_image:
+    comment: Use favicon here
+  login_url:
+    comment: Enter login link in menu
+  signup_url:
+    comment: Enter signup link in menu
+
+  # Used in footer yml files
+  columns_for_laptop:
+    comment: Default value is 3
+  columns_for_tablet:
+    comment: Default value is 2
+  columns_for_mobile:
+    comment: Default value is 1
+
+  # Used in general yml files
+  site_title:
+    comment: Enter the website title
+  description:
+    comment: Enter the site description
+  permalink:
+    comment: Page URL in slug format
+  website_url:
+    comment: Enter live website domain
+  font-style_url:
+    comment: Enter a google font url.
 
 _select_data:
   columns_for_laptops:
@@ -67,11 +102,11 @@ _select_data:
     - full-width
 
   post_categories:
-    - 'Marketing'
-    - 'Business'
-    - 'Designs'
-    - 'Relations'
-    - 'Career Advice'
+    - "Marketing"
+    - "Business"
+    - "Designs"
+    - "Relations"
+    - "Career Advice"
 
 _collection_groups:
   - heading: Pages
@@ -89,27 +124,4 @@ _collection_groups:
 
 _structures:
   content_blocks:
-    style: 'modal'
-
-_comments:
-  # Used in footer and menu yml files
-  url: Enter the page url
-
-  # Used in menu yml files
-  logo_image: Use logo icon here
-  logo_width: Enter logo width (default 150px)
-  favicon_image: Use favicon here
-  login_url: Enter login link in menu
-  signup_url: Enter signup link in menu
-
-  # Used in footer yml files
-  columns_for_laptop: Default value is 3
-  columns_for_tablet: Default value is 2
-  columns_for_mobile: Default value is 1
-
-  # Used in general yml files
-  site_title: Enter the website title
-  description: Enter the site description
-  permalink: Page URL in slug format
-  website_url: Enter live website domain
-  font-style_url: Enter a google font url.
+    style: "modal"
