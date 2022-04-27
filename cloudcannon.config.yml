@@ -116,6 +116,7 @@ collections_config:
     singular_name: 'Team'
     output: true
     permalink: /staff_members/:slug/
+    image_key: image
     sort:
       key: title
     sort_options:
@@ -135,9 +136,9 @@ collections_config:
     path: _portfolio
     name: 'Portfolio'
     icon: 'work_outline'
+    image_key: image
     singular_name: 'Portfolio'
     output: true
-    permalink: /portfolio/:slug/
 
 collection_groups:
   - heading: Pages
