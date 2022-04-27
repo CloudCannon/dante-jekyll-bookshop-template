@@ -111,14 +111,14 @@ _select_data:
 collections_config:
   staff_members:
     path: _staff_members
-    name: 'Staff Members'
-    icon: 'groups'
-    singular_name: 'Team'
+    name: "Staff Members"
+    icon: "groups"
+    singular_name: "Team"
     output: true
     permalink: /staff_members/:slug/
     image_key: image
     schemas:
-      default: 
+      default:
         path: schemas/staff_members.md
     sort:
       key: title
@@ -130,20 +130,20 @@ collections_config:
       - key: designation
         order: desc
   posts:
-    name: 'Posts'
-    icon: 'description'
-    singular_name: 'Post'
+    name: "Posts"
+    icon: "description"
+    singular_name: "Post"
     output: true
     permalink: /blog/:slug/
   portfolio:
     path: _portfolio
-    name: 'Portfolio'
-    icon: 'work_outline'
+    name: "Portfolio"
+    icon: "work_outline"
     image_key: image
-    singular_name: 'Portfolio'
+    singular_name: "Portfolio"
     output: true
     schemas:
-      default: 
+      default:
         path: schemas/portfolio.md
 
 collection_groups:
