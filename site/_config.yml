@@ -1,12 +1,11 @@
-
 # Timezone
-timezone: Pacific/Auckland  # Set the time zone for site generation.
+timezone: Pacific/Auckland # Set the time zone for site generation.
 
 # Pagination Settings
 pagination:
-  per_page: 6             # maximum number of items per page
-  limit: false          # Maximum number of pages to paginate (false for unlimited)
-  permalink: /page:num/     # pagination path (relative to template page)
+  per_page: 6 # maximum number of items per page
+  limit: false # Maximum number of pages to paginate (false for unlimited)
+  permalink: /page:num/ # pagination path (relative to template page)
   title_suffix: " - page :num" # Append to template's page title
 
 plugins:
@@ -28,41 +27,36 @@ include:
   - _cloudcannon
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: default
-  -
-    scope:
+  - scope:
       type: posts
       path: _posts
     values:
       layout: post
-  -
-    scope:
+  - scope:
       type: portfolio
       path: _portfolio
     values:
       layout: portfolio
-  -
-    scope:
+  - scope:
       type: staff_members
       path: _team
     values:
       layout: team-member
 
-
 # portfolio tags
 portfolio-tags:
-  - portfolio_name: 'Web Development'
-    portfolio-tag: 'web-development'
-  - portfolio_name: 'Mobile Development'
-    portfolio-tag: 'mobile-development'
-  - portfolio_name: 'Digital product design'
-    portfolio-tag: 'digital-product-design'
-  - portfolio_name: 'Cloud &amp; DevOps'
-    portfolio-tag: 'cloud-and-devops'
+  - portfolio_name: "Web Development"
+    portfolio-tag: "web-development"
+  - portfolio_name: "Mobile Development"
+    portfolio-tag: "mobile-development"
+  - portfolio_name: "Digital product design"
+    portfolio-tag: "digital-product-design"
+  - portfolio_name: "Cloud &amp; DevOps"
+    portfolio-tag: "cloud-and-devops"
 
 # Build Settings
 markdown: kramdown
@@ -76,9 +70,3 @@ sass:
 
 gems:
   - octopress-paginate
-
-
-
-
-
-
