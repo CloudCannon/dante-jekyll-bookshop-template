@@ -115,6 +115,15 @@ collections_config:
     singular_name: 'Team'
     output: true
     permalink: /staff_members/:slug/
+    sort:
+      key: title
+    sort_options:
+      - key: title
+      - key: title
+        order: desc
+      - key: designation
+      - key: designation
+        order: desc
   posts:
     name: 'Posts'
     icon: 'description'
@@ -122,6 +131,7 @@ collections_config:
     output: true
     permalink: /blog/:slug/
   portfolio:
+    path: site/_portfolio
     name: 'Portfolio'
     icon: 'work_outline'
     singular_name: 'Portfolio'
