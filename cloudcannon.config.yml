@@ -110,6 +110,7 @@ _select_data:
 
 collections_config:
   staff_members:
+    path: _staff_members
     name: 'Staff Members'
     icon: 'groups'
     singular_name: 'Team'
@@ -131,7 +132,7 @@ collections_config:
     output: true
     permalink: /blog/:slug/
   portfolio:
-    path: site/_portfolio
+    path: _portfolio
     name: 'Portfolio'
     icon: 'work_outline'
     singular_name: 'Portfolio'
