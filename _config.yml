@@ -1,4 +1,4 @@
-
+source: site
 # Timezone
 timezone: Pacific/Auckland  # Set the time zone for site generation.
 
