@@ -5,13 +5,6 @@ GIT
     jekyll-sass-converter (2.2.0)
       sass-embedded (~> 1.0)
 
-GIT
-  remote: https://github.com/CloudCannon/jekyll-watch
-  revision: d220b890e179afc1c518d34c32be8bf168b19ace
-  specs:
-    jekyll-watch (2.2.1)
-      listen (~> 3.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +49,8 @@ GEM
     jekyll-pagebreak (0.6.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-postcss-v2 (1.0.1)
+    jekyll-watch (2.2.1)
+      listen (~> 3.0)
     kramdown (2.3.2)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -92,7 +87,7 @@ DEPENDENCIES
   jekyll-pagebreak (~> 0.6.0)
   jekyll-postcss-v2
   jekyll-sass-converter!
-  jekyll-watch!
+  jekyll-watch
 
 BUNDLED WITH
    2.1.4
