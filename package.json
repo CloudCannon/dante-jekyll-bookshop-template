@@ -4,7 +4,7 @@
   "description": "Dante template for bookshop and CloudCannon",
   "scripts": {
     "bookshop": "bookshop-browser",
-    "jekyll": "bundle exec jekyll serve --port 6060 --trace --unpublished",
+    "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --port 6060 --trace --unpublished --source site",
     "start": "run-p bookshop jekyll",
     "postinstall": "mkdir -p site/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss site/node_modules/.bin/postcss"
   },
