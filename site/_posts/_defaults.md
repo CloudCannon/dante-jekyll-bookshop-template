@@ -6,4 +6,5 @@ featured: true
 image:
 author_staff_member:
 permalink:
+blurb:
 ---

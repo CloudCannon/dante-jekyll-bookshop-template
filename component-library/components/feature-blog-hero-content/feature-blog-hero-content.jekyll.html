@@ -53,11 +53,11 @@
 			{% assign featured_posts = site.posts | where_exp:"post", "post.featured == true" %}
 			{% assign sorted_posts = featured_posts | sort: date | reverse %}
 			{% for post in sorted_posts limit: 1 %}
-				<div class="col-lg-6 
-							col-md-12 
-							{{ content_order }} 
-							{{ mobile_content_order }} 
-							{{ vertical_alignment }} 
+				<div class="col-lg-6
+							col-md-12
+							{{ content_order }}
+							{{ mobile_content_order }}
+							{{ vertical_alignment }}
 							{{c}}__content-column">
 					{% if include.display_title %}
 						<div class="{{c}}__feature-blog-title">
@@ -69,7 +69,7 @@
 
 					{% if include.display_description %}
 						<div class="{{c}}__feature-blog-description">
-							<p>{{ post.excerpt }}</p>
+							<p>{{ post.blurb }}</p>
 						</div>
 					{% endif %}
 
@@ -83,12 +83,12 @@
 				</div>
 
 				{% if include.display_image %}
-					<div class="col-lg-6 
-								col-md-12 
-								{{ image_order }} 
-								{{ mobile_image_order }} 
-								{{ vertical_alignment }} 
-								{{c}}__post-image 
+					<div class="col-lg-6
+								col-md-12
+								{{ image_order }}
+								{{ mobile_image_order }}
+								{{ vertical_alignment }}
+								{{c}}__post-image
 								{{c}}__content-column">
 						<a href="{{ post.permalink }}">
 							<img class="img-fluid" src="{{ post.image }}" alt="{{ post.title }}" />
