@@ -109,6 +109,10 @@ _select_data:
     - "Career Advice"
 
 collections_config:
+  pages:
+    scehams:
+      default:
+        path: schemas/page.md
   staff_members:
     path: _staff_members
     name: "Staff Members"
@@ -133,6 +137,9 @@ collections_config:
     icon: "description"
     singular_name: "Post"
     permalink: /blog/:slug/
+    schemas:
+      default:
+        path: schemas/post.md
   portfolio:
     path: _portfolio
     name: "Portfolio"
