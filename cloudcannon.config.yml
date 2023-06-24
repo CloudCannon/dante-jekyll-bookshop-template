@@ -5,16 +5,16 @@ _inputs:
     instance_value: NOW
 
   post_settings.layout:
-    type: select
-      options:
-        values:
-          - test
+    type: number
+  #     options:
+  #       values:
+  #         - test
 
-  portfolio_settings.layout:
-    type: select
-      options:
-        values:
-          - test
+  # portfolio_settings.layout:
+  #   type: select
+  #     options:
+  #       values:
+  #         - test
 
   # Used in footer and menu yml files
   url:
