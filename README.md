@@ -57,8 +57,7 @@ Dante is already optimised for adding, updating and removing pages, and componen
 
 ### Contact Forms
 
-* Preconfigured to work with CloudCannon, but easily changed to another provider (e.g. [FormSpree](https://formspree.io/)).
-* Sends email to the address defined within the component.
+* The contact form isn't connected to any backend allowing you connect to your provider of choice. As this template is configured for CloudCannon we would reccomend using CloudCannon as your contact form provider. Documentation can be found here: https://cloudcannon.com/documentation/articles/creating-a-form-for-your-site-on-cloudcannon/ 
 
 ### Staff Members
 
@@ -73,3 +72,5 @@ Dante is already optimised for adding, updating and removing pages, and componen
 
 * Managed as a data file to give clients better access.
 * Set in the *Data > Footer* section.
+
+
