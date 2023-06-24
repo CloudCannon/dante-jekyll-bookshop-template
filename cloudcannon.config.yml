@@ -123,9 +123,9 @@ collections_config:
   portfolio_pages:
     name: "Portfolio Pages"
     icon: "more"
-    path: portfolio-pages
+    # path: portfolio-pages
     singular_name: "Portfolio Page"
-    permalink: /portfolio/tags/:path/
+    # permalink: /portfolio/tags/:path/
     schemas:
       default:
         path: schemas/portfolio-page.md
