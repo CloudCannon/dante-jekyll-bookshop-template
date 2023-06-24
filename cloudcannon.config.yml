@@ -120,6 +120,10 @@ _select_data:
     - "Career Advice"
 
 collections_config:
+  pages:
+    scehams:
+      default:
+        path: schemas/page.md
   portfolio_pages:
     name: "Portfolio Pages"
     icon: "more"
@@ -129,10 +133,6 @@ collections_config:
     schemas:
       default:
         path: schemas/portfolio-page.md
-  pages:
-    scehams:
-      default:
-        path: schemas/page.md
   staff_members:
     path: _staff_members
     name: "Staff Members"
