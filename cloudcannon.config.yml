@@ -1,180 +1,180 @@
-# _inputs:
-#   date:
-#     instance_value: NOW
-#   datetime:
-#     instance_value: NOW
+_inputs:
+  date:
+    instance_value: NOW
+  datetime:
+    instance_value: NOW
 
-#  post_settings.layout:
-#   type: select
-#   options:
-#     values: _select_data.post_layouts
+ post_settings.layout:
+  type: select
+  options:
+    values: _select_data.post_layouts
 
-#   portfolio_settings.layout:
-#     type: select
-#     options:
-#       values: _select_data.post_layouts
+  # portfolio_settings.layout:
+  #   type: select
+  #   options:
+  #     values: _select_data.post_layouts
 
-#   # Used in footer and menu yml files
-#   url:
-#     comment: Enter the page url
+  # Used in footer and menu yml files
+  url:
+    comment: Enter the page url
 
-#   # Used in menu yml files
-#   logo_image:
-#     comment: Use logo icon here
-#   logo_width:
-#     comment: Enter logo width (default 150px)
-#   favicon_image:
-#     comment: Use favicon here
-#   login_url:
-#     comment: Enter login link in menu
-#   signup_url:
-#     comment: Enter signup link in menu
+  # Used in menu yml files
+  logo_image:
+    comment: Use logo icon here
+  logo_width:
+    comment: Enter logo width (default 150px)
+  favicon_image:
+    comment: Use favicon here
+  login_url:
+    comment: Enter login link in menu
+  signup_url:
+    comment: Enter signup link in menu
 
-#   # Used in footer yml files
-#   columns_for_laptop:
-#     comment: Default value is 3
-#   columns_for_tablet:
-#     comment: Default value is 2
-#   columns_for_mobile:
-#     comment: Default value is 1
+  # Used in footer yml files
+  columns_for_laptop:
+    comment: Default value is 3
+  columns_for_tablet:
+    comment: Default value is 2
+  columns_for_mobile:
+    comment: Default value is 1
 
-#   # Used in general yml files
-#   site_title:
-#     comment: Enter the website title
-#   description:
-#     comment: Enter the site description
-#   permalink:
-#     comment: Page URL in slug format
-#   website_url:
-#     comment: Enter live website domain
-#   font-style_url:
-#     comment: Enter a google font url.
+  # Used in general yml files
+  site_title:
+    comment: Enter the website title
+  description:
+    comment: Enter the site description
+  permalink:
+    comment: Page URL in slug format
+  website_url:
+    comment: Enter live website domain
+  font-style_url:
+    comment: Enter a google font url.
 
-# _select_data:
-#   columns_for_laptops:
-#     - 1
-#     - 2
-#     - 3
-#     - 4
-#     - 6
-#   columns_for_tablets:
-#     - 1
-#     - 2
-#     - 3
-#     - 4
-#   columns_for_mobiles:
-#     - 1
-#     - 2
+_select_data:
+  columns_for_laptops:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 6
+  columns_for_tablets:
+    - 1
+    - 2
+    - 3
+    - 4
+  columns_for_mobiles:
+    - 1
+    - 2
 
-#   hero_layouts:
-#     - "Image Left"
-#     - "Image Right"
+  hero_layouts:
+    - "Image Left"
+    - "Image Right"
 
-#   caption_alignments:
-#     - "Left"
-#     - "Center"
-#     - "Right"
+  caption_alignments:
+    - "Left"
+    - "Center"
+    - "Right"
 
-#   counter_alignments:
-#     - "Left"
-#     - "Center"
-#     - "Right"
+  counter_alignments:
+    - "Left"
+    - "Center"
+    - "Right"
 
-#   content_alignments:
-#     - "Left"
-#     - "Center"
-#     - "Right"
+  content_alignments:
+    - "Left"
+    - "Center"
+    - "Right"
 
-#   component_widths:
-#     - "Normal"
-#     - "Wide"
+  component_widths:
+    - "Normal"
+    - "Wide"
 
-#   vertical_alignments:
-#     - "Top"
-#     - "Center"
-#     - "Bottom"
+  vertical_alignments:
+    - "Top"
+    - "Center"
+    - "Bottom"
 
-#   mobile_image_orders:
-#     - "Top"
-#     - "Bottom"
+  mobile_image_orders:
+    - "Top"
+    - "Bottom"
 
-#   image_types:
-#     - "contained"
-#     - "stretched"
+  image_types:
+    - "contained"
+    - "stretched"
 
-#   portfolio_layouts:
-#     - left-sidebar
-#     - right-sidebar
-#     - full-width
+  portfolio_layouts:
+    - left-sidebar
+    - right-sidebar
+    - full-width
 
-#   post_layouts:
-#     - left-sidebar
-#     - right-sidebar
-#     - full-width
+  post_layouts:
+    - left-sidebar
+    - right-sidebar
+    - full-width
 
-#   post_categories:
-#     - "Marketing"
-#     - "Business"
-#     - "Designs"
-#     - "Relations"
-#     - "Career Advice"
+  post_categories:
+    - "Marketing"
+    - "Business"
+    - "Designs"
+    - "Relations"
+    - "Career Advice"
 
-# collections_config:
-#   pages:
-#     scehams:
-#       default:
-#         path: schemas/page.md
-#   staff_members:
-#     path: _staff_members
-#     name: "Staff Members"
-#     icon: "groups"
-#     singular_name: "Team"
-#     permalink: /staff_members/:slug/
-#     image_key: image
-#     schemas:
-#       default:
-#         path: schemas/staff_members.md
-#     sort:
-#       key: title
-#     sort_options:
-#       - key: title
-#       - key: title
-#         order: desc
-#       - key: designation
-#       - key: designation
-#         order: desc
-#   posts:
-#     name: "Posts"
-#     icon: "description"
-#     singular_name: "Post"
-#     permalink: /blog/:slug/
-#     schemas:
-#       default:
-#         path: schemas/post.md
-#   portfolio:
-#     path: _portfolio
-#     name: "Portfolio"
-#     icon: "work_outline"
-#     image_key: image
-#     singular_name: "Portfolio"
-#     schemas:
-#       default:
-#         path: schemas/portfolio.md
+collections_config:
+  pages:
+    scehams:
+      default:
+        path: schemas/page.md
+  staff_members:
+    path: _staff_members
+    name: "Staff Members"
+    icon: "groups"
+    singular_name: "Team"
+    permalink: /staff_members/:slug/
+    image_key: image
+    schemas:
+      default:
+        path: schemas/staff_members.md
+    sort:
+      key: title
+    sort_options:
+      - key: title
+      - key: title
+        order: desc
+      - key: designation
+      - key: designation
+        order: desc
+  posts:
+    name: "Posts"
+    icon: "description"
+    singular_name: "Post"
+    permalink: /blog/:slug/
+    schemas:
+      default:
+        path: schemas/post.md
+  portfolio:
+    path: _portfolio
+    name: "Portfolio"
+    icon: "work_outline"
+    image_key: image
+    singular_name: "Portfolio"
+    schemas:
+      default:
+        path: schemas/portfolio.md
 
-# collection_groups:
-#   - heading: Pages
-#     collections:
-#       - pages
-#       - portfolio
-#       - staff_members
-#   - heading: Blog
-#     collections:
-#       - posts
-#       - drafts
-#   - heading: Settings
-#     collections:
-#       - data
+collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+      - portfolio
+      - staff_members
+  - heading: Blog
+    collections:
+      - posts
+      - drafts
+  - heading: Settings
+    collections:
+      - data
 
-# _structures:
-#   content_blocks:
-#     style: "modal"
+_structures:
+  content_blocks:
+    style: "modal"
