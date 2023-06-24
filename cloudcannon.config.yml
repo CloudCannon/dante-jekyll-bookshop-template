@@ -138,7 +138,7 @@ collections_config:
     name: "Staff Members"
     icon: "groups"
     singular_name: "Team"
-    permalink: /staff_members/:slug/
+    # permalink: /staff_members/:slug/
     image_key: image
     schemas:
       default:
