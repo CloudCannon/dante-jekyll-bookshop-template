@@ -125,10 +125,10 @@ collections_config:
     icon: "more"
     path: portfolio-pages
     singular_name: "Portfolio Page"
-    permalink: /portfolio-pages/:slug/
-    schemas:
-      default:
-        path: schemas/portfolio-page.md
+    # permalink: /portfolio-pages/:slug/
+    # schemas:
+    #   default:
+    #     path: schemas/portfolio-page.md
   pages:
     scehams:
       default:
