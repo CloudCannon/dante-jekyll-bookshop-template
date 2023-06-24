@@ -127,6 +127,7 @@ collections_config:
   portfolio_tags:
     name: "Portfolio Tags"
     icon: "more"
+    path: portfolio-pages
     singular_name: "Portfolio Tag"
     permalink: /portfolio-pages/:slug/
     schemas:
