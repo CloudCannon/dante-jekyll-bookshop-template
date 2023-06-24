@@ -12,7 +12,7 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   hero_layout: Image Right
-  component_width: Normal
+  component_width: normal
   mobile_image_order: Bottom
   vertical_alignment: Top
   display_image: true
