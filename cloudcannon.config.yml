@@ -124,6 +124,14 @@ collections_config:
     scehams:
       default:
         path: schemas/page.md
+  portfolio_tags:
+    name: "Portfolio Tags"
+    icon: "more"
+    singular_name: "Portfolio Tag"
+    permalink: /portfolio-pages/:slug/
+    schemas:
+      default:
+        path: schemas/portfolio-tag.md
   staff_members:
     path: _staff_members
     name: "Staff Members"
