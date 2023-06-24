@@ -121,7 +121,7 @@ _select_data:
 
 collections_config:
   pages:
-    scehams:
+    schemas:
       default:
         path: schemas/page.md
   portfolio_pages:
