@@ -4,15 +4,17 @@ _inputs:
   datetime:
     instance_value: NOW
 
-  # post_settings.layout:
-  #   type: select
-  #     options:
-  #       values: _select_data.post_layouts
+  post_settings.layout:
+    type: select
+      options:
+        values:
+          - test
 
-  # portfolio_settings.layout:
-  #   type: select
-  #     options:
-  #       values: _select_data.post_layouts
+  portfolio_settings.layout:
+    type: select
+      options:
+        values:
+          - test
 
   # Used in footer and menu yml files
   url:
