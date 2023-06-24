@@ -1,11 +1,11 @@
 <!-- feature blog version 1.0.0 -->
 {% assign hero_layout = include.hero_layout | slugify %}
-{% if hero_layout == "image-right" %}
+{% if hero_layout == "image_right" %}
 {% assign content_order = "order-lg-1" %}
 {% assign image_order = "order-lg-2" %}
 {% endif %}
 
-{% if hero_layout == "image-left" %}
+{% if hero_layout == "image_left" %}
 {% assign content_order = "order-lg-2" %}
 {% assign image_order = "order-lg-1" %}
 {% endif %}
@@ -21,7 +21,7 @@
 {% assign mobile_image_order = "order-1" %}
 {% endif %}
 
-{% if mobile_image_order == null and hero_layout == "image-left" %}
+{% if mobile_image_order == null and hero_layout == "image_left" %}
 {% assign content_order = "order-2" %}
 {% assign image_order = "order-1" %}
 {% endif %}
