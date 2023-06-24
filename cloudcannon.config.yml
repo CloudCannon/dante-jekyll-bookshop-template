@@ -175,7 +175,7 @@ collection_groups:
     collections:
       - pages
       - portfolio
-      - portfolio_pages
+      # - portfolio_pages
       - staff_members
   - heading: Blog
     collections:
