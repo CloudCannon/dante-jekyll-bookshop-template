@@ -120,15 +120,15 @@ _select_data:
     - "Career Advice"
 
 collections_config:
-  portfolio_pages:
-    name: "Portfolio Pages"
-    icon: "more"
-    path: _portfolio-pages
-    singular_name: "Portfolio Page"
-    permalink: /portfolio/tags/:name/
-    schemas:
-      default:
-        path: schemas/portfolio-page.md
+  # portfolio_pages:
+  #   name: "Portfolio Pages"
+  #   icon: "more"
+  #   path: _portfolio-pages
+  #   singular_name: "Portfolio Page"
+  #   permalink: /portfolio/tags/:name/
+  #   schemas:
+  #     default:
+  #       path: schemas/portfolio-page.md
   pages:
     scehams:
       default:
