@@ -10,9 +10,9 @@ _inputs:
     values: _select_data.post_layouts
 
   portfolio_settings.layout:
-  type: select
-  options:
-    values: _select_data.post_layouts
+    type: select
+    options:
+      values: _select_data.post_layouts
 
   # Used in footer and menu yml files
   url:
