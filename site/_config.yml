@@ -54,9 +54,6 @@ collections:
     output: true
   portfolio:
     output: true
-  portfolio-pages:
-    output: true 
-  
 
 # portfolio tags
 portfolio-tags:
