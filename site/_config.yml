@@ -12,7 +12,6 @@ plugins:
   - jekyll-bookshop
   - jekyll-postcss-v2
   - jekyll-local-assign
-  - jekyll-pagebreak
 
 # Multiple bookshops can be used on one website,
 # or different production / staging locations.
