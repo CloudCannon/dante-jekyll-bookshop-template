@@ -3,6 +3,17 @@ _inputs:
     instance_value: NOW
   datetime:
     instance_value: NOW
+
+  post_settings.layout:
+    type: select
+    options:
+      values: _select_data.post_layouts
+
+  portfolio_settings.layout:
+    type: select
+    options:
+      values: _select_data.post_layouts
+
   # Used in footer and menu yml files
   url:
     comment: Enter the page url
@@ -109,6 +120,18 @@ _select_data:
     - "Career Advice"
 
 collections_config:
+  pages:
+    schemas:
+      default:
+        path: schemas/page.md
+  portfolio_pages:
+    name: "Portfolio Pages"
+    icon: "more"
+    path: _portfolio-pages
+    singular_name: "Portfolio Page"
+    schemas:
+      default:
+        path: schemas/portfolio-page.md
   staff_members:
     path: _staff_members
     name: "Staff Members"
@@ -133,6 +156,9 @@ collections_config:
     icon: "description"
     singular_name: "Post"
     permalink: /blog/:slug/
+    schemas:
+      default:
+        path: schemas/post.md
   portfolio:
     path: _portfolio
     name: "Portfolio"
@@ -148,6 +174,7 @@ collection_groups:
     collections:
       - pages
       - portfolio
+      - portfolio_pages
       - staff_members
   - heading: Blog
     collections:

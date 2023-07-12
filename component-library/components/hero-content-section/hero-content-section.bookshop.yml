@@ -10,8 +10,8 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  hero_layout: Image Right
-  component_width: Normal
+  hero_layout: image_right
+  component_width: normal
   mobile_image_order: Bottom
   vertical_alignment: Top
   image_type: contained
@@ -37,7 +37,7 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  layout:
+  hero_layout:
     comment: Select the layout for the image. Note this will only work for hero
       image type contained option
     type: select

@@ -10,7 +10,7 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  space: 30px
+  space: 30
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview: {}
@@ -18,4 +18,5 @@ preview: {}
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   space:
-    comment: Default value for the spacer section ex-30px
+    type: number
+    comment: Pixel value for the spacer section e.g. 30px
