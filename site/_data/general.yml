@@ -16,3 +16,6 @@ portfolio_settings:
   layout: full-width
   author_details: true
   social_share: true
+twitter_handle: 
+canonical_url:
+baseUrl: example.com
