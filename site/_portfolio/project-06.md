@@ -4,6 +4,13 @@ image: /assets/images/portfolio/project-6.jpg
 header_image:
 author_staff_member: Wilson Kumbara
 permalink: /portfolio/project-6/
+seo:
+  page_description:
+  canonical_url: 
+  featured_image: 
+  twitter_handle: 
+  open_graph_type:
+  no_index: false
 ---
 
 Mi fermentum amet sodales tellus id lorem ante pellentesque vulputate. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Lacinia quis vel eros donec ac odio tempor orci dapibus. At quis risus sed vulputate odio ut. Nam aliquam sem et tortor consequat id porta nibh. Tempus urna et pharetra pharetra massa massa ultricies mi. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Ut eu sem integer vitae. In ornare quam viverra orci sagittis. Integer malesuada nunc vel risus commodo.

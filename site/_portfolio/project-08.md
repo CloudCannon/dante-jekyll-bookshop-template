@@ -4,6 +4,13 @@ image: /assets/images/portfolio/project-8.jpg
 header_image:
 author_staff_member: Danney Johnson
 permalink: /portfolio/project-8/
+seo:
+  page_description:
+  canonical_url: 
+  featured_image: 
+  twitter_handle: 
+  open_graph_type:
+  no_index: false
 ---
 
 Pharetra sit massa nisl et, porttitor platea lacus, id lacus orci mauris mollis. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Lacinia quis vel eros donec ac odio tempor orci dapibus. At quis risus sed vulputate odio ut. Nam aliquam sem et tortor consequat id porta nibh. Tempus urna et pharetra pharetra massa massa ultricies mi. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Ut eu sem integer vitae. In ornare quam viverra orci sagittis. Integer malesuada nunc vel risus commodo.

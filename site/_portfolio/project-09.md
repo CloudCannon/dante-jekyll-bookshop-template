@@ -4,6 +4,13 @@ image: /assets/images/portfolio/project-9.jpg
 header_image:
 author_staff_member: Hannah Khanwald
 permalink: /portfolio/project-9/
+seo:
+  page_description:
+  canonical_url: 
+  featured_image: 
+  twitter_handle: 
+  open_graph_type:
+  no_index: false
 ---
 
 Amet porta justo enim, lorem at et vel magna vitae fermentum dignissim tincidunt. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Lacinia quis vel eros donec ac odio tempor orci dapibus. At quis risus sed vulputate odio ut. Nam aliquam sem et tortor consequat id porta nibh. Tempus urna et pharetra pharetra massa massa ultricies mi. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Ut eu sem integer vitae. In ornare quam viverra orci sagittis. Integer malesuada nunc vel risus commodo.
