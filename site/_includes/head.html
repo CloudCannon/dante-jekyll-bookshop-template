@@ -24,9 +24,11 @@
 	{% if page.seo.page_description %}
 	<meta name="description" content="{{ page.seo.page_description }}">
 	<meta property="og:description" content="{{ page.seo.page_description }}">	
+	<meta property="twitter:description" content="{{ page.seo.page_description }}">
 	{% else %}
 	<meta name="description" content="{{ general_settings.description }}">
 	<meta property="og:description" content="{{ general_settings.description }}">
+	<meta property="twitter:description" content="{{ general_settings.description }}">
 	{% endif %}
 	
 
@@ -78,7 +80,6 @@
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="{{ general_settings.website_url }}{{ page.url | remove: ".html" }}">
 	<meta property="twitter:title" content="{{ title }}">
-	<meta property="twitter:description" content="{{ description }}">
 
 	<script type="application/ld+json">
 		{
