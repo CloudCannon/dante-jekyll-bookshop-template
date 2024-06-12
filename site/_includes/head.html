@@ -8,11 +8,6 @@
 	{% assign title = general_settings.website_title %}
 {% endif %}
 
-{% if page.description %}
-	{% assign description = page.description %}
-{% else %}
-	{% assign description = general_settings.description %}
-{% endif %}
 
 {% assign favicon = general_settings.site_icon_image %}
 
@@ -24,21 +19,67 @@
 	<!-- Primary Meta Tags -->
 	<title>{{ title }}</title>
 	<meta name="title" content="{{ title }}">
-	<meta name="description" content="{{ description }}">
+	
 
-	<!-- Open Graph / Facebook -->
+	{% if page.seo.page_description %}
+	<meta name="description" content="{{ page.seo.page_description }}">
+	<meta property="og:description" content="{{ page.seo.page_description }}">	
+	<meta property="twitter:description" content="{{ page.seo.page_description }}">
+	{% else %}
+	<meta name="description" content="{{ general_settings.description }}">
+	<meta property="og:description" content="{{ general_settings.description }}">
+	<meta property="twitter:description" content="{{ general_settings.description }}">
+	{% endif %}
+	
+
+	{% if page.seo.open_graph_type %}
+	<meta property="og:type" content="{{ page.seo.open_graph_type }}">
+
+	{% else %}
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="{{ general_settings.website_url }}{{ page.url | remove: ".html" }}">
+	{% endif %}
+
+
 	<meta property="og:title" content="{{ title }}">
-	<meta property="og:description" content="{{ description }}">
+	<meta property="og:url" content="{{ general_settings.website_url }}{{ page.url | remove: ".html" }}">
+
+
+	{% if page.seo.canonical_url %}
+
+	<link rel="canonical" href="{{ .page.seo.canonical_url }}">
+
+	{% else %}
+
+	<link rel="canonical" href="{{site.url}}">
+
+	{% endif %}
+
+	
+	{% if page.seo.featured_image %}
+
+	<meta property="og:image" content="{{ page.seo.featured_image }}">
+	<meta property="twitter:image" content="{{ page.seo.featured_image }}">
+	{% else %}
 	<meta property="og:image" content="{{general_settings.website_url}}{{ favicon }}">
+	<meta property="twitter:image" content="{{ general_settings.website_url }}{{ favicon }}">
+	{% endif %}
 
 	<!-- Twitter -->
+
+	{% if page.seo.twitter_handle %}
+
+	<meta name="twitter:creator" content="{{ page.seo.twitter_handle }}">
+
+	{% else %}
+
+	<meta name="twitter:creator" content="{{ general_settings.twitter_handle }}">
+
+	{% endif %}
+
+
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="{{ general_settings.website_url }}{{ page.url | remove: ".html" }}">
 	<meta property="twitter:title" content="{{ title }}">
-	<meta property="twitter:description" content="{{ description }}">
-	<meta property="twitter:image" content="{{ general_settings.website_url }}{{ favicon }}">
 
 	<script type="application/ld+json">
 		{

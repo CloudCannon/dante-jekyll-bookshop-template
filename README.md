@@ -1,10 +1,8 @@
 # Dante
 
-Dante serves as an example of a fully-functioning implementation of [Bookshop 2.0](https://github.com/CloudCannon/bookshop) on a simple website.
+Dante serves as an example of a fully-functioning implementation of [Bookshop 3.0](https://github.com/CloudCannon/bookshop) on a simple website.
 
 ![Dante template screenshot](site/images/_screenshot.png)
-
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Community](https://cloudcannon.com/community/).
 
 [![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/dante-jekyll-bookshop-template)
 

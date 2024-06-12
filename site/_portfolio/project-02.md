@@ -4,6 +4,13 @@ image: /assets/images/portfolio/project-2.jpg
 header_image: /assets/images/portfolio/data-on-laptop.jpg
 author_staff_member: Danney Johnson
 permalink: /portfolio/project-2/
+seo:
+  page_description:
+  canonical_url: 
+  featured_image: 
+  twitter_handle: 
+  open_graph_type:
+  no_index: false
 ---
 
 Pellentesque adipiscing pharetra phasellus est nulla venenatis ligula Pharetra. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Lacinia quis vel eros donec ac odio tempor orci dapibus. At quis risus sed vulputate odio ut. Nam aliquam sem et tortor consequat id porta nibh. Tempus urna et pharetra pharetra massa massa ultricies mi. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Ut eu sem integer vitae. In ornare quam viverra orci sagittis. Integer malesuada nunc vel risus commodo.
