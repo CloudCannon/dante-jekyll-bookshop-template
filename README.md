@@ -1,5 +1,8 @@
 # Dante
 
+> [!IMPORTANT]
+> This template is no longer actively maintained but remains available for reference and learning. For production sites, we recommend our [modern templates](https://cloudcannon.com/templates/).
+
 Dante serves as an example of a fully-functioning implementation of [Bookshop 3.0](https://github.com/CloudCannon/bookshop) on a simple website.
 
 ![Dante template screenshot](site/images/_screenshot.png)
